@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/ace-logo.png.asset.json";
 import { contact } from "@/data/ace";
+import { LogoFallback, SafeImage } from "./SafeImage";
 
 const nav = [
   { to: "/admissions", label: "Admissions & Achievers" },
@@ -15,7 +15,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
       <div className="container-ace flex h-18 items-center justify-between gap-4 py-3">
         <Link to="/admissions" className="shrink-0" aria-label="ACE – Education Redefined, home">
-          <img src={logo.url} alt="ACE – Education Redefined" width={700} height={250} className="h-11 w-auto" />
+          <SafeImage src="/images/ace-logo.png" alt="ACE – Education Redefined" width={700} height={250} className="h-11 w-auto" fallback={<LogoFallback />} />
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
           {nav.map((n) => (

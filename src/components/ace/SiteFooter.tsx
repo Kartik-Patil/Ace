@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Globe, Instagram, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/ace-logo.png.asset.json";
 import { contact } from "@/data/ace";
+import { LogoFallback, SafeImage } from "./SafeImage";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="container-ace grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="inline-block rounded-xl bg-card p-3">
-            <img src={logo.url} alt="ACE – Education Redefined" className="h-10 w-auto" loading="lazy" />
+            <SafeImage src="/images/ace-logo.png" alt="ACE – Education Redefined" className="h-10 w-auto" loading="lazy" fallback={<LogoFallback />} />
           </div>
           <p className="mt-4 max-w-sm font-display text-2xl italic">“{contact.tagline}”</p>
           <p className="mt-2 text-sm opacity-75">Programs for Classes VIII, IX & X · ICSE · CBSE · State Board</p>

@@ -1,3 +1,4 @@
+import { initials, SafeImage } from "./SafeImage";
 import {
   BookOpenCheck, Calculator, ClipboardCheck, Languages, Layers, Rocket, type LucideIcon,
 } from "lucide-react";
@@ -46,7 +47,19 @@ export function AchieverCard({ a }: { a: Achiever }) {
   return (
     <figure className="group overflow-hidden rounded-2xl border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-lift">
       <div className="relative aspect-[4/5] overflow-hidden bg-sky">
-        <img src={a.photo} alt={`Photo of ${a.name}`} loading="lazy" width={400} height={500} className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+        <SafeImage
+          src={a.photo}
+          alt={`Photo of ${a.name}`}
+          loading="lazy"
+          width={400}
+          height={500}
+          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          fallback={
+            <div role="img" aria-label={`Photo of ${a.name}`} className="flex h-full w-full items-center justify-center bg-navy-pattern">
+              <span className="font-display text-5xl font-bold text-gold">{initials(a.name)}</span>
+            </div>
+          }
+        />
         <div className="absolute right-3 top-3 rounded-xl bg-gold px-3 py-2 text-center font-display leading-none text-gold-foreground shadow-card">
           <span className="block text-lg font-bold">{a.score}</span>
           {a.scoreSub && <span className="block text-xs font-semibold">{a.scoreSub}</span>}

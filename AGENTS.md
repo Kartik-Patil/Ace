@@ -12,3 +12,4 @@
 ## Project rules
 - Site content (programs, achievers, FAQs, contact) lives in src/data/ace.ts; components only present it, so client edits touch one file.
 - Shared header/footer are rendered in __root.tsx; page sections are reusable components under src/components/ace.
+- Logo and achiever photos are plain files in public/images (referenced as /images/...), not CDN asset pointers, so the site deploys on any host such as Vercel.

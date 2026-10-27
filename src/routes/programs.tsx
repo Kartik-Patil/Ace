@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import study from "@/assets/study-illustration.jpg";
+import study from "@/assets/programs-illustration.jpg";
 import { ProgramCard, SectionHeading } from "@/components/ace/blocks";
 import { ContactSection } from "@/components/ace/ContactSection";
 import { SectionTabs } from "@/components/ace/SectionTabs";
@@ -41,7 +41,7 @@ function ProgramsPage() {
               <a href="#enquire" className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold hover:border-gold hover:text-gold">Enquire <ArrowRight className="size-4" aria-hidden /></a>
             </div>
           </div>
-          <img src={study} alt="Students learning maths and science" width={1280} height={960} className="fade-up rounded-3xl border-4 border-gold/70 shadow-lift [animation-delay:150ms]" />
+          <img src={study} alt="Teacher guiding students through geometry at a whiteboard" width={1280} height={960} className="fade-up rounded-3xl border-4 border-gold/70 shadow-lift [animation-delay:150ms]" />
         </div>
       </section>
 

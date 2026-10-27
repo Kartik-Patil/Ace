@@ -1,15 +1,3 @@
-import aadhya from "@/assets/achievers/aadhya-hiremath.webp.asset.json";
-import amogh from "@/assets/achievers/amogh-mantur.webp.asset.json";
-import khalid from "@/assets/achievers/khalid-mirji.webp.asset.json";
-import ayaan from "@/assets/achievers/mohammad-ayaan.webp.asset.json";
-import niranjan from "@/assets/achievers/niranjan-k.webp.asset.json";
-import prasanna from "@/assets/achievers/prasanna-totad.webp.asset.json";
-import rajat from "@/assets/achievers/rajat-kulkarni.webp.asset.json";
-import sanjana from "@/assets/achievers/sanjana-benakatti.webp.asset.json";
-import shalini from "@/assets/achievers/shalini-shettar.webp.asset.json";
-import sharan from "@/assets/achievers/sharan-tugalad.webp.asset.json";
-import tejas from "@/assets/achievers/tejas-onimani.webp.asset.json";
-
 // All content below is transcribed from the client's flyer. Do not embellish.
 export const contact = {
   brand: "ACE – Education Redefined",
@@ -50,34 +38,34 @@ export const achieverGroups: AchieverGroup[] = [
     id: "neet-jee",
     title: "NEET / IIT JEE",
     students: [
-      { name: "Sanjana Benakatti", score: "525", scoreSub: "/720", institution: "SNMC, Bagalkot", photo: sanjana.url },
-      { name: "Khalid Mirji", score: "488", scoreSub: "/720", institution: "SNMC, Bagalkot", photo: khalid.url },
-      { name: "Niranjan K", score: "AIR* 1153", institution: "IIT Mumbai", photo: niranjan.url },
-      { name: "Mohammad Ayaan", score: "98.03", scoreSub: "%ile", institution: "MSRIT, Bangalore", photo: ayaan.url },
+      { name: "Sanjana Benakatti", score: "525", scoreSub: "/720", institution: "SNMC, Bagalkot", photo: "/images/achievers/sanjana-benakatti.webp" },
+      { name: "Khalid Mirji", score: "488", scoreSub: "/720", institution: "SNMC, Bagalkot", photo: "/images/achievers/khalid-mirji.webp" },
+      { name: "Niranjan K", score: "AIR* 1153", institution: "IIT Mumbai", photo: "/images/achievers/niranjan-k.webp" },
+      { name: "Mohammad Ayaan", score: "98.03", scoreSub: "%ile", institution: "MSRIT, Bangalore", photo: "/images/achievers/mohammad-ayaan.webp" },
     ],
   },
   {
     id: "class-x",
     title: "Class X",
     students: [
-      { name: "Aadhya Hiremath", score: "95.2%", tag: "ICSE", photo: aadhya.url },
-      { name: "Tejas Onimani", score: "97%", tag: "STATE", photo: tejas.url },
-      { name: "Rajat kulkarni", score: "91.8%", tag: "CBSE", photo: rajat.url },
-      { name: "Prasanna Totad", score: "91.2%", tag: "CBSE", photo: prasanna.url },
+      { name: "Aadhya Hiremath", score: "95.2%", tag: "ICSE", photo: "/images/achievers/aadhya-hiremath.webp" },
+      { name: "Tejas Onimani", score: "97%", tag: "STATE", photo: "/images/achievers/tejas-onimani.webp" },
+      { name: "Rajat kulkarni", score: "91.8%", tag: "CBSE", photo: "/images/achievers/rajat-kulkarni.webp" },
+      { name: "Prasanna Totad", score: "91.2%", tag: "CBSE", photo: "/images/achievers/prasanna-totad.webp" },
     ],
   },
   {
     id: "class-ix",
     title: "Class IX",
     students: [
-      { name: "Sharan Tugalad", score: "96%", tag: "CBSE", photo: sharan.url },
-      { name: "Shalini Shettar", score: "82%", tag: "CBSE", photo: shalini.url },
+      { name: "Sharan Tugalad", score: "96%", tag: "CBSE", photo: "/images/achievers/sharan-tugalad.webp" },
+      { name: "Shalini Shettar", score: "82%", tag: "CBSE", photo: "/images/achievers/shalini-shettar.webp" },
     ],
   },
   {
     id: "class-viii",
     title: "Class VIII",
-    students: [{ name: "Amogh Mantur", score: "85%", tag: "CBSE", photo: amogh.url }],
+    students: [{ name: "Amogh Mantur", score: "85%", tag: "CBSE", photo: "/images/achievers/amogh-mantur.webp" }],
   },
 ];
 
