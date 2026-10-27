@@ -1,0 +1,16 @@
+import { z } from "zod";
+
+export const enquirySchema = z.object({
+  studentName: z.string().trim().min(2, "Please enter the student's name").max(80, "Name is too long"),
+  parentName: z.string().trim().min(2, "Please enter the parent's name").max(80, "Name is too long"),
+  phone: z
+    .string()
+    .trim()
+    .transform((v) => v.replace(/[\s-]/g, "").replace(/^(\+91|0)/, ""))
+    .refine((v) => /^[6-9]\d{9}$/.test(v), "Enter a valid 10-digit Indian mobile number"),
+  studentClass: z.enum(["Class VIII", "Class IX", "Class X"], { errorMap: () => ({ message: "Choose a class" }) }),
+  board: z.enum(["ICSE", "CBSE", "State Board"], { errorMap: () => ({ message: "Choose a board" }) }),
+  program: z.string().min(1, "Choose a program"),
+});
+
+export type EnquiryInput = z.input<typeof enquirySchema>;
