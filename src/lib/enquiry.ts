@@ -3,6 +3,7 @@ import { z } from "zod";
 export const enquirySchema = z.object({
   studentName: z.string().trim().min(2, "Please enter the student's name").max(80, "Name is too long"),
   parentName: z.string().trim().min(2, "Please enter the parent's name").max(80, "Name is too long"),
+  email: z.string().trim().email("Please enter a valid email address").optional(),
   phone: z
     .string()
     .trim()
@@ -11,6 +12,7 @@ export const enquirySchema = z.object({
   studentClass: z.enum(["Class VIII", "Class IX", "Class X"], { errorMap: () => ({ message: "Choose a class" }) }),
   board: z.enum(["ICSE", "CBSE", "State Board"], { errorMap: () => ({ message: "Choose a board" }) }),
   program: z.string().min(1, "Choose a program"),
+  notes: z.string().optional(),
 });
 
 export type EnquiryInput = z.input<typeof enquirySchema>;

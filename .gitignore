@@ -1,5 +1,47 @@
-# Logs
-logs
+# ==============================================================================
+# Dependencies & Package Managers
+# ==============================================================================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL: Never commit credentials)
+# ==============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+
+# ==============================================================================
+# Build, Bundler & Framework Caches (TanStack Start / Vite / Nitro / Vinxi)
+# ==============================================================================
+dist/
+dist-ssr/
+build/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+.vite/
+.turbo/
+.cache/
+.parcel-cache/
+
+# ==============================================================================
+# Logs & Process Dumps
+# ==============================================================================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,26 +49,53 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-.output
-.vinxi
-.tanstack/**
-.nitro
-*.local
+# ==============================================================================
+# Testing & Code Coverage
+# ==============================================================================
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
 
-# Wrangler / Cloudflare
-.wrangler/
-.dev.vars
-
-# Editor directories and files
+# ==============================================================================
+# IDEs, Editors & Workspace Files
+# ==============================================================================
+.idea/
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.sublime-workspace
+*.sublime-project
+
+# ==============================================================================
+# OS Generated Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+%LOCALAPPDATA%/
+
+# ==============================================================================
+# Temporary Files, Backups & Local Documents
+# ==============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*-orig.*
+scratch-*.mjs
+test-*.mjs
+*.docx
