@@ -3,6 +3,7 @@ import { Sparkles } from "lucide-react";
 import { AchieverCard, Faq, SectionHeading } from "@/components/ace/blocks";
 import { ContactSection } from "@/components/ace/ContactSection";
 import { Reveal } from "@/components/ace/Reveal";
+import { AceWord } from "@/components/ace/AceWord";
 import { achieverGroups, contact } from "@/data/ace";
 
 export const Route = createFileRoute("/results")({
@@ -29,7 +30,7 @@ function ResultsPage() {
               Our <span className="italic text-gold">Achievers</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg opacity-85">
-              These results speak for themselves. Congratulations to every student who worked hard and made ACE proud.
+              These results speak for themselves. Congratulations to every student who worked hard and made <AceWord dark /> proud.
             </p>
           </div>
         </div>
@@ -41,7 +42,7 @@ function ResultsPage() {
           <SectionHeading
             eyebrow={`Academic Year ${contact.achieversYear}`}
             title="Results that inspire"
-            intro="Results exactly as reported by ACE for the 2025–26 academic year."
+            intro={<>Results exactly as reported by <AceWord /> for the 2025–26 academic year.</>}
           />
         </Reveal>
         <div className="mt-12 space-y-16">
@@ -60,7 +61,7 @@ function ResultsPage() {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-xs text-muted-foreground">*AIR as printed on the ACE flyer.</p>
+        <p className="mt-6 text-xs text-muted-foreground">*AIR as printed on the <AceWord /> flyer.</p>
       </section>
 
       {/* ── FAQ ── */}

@@ -5,12 +5,13 @@ import {
 import type { ReactNode } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { faqs, type Achiever, type Program } from "@/data/ace";
+import { AceWord } from "./AceWord";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-border">{children}</p>;
 }
 
-export function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: ReactNode; intro?: string }) {
+export function SectionHeading({ eyebrow, title, intro }: { eyebrow: ReactNode; title: ReactNode; intro?: ReactNode }) {
   return (
     <div className="max-w-2xl">
       <Eyebrow>{eyebrow}</Eyebrow>

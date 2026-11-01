@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Globe, Instagram, MapPin, Phone } from "lucide-react";
 import { contact } from "@/data/ace";
 import { LogoFallback, SafeImage } from "./SafeImage";
+import { AceWord } from "./AceWord";
 
 export function SiteFooter() {
   return (
@@ -18,7 +19,7 @@ export function SiteFooter() {
           <h2 className="text-sm font-bold uppercase tracking-widest text-gold">Explore</h2>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/admissions" className="hover:text-gold">Admissions & Achievers</Link></li>
-            <li><Link to="/programs" className="hover:text-gold">Programs</Link></li>
+            <li><Link to="/courses" className="hover:text-gold">Programs</Link></li>
           </ul>
         </div>
         <div>
@@ -32,7 +33,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-navy-foreground/15 py-5 text-center text-xs opacity-70">
-        © {new Date().getFullYear()} {contact.brand}, Hubballi
+        © {new Date().getFullYear()} <AceWord dark /> – Education Redefined, Hubballi
       </div>
     </footer>
   );

@@ -15,6 +15,7 @@ import { ContactSection } from "@/components/ace/ContactSection";
 import { Reveal } from "@/components/ace/Reveal";
 import { RollingNumber } from "@/components/ace/RollingNumber";
 import { ExamReadySection } from "@/components/ace/ExamReadySection";
+import { AceWord } from "@/components/ace/AceWord";
 import { contact } from "@/data/ace";
 import study from "@/assets/study-illustration.jpg";
 
@@ -34,8 +35,8 @@ export const Route = createFileRoute("/home")({
 
 const stats = [
   { value: "500+", label: "Students Guided" },
-  { value: "2022", label: "Established" },
-  { value: "3", label: "Classes (VIII · IX · X)" },
+  { value: "2020", label: "Established" },
+  { value: "5", label: "Classes (VIII · IX · X . PU-I . PU-II)" },
   { value: "100%", label: "Conceptual Focus" },
 ];
 
@@ -101,7 +102,7 @@ function HomePage() {
               From Concepts <span className="italic text-gold">to Confidence.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90">
-              At ACE Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
+              At <AceWord dark /> Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -155,11 +156,11 @@ function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <Reveal variant="slide-left">
             <SectionHeading
-              eyebrow="About Us – ACE Education, Hubballi"
+              eyebrow={<>About Us – <AceWord /> Education, Hubballi</>}
               title={<>Academic Excellence &amp; <span className="italic text-primary">Beyond Classroom Learning</span></>}
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Established in 2022, ACE has grown into a dedicated learning centre, having guided and supported 500+ students on their academic journey. We are committed to nurturing young minds through quality education, personalised mentoring and a strong foundation in essential academic concepts.
+              Established in 2022, <AceWord /> has grown into a dedicated learning centre, having guided and supported 500+ students on their academic journey. We are committed to nurturing young minds through quality education, personalised mentoring and a strong foundation in essential academic concepts.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               We specialise in Foundation Programmes and Board Examination Support for Classes 8, 9 and 10, with a focus on building conceptual clarity, strengthening analytical abilities and developing problem-solving skills.
@@ -181,7 +182,7 @@ function HomePage() {
                   Beyond Textbooks &amp; Classroom Teaching
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  At ACE, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
+                  At <AceWord />, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
                 </p>
               </div>
 
@@ -249,7 +250,7 @@ function HomePage() {
       {/* ── CTA band ── */}
       <section className="bg-navy-pattern py-16 text-navy-foreground">
         <Reveal variant="zoom-in" className="container-ace flex flex-col items-center gap-6 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">ACE Education</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold"><AceWord dark /> Education</p>
           <h2 className="text-3xl font-semibold md:text-5xl">
             Your Ambition, <span className="italic text-gold">Our Foundation.</span>
           </h2>

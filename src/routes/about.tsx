@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Sparkles, BookOpen, Compass, Lightbulb, Trophy, ShieldCheck } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, Compass, Lightbulb, Trophy, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/ace/blocks";
 import { ContactSection } from "@/components/ace/ContactSection";
 import { Reveal } from "@/components/ace/Reveal";
 import { RollingNumber } from "@/components/ace/RollingNumber";
 import { ExamReadySection } from "@/components/ace/ExamReadySection";
+import { AceWord } from "@/components/ace/AceWord";
 import study from "@/assets/study-illustration.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -77,13 +78,13 @@ function AboutPage() {
         <div className="container-ace grid items-center gap-10 py-16 md:py-24 lg:grid-cols-2">
           <div className="fade-up">
             <p className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-1.5 text-xs font-bold text-gold-foreground uppercase tracking-widest">
-              <Sparkles className="size-3.5" aria-hidden /> About Us – ACE Education, Hubballi
+              <Sparkles className="size-3.5" aria-hidden /> About Us – <AceWord dark /> Education, Hubballi
             </p>
             <h1 className="mt-5 text-5xl font-semibold leading-[1.08] md:text-6xl">
               From Concepts <span className="italic text-gold">to Confidence</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90">
-              At ACE Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
+              At <AceWord dark /> Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-gold">
               <span className="rounded-full border border-gold/40 px-3.5 py-1.5 bg-navy/60">
@@ -152,7 +153,7 @@ function AboutPage() {
               title="Dedicated Learning Centre in Hubballi"
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Established in 2022, ACE has grown into a dedicated learning centre, having guided and supported 500+ students on their academic journey. We are committed to nurturing young minds through quality education, personalised mentoring and a strong foundation in essential academic concepts.
+              Established in 2022, <AceWord /> has grown into a dedicated learning centre, having guided and supported 500+ students on their academic journey. We are committed to nurturing young minds through quality education, personalised mentoring and a strong foundation in essential academic concepts.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               We specialise in Foundation Programmes and Board Examination Support for Classes 8, 9 and 10, with a focus on building conceptual clarity, strengthening analytical abilities and developing problem-solving skills.
@@ -174,7 +175,7 @@ function AboutPage() {
                   Beyond Textbooks &amp; Classroom Teaching
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  At ACE, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
+                  At <AceWord />, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
                 </p>
               </div>
 
@@ -242,7 +243,7 @@ function AboutPage() {
       {/* ── Closing Banner: ACE Education – Your Ambition, Our Foundation. Learn. Lead. Excel. ── */}
       <section className="bg-navy-pattern py-16 text-navy-foreground">
         <Reveal variant="zoom-in" className="container-ace flex flex-col items-center gap-4 text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">ACE Education</p>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold"><AceWord dark /> Education</p>
           <h2 className="text-3xl font-semibold md:text-5xl">
             Your Ambition, <span className="italic text-gold">Our Foundation.</span>
           </h2>

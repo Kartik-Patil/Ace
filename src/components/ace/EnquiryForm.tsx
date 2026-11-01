@@ -16,6 +16,7 @@ import { boards, classes, contact, programs } from "@/data/ace";
 import { enquirySchema } from "@/lib/enquiry";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { sendOtpServerFn, sendEnquiryServerFn } from "@/lib/mail";
+import { AceWord } from "./AceWord";
 
 type Errors = Partial<Record<string, string>>;
 
@@ -546,7 +547,7 @@ export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }
         <div className="mt-6 flex flex-col gap-4 border-t pt-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <FileCheck2 className="size-4 text-emerald-600 shrink-0" />
-            <span>Enquiry is directly submitted to ACE admissions desk.</span>
+            <span>Enquiry is directly submitted to <AceWord /> admissions desk.</span>
           </div>
 
           <button

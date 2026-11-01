@@ -1,5 +1,6 @@
-import { CheckCircle2, Play, Sparkles, BookOpen, Lightbulb, Trophy, Award, TrendingUp, Check, ArrowUpRight } from "lucide-react";
+import { Play, Sparkles, Lightbulb, TrendingUp } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { AceWord } from "./AceWord";
 
 export function ExamReadySection() {
   return (
@@ -67,7 +68,9 @@ export function ExamReadySection() {
                           <span className="size-2.5 rounded-full bg-rose-400" />
                           <span className="size-2.5 rounded-full bg-amber-400" />
                           <span className="size-2.5 rounded-full bg-emerald-400" />
-                          <span className="ml-2 font-semibold text-gold">ACE Concept Vault</span>
+                          <span className="ml-2 font-semibold text-gold">
+                            <AceWord dark /> Concept Vault
+                          </span>
                         </div>
                         <span className="text-[10px] uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded text-white/70">
                           Class 8 · 9 · 10
@@ -230,7 +233,9 @@ export function ExamReadySection() {
                     {/* Screen Content */}
                     <div className="relative aspect-video rounded-lg bg-navy flex flex-col justify-between p-3 overflow-hidden">
                       <div className="flex items-center justify-between text-[10px] text-white/70">
-                        <span className="font-bold text-gold">ACE Board Masterclass</span>
+                        <span className="font-bold text-gold">
+                          <AceWord dark /> Board Masterclass
+                        </span>
                         <span className="bg-red-500/80 text-white px-1.5 py-0.2 rounded font-mono text-[9px]">LIVE</span>
                       </div>
 
@@ -305,7 +310,9 @@ export function ExamReadySection() {
                       <div className="absolute top-2 right-2 size-12 rounded-full border-2 border-dashed border-red-600 bg-red-50/90 text-red-600 grid place-items-center -rotate-12 shadow-sm pointer-events-none">
                         <div className="text-center leading-none">
                           <span className="block text-sm font-black tracking-tighter">A+</span>
-                          <span className="block text-[7px] font-bold uppercase tracking-widest text-red-500">ACE</span>
+                          <span className="block text-[8px] font-bold uppercase tracking-widest text-primary">
+                            <AceWord />
+                          </span>
                         </div>
                       </div>
 
@@ -358,4 +365,3 @@ export function ExamReadySection() {
     </section>
   );
 }
-

@@ -1,10 +1,13 @@
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpenCheck, Calculator, ClipboardCheck, Languages, Layers, Rocket } from "lucide-react";
+import { ArrowRight, BookOpenCheck, ClipboardCheck, Languages, Rocket } from "lucide-react";
 import { SectionHeading } from "@/components/ace/blocks";
 import { ContactSection } from "@/components/ace/ContactSection";
 import { Reveal } from "@/components/ace/Reveal";
-import { boards, contact, programs } from "@/data/ace";
+import { AceWord } from "@/components/ace/AceWord";
+import { AcesetSection } from "@/components/ace/AcesetSection";
+import { ProgrammesSplashSection } from "@/components/ace/ProgrammesSplashSection";
+import { boards, contact } from "@/data/ace";
 import programs_img from "@/assets/programs-illustration.jpg";
 
 export const Route = createFileRoute("/courses")({
@@ -16,20 +19,6 @@ export const Route = createFileRoute("/courses")({
   }),
   component: CoursesPage,
 });
-
-const aceset_benefits = [
-  { n: "01", t: "Unlock Scholarship Opportunities",    d: "Get an opportunity to earn scholarships of up to 100%* and make quality education more accessible." },
-  { n: "02", t: "Evaluate Your Academic Readiness",    d: "Understand your current level of preparation and assess your strengths across key academic subjects." },
-  { n: "03", t: "Discover Your Learning Pathway",      d: "Explore the right academic programme based on your interests, abilities and future aspirations." },
-  { n: "04", t: "Experience the ACE Learning Approach",d: "Get introduced to ACE's student-centric teaching methodology, concept-based learning and academic mentoring." },
-  { n: "05", t: "Plan Your Academic Journey",          d: "Get an early opportunity to explore suitable programmes and plan your learning journey with ACE." },
-  { n: "06", t: "Take the First Step Towards Excellence", d: "Begin your journey towards stronger concepts, sharper thinking and greater confidence with ACE Foundation Programmes." },
-];
-
-const iconMap: Record<string, React.ElementType> = {
-  bridge: Layers, foundation: Rocket, board: BookOpenCheck,
-  tests: ClipboardCheck, math: Calculator, language: Languages,
-};
 
 function CoursesPage() {
   return (
@@ -44,7 +33,7 @@ function CoursesPage() {
               <span className="italic text-gold">Preparing for Future Success.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg opacity-85">
-              From closing gaps to building competitive strength, ACE's programmes take students from concepts to confidence —
+              From closing gaps to building competitive strength, <AceWord dark />&apos;s programmes take students from concepts to confidence —
               for ICSE, CBSE and State Board.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -69,7 +58,7 @@ function CoursesPage() {
               <span className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-1.5 text-sm font-bold text-gold-foreground">
                 <Rocket className="size-4" aria-hidden /> STEM Foundation Programme
               </span>
-              <h2 className="mt-5 text-2xl font-semibold">ACE Foundation Programme</h2>
+              <h2 className="mt-5 text-2xl font-semibold"><AceWord dark /> Foundation Programme</h2>
               <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-gold">Year-Long Academic Enrichment · Classes 8, 9 &amp; 10</p>
               <p className="mt-4 opacity-85">
                 A comprehensive three-year academic enrichment programme designed for students who aspire to pursue careers in Engineering,
@@ -100,34 +89,8 @@ function CoursesPage() {
         </div>
       </section>
 
-      {/* ── All 6 programme cards ── */}
-      <section className="bg-secondary py-20">
-        <div className="container-ace">
-          <Reveal variant="fade-up">
-            <SectionHeading eyebrow="What we offer" title="Six programmes, one goal" intro="Each programme focuses on one part of a student's growth. Students can combine them as they need." />
-          </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {programs.map((p, i) => {
-              const Icon = iconMap[p.id] ?? Layers;
-              return (
-                <Reveal key={p.id} variant="zoom-in" delay={i * 70}>
-                  <article className="group relative flex h-full flex-col rounded-2xl border-2 border-sky-border/40 bg-sky p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-border hover:shadow-lift">
-                    <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-xl bg-primary text-primary-foreground transition group-hover:bg-gold group-hover:text-gold-foreground">
-                        <Icon className="size-6" aria-hidden />
-                      </span>
-                      <span className="font-display text-3xl text-sky-border/30">{String(i + 1).padStart(2, "0")}</span>
-                    </div>
-                    <h3 className="mt-5 text-xl font-semibold text-primary">{p.name}</h3>
-                    <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.summary}</p>
-                    {p.highlight && <p className="mt-4 inline-flex w-fit rounded-full bg-gold px-3 py-1 text-xs font-bold text-gold-foreground">{p.highlight}</p>}
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Offer – 6 Programmes Splash Bento Section ── */}
+      <ProgrammesSplashSection />
 
       {/* ── Language & Test Series ── */}
       <section className="container-ace py-20">
@@ -160,32 +123,8 @@ function CoursesPage() {
         </div>
       </section>
 
-      {/* ── ACESET ── */}
-      <section className="bg-secondary py-20">
-        <div className="container-ace">
-          <Reveal variant="fade-up">
-            <SectionHeading
-              eyebrow="ACESET – Scholarship Entrance Test"
-              title={<>Why participate in <span className="italic text-gold">ACESET?</span></>}
-              intro="Your Potential Deserves an Opportunity to Excel!"
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {aceset_benefits.map((b, i) => (
-              <Reveal key={b.n} variant="fade-up" delay={i * 70}>
-                <div className="flex h-full gap-4 rounded-2xl bg-card p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-lift">
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-gold font-display text-sm font-bold text-gold-foreground">{b.n}</span>
-                  <div>
-                    <p className="font-bold text-primary">{b.t}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{b.d}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <p className="mt-6 text-xs text-muted-foreground">*Scholarship percentage subject to eligibility criteria and seat availability.</p>
-        </div>
-      </section>
+      {/* ── ACESET Bento Grid Section (matching ExamReadySection / EduRev design) ── */}
+      <AcesetSection />
 
       {/* ── Boards CTA ── */}
       <section className="container-ace py-16">

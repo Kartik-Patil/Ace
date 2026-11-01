@@ -1,16 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { contact } from "@/data/ace";
 import { LogoFallback, SafeImage } from "./SafeImage";
+import { AceWord } from "./AceWord";
 
-const nav = [
-  { to: "/home", label: "ACE Experience" },
-  { to: "/admissions", label: "Join ACE" },
+interface NavItem {
+  to: string;
+  label: ReactNode;
+}
+
+const nav: NavItem[] = [
+  { to: "/home", label: <><AceWord /> Experience</> },
+  { to: "/admissions", label: <>Join <AceWord /></> },
   { to: "/courses", label: "Explore Programs" },
   { to: "/results", label: "Our Achievers" },
   { to: "/career", label: "Career" },
-] as const;
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
