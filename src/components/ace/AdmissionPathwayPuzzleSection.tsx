@@ -432,13 +432,15 @@ export function AdmissionPathwayPuzzleSection() {
             href="#enquire"
             className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-lg"
           >
-            Start Admission for {contact.admissionYear} <ArrowRight className="size-4" />
+            Enquire Now <ArrowRight className="size-4" />
           </a>
           <a
-            href={contact.phoneHref}
+            href={contact.whatsappHref}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-card px-7 py-3.5 font-bold text-primary transition hover:border-gold hover:text-gold"
           >
-            <Phone className="size-4" /> Call Admissions Team
+            <Phone className="size-4 text-emerald-600" /> WhatsApp Admissions Desk
           </a>
         </div>
       </div>

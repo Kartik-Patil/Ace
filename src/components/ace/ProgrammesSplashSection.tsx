@@ -378,7 +378,7 @@ export function ProgrammesSplashSection() {
                           onClick={(e) => e.stopPropagation()}
                           className="inline-flex items-center gap-1.5 rounded-full bg-gold px-3.5 py-1.5 text-xs font-bold text-gold-foreground transition hover:shadow-md hover:-translate-y-0.5"
                         >
-                          Enquire <ArrowRight className="size-3" />
+                          Enquire Now <ArrowRight className="size-3" />
                         </a>
                       </div>
                     </div>
@@ -409,7 +409,7 @@ export function ProgrammesSplashSection() {
                   href="#enquire"
                   className="rounded-full bg-gold px-6 py-3 text-sm font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
-                  Book Free Academic Counselling
+                  Enquire Now
                 </a>
               </div>
             </div>

@@ -9,7 +9,23 @@ export const enquirySchema = z.object({
     .trim()
     .transform((v) => v.replace(/[\s-]/g, "").replace(/^(\+91|0)/, ""))
     .refine((v) => /^[6-9]\d{9}$/.test(v), "Enter a valid 10-digit Indian mobile number"),
-  studentClass: z.enum(["Class VIII", "Class IX", "Class X"], { errorMap: () => ({ message: "Choose a class" }) }),
+  studentClass: z.enum(
+    [
+      "Class VII",
+      "Class VIII",
+      "Class IX",
+      "Class X",
+      "Class VII (7th)",
+      "Class VIII (8th)",
+      "Class IX (9th)",
+      "Class X (10th)",
+      "7th",
+      "8th",
+      "9th",
+      "10th",
+    ],
+    { errorMap: () => ({ message: "Choose a class" }) }
+  ),
   board: z.enum(["ICSE", "CBSE", "State Board"], { errorMap: () => ({ message: "Choose a board" }) }),
   program: z.string().min(1, "Choose a program"),
   notes: z.string().optional(),

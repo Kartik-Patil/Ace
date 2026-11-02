@@ -17,7 +17,7 @@ export const contact = {
   achieversYear: "2025–26",
 };
 
-export const classes = ["Class VIII", "Class IX", "Class X"] as const;
+export const classes = ["Class VII", "Class VIII", "Class IX", "Class X"] as const;
 export const boards = ["ICSE", "CBSE", "State Board"] as const;
 
 export type Program = { id: string; name: string; summary: string; detail?: string; highlight?: string };
@@ -70,7 +70,7 @@ export const achieverGroups: AchieverGroup[] = [
 ];
 
 export const faqs = [
-  { q: "Which classes does ACE teach?", a: "ACE runs programs for students of Classes VIII, IX and X." },
+  { q: "Which classes does ACE teach?", a: "ACE runs programs for students of Classes VII, VIII, IX and X." },
   { q: "Which boards do you support?", a: "We support students from ICSE, CBSE and State Board schools." },
   { q: "Are admissions open?", a: "Yes — admissions are open for Academic Year 2027–28. Send an enquiry or call +91 91484 86661 to know more." },
   { q: "What programs are offered?", a: "Bridge Course, Foundation (PCMB & Reasoning), Board Support, Curated Test Series, Math Mastery and Language Support (Kannada & Hindi)." },

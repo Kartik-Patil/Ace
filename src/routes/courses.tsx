@@ -39,7 +39,7 @@ function CoursesPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#programmes" className="rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5">View programmes</a>
               <a href="#enquire" className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold hover:border-gold hover:text-gold">
-                Enquire <ArrowRight className="size-4" aria-hidden />
+                Enquire Now <ArrowRight className="size-4" aria-hidden />
               </a>
             </div>
           </div>
@@ -138,7 +138,7 @@ function CoursesPage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#enquire" className="rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5">
-                Enquire for {contact.admissionYear}
+                Enquire Now
               </a>
               <Link to="/results" className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold hover:border-gold hover:text-gold">
                 Meet our achievers <ArrowRight className="size-4" aria-hidden />

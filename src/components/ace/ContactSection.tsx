@@ -14,11 +14,15 @@ export function ContactSection({ title }: { title?: ReactNode }) {
         <div>
           <Eyebrow>Admission enquiry · {contact.admissionYear}</Eyebrow>
           <h2 className="mt-3 text-3xl font-semibold text-primary md:text-4xl">{displayTitle}</h2>
-          <p className="mt-3 text-muted-foreground">Share a few details, or reach us directly. We teach Classes VIII, IX & X across ICSE, CBSE and State Board.</p>
+          <p className="mt-3 text-muted-foreground">Share a few details, or reach us directly. We teach Classes VII, VIII, IX & X across ICSE, CBSE and State Board.</p>
           <div className="mt-8 space-y-4">
+            <a href={contact.whatsappHref} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-card transition hover:shadow-lift">
+              <span className="grid size-11 place-items-center rounded-xl bg-emerald-600 text-white"><Phone className="size-5" aria-hidden /></span>
+              <span><span className="block text-xs text-muted-foreground">WhatsApp Admissions Desk</span><span className="font-bold text-primary">{contact.phoneDisplay}</span></span>
+            </a>
             <a href={contact.phoneHref} className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-card transition hover:shadow-lift">
               <span className="grid size-11 place-items-center rounded-xl bg-gold text-gold-foreground"><Phone className="size-5" aria-hidden /></span>
-              <span><span className="block text-xs text-muted-foreground">Call us</span><span className="font-bold text-primary">{contact.phoneDisplay}</span></span>
+              <span><span className="block text-xs text-muted-foreground">Direct Call</span><span className="font-bold text-primary">{contact.phoneDisplay}</span></span>
             </a>
             <a href={contact.mapsHref} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl bg-card p-4 shadow-card transition hover:shadow-lift">
               <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground"><MapPin className="size-5" aria-hidden /></span>

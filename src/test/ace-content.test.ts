@@ -14,7 +14,8 @@ describe("enquiry form rules", () => {
   it("rejects short phone numbers", () => {
     expect(enquirySchema.safeParse({ ...valid, phone: "12345" }).success).toBe(false);
   });
-  it("only allows classes VIII to X", () => {
+  it("allows classes VII to X", () => {
+    expect(enquirySchema.safeParse({ ...valid, studentClass: "Class VII" }).success).toBe(true);
     expect(enquirySchema.safeParse({ ...valid, studentClass: "Class XI" }).success).toBe(false);
   });
 });

@@ -492,9 +492,10 @@ export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }
                 <option value="" disabled>
                   Select class
                 </option>
-                {classes.map((c) => (
-                  <option key={c}>{c}</option>
-                ))}
+                <option value="Class VII">Class VII (7th)</option>
+                <option value="Class VIII">Class VIII (8th)</option>
+                <option value="Class IX">Class IX (9th)</option>
+                <option value="Class X">Class X (10th)</option>
               </select>
               {err("studentClass")}
             </label>

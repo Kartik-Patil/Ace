@@ -109,13 +109,15 @@ function HomePage() {
                 href="#enquire"
                 className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5"
               >
-                Enquire for admission <ArrowRight className="size-4" aria-hidden />
+                Enquire Now <ArrowRight className="size-4" aria-hidden />
               </a>
               <a
-                href={contact.phoneHref}
+                href={contact.whatsappHref}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold transition hover:border-gold hover:text-gold"
               >
-                <Phone className="size-4" aria-hidden /> {contact.phoneDisplay}
+                <Phone className="size-4 text-emerald-400" aria-hidden /> WhatsApp Us
               </a>
             </div>
           </div>
@@ -271,7 +273,7 @@ function HomePage() {
               href="#enquire"
               className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold transition hover:border-gold hover:text-gold"
             >
-              Enquire now
+              Enquire Now
             </a>
           </div>
         </Reveal>

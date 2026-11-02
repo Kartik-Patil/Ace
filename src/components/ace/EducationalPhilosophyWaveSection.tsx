@@ -317,7 +317,7 @@ export function EducationalPhilosophyWaveSection() {
             href="#enquire"
             className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-gold transition"
           >
-            ↗ Enquire for Academic Year 2027–28
+            Enquire Now →
           </a>
         </div>
       </div>

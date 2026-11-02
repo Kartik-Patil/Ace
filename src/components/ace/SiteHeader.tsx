@@ -49,16 +49,21 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* Desktop: phone + CTA */}
+        {/* Desktop: WhatsApp / call + CTA */}
         <div className="hidden items-center gap-4 lg:flex">
-          <a href={contact.phoneHref} className="flex items-center gap-2 whitespace-nowrap text-sm font-semibold text-primary">
-            <Phone className="size-4" aria-hidden /> {contact.phoneDisplay}
+          <a
+            href={contact.whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 whitespace-nowrap text-sm font-semibold text-primary transition hover:text-gold"
+          >
+            <Phone className="size-4 text-emerald-600" aria-hidden /> WhatsApp {contact.phoneDisplay}
           </a>
           <a
             href="#enquire"
             className="whitespace-nowrap rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-card"
           >
-            Enquire now
+            Enquire Now
           </a>
         </div>
 
@@ -88,15 +93,20 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <a href={contact.phoneHref} className="px-3 py-3 font-semibold text-primary">
-              Call {contact.phoneDisplay}
+            <a
+              href={contact.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3 py-3 font-semibold text-primary"
+            >
+              <Phone className="size-4 text-emerald-600" /> WhatsApp {contact.phoneDisplay}
             </a>
             <a
               href="#enquire"
               onClick={() => setOpen(false)}
               className="mt-1 rounded-full bg-gold px-5 py-3 text-center font-bold text-gold-foreground"
             >
-              Enquire now
+              Enquire Now
             </a>
           </div>
         </nav>

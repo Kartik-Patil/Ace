@@ -228,7 +228,7 @@ export function CommitmentsInfographicSection() {
               href="#enquire"
               className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              Enquire for Admission <ArrowRight className="size-3.5" />
+              Enquire Now <ArrowRight className="size-3.5" />
             </a>
           </div>
         </div>

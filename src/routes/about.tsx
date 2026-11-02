@@ -261,7 +261,7 @@ function AboutPage() {
               href="#enquire"
               className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold transition hover:border-gold hover:text-gold"
             >
-              Enquire now
+              Enquire Now
             </a>
           </div>
         </Reveal>
