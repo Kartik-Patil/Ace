@@ -15,7 +15,9 @@ import { Route as AdmissionsRouteImport } from './routes/admissions'
 import { Route as CareerRouteImport } from './routes/career'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as EventsRouteImport } from './routes/events'
 import { Route as HomeRouteImport } from './routes/home'
+import { Route as PartnerRouteImport } from './routes/partner'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as ResultsRouteImport } from './routes/results'
 
@@ -49,9 +51,19 @@ const CoursesRoute = CoursesRouteImport.update({
   path: '/courses',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HomeRoute = HomeRouteImport.update({
   id: '/home',
   path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerRoute = PartnerRouteImport.update({
+  id: '/partner',
+  path: '/partner',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsRoute = ProgramsRouteImport.update({
@@ -72,7 +84,9 @@ export interface FileRoutesByFullPath {
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
 }
@@ -83,7 +97,9 @@ export interface FileRoutesByTo {
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
 }
@@ -95,7 +111,9 @@ export interface FileRoutesById {
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
 }
@@ -108,7 +126,9 @@ export interface FileRouteTypes {
     | '/career'
     | '/contact'
     | '/courses'
+    | '/events'
     | '/home'
+    | '/partner'
     | '/programs'
     | '/results'
   fileRoutesByTo: FileRoutesByTo
@@ -119,7 +139,9 @@ export interface FileRouteTypes {
     | '/career'
     | '/contact'
     | '/courses'
+    | '/events'
     | '/home'
+    | '/partner'
     | '/programs'
     | '/results'
   id:
@@ -130,7 +152,9 @@ export interface FileRouteTypes {
     | '/career'
     | '/contact'
     | '/courses'
+    | '/events'
     | '/home'
+    | '/partner'
     | '/programs'
     | '/results'
   fileRoutesById: FileRoutesById
@@ -142,7 +166,9 @@ export interface RootRouteChildren {
   CareerRoute: typeof CareerRoute
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
+  EventsRoute: typeof EventsRoute
   HomeRoute: typeof HomeRoute
+  PartnerRoute: typeof PartnerRoute
   ProgramsRoute: typeof ProgramsRoute
   ResultsRoute: typeof ResultsRoute
 }
@@ -191,11 +217,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CoursesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/home': {
       id: '/home'
       path: '/home'
       fullPath: '/home'
       preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner': {
+      id: '/partner'
+      path: '/partner'
+      fullPath: '/partner'
+      preLoaderRoute: typeof PartnerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs': {
@@ -222,7 +262,9 @@ const rootRouteChildren: RootRouteChildren = {
   CareerRoute: CareerRoute,
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
+  EventsRoute: EventsRoute,
   HomeRoute: HomeRoute,
+  PartnerRoute: PartnerRoute,
   ProgramsRoute: ProgramsRoute,
   ResultsRoute: ResultsRoute,
 }

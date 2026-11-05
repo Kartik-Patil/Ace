@@ -5,7 +5,6 @@ import {
   MessageSquare,
   ShieldCheck,
   HeartHandshake,
-  Sparkles,
   ArrowRight,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
@@ -26,7 +25,7 @@ export function CommitmentsInfographicSection() {
   const commitments: CommitmentItem[] = [
     {
       num: "1",
-      color: "#e11d48", // Coral Red matching reference item 1
+      color: "#e11d48", // Coral Red matching reference Image 2 Item 1
       lightBg: "rgba(225, 29, 72, 0.08)",
       icon: BookOpen,
       title: "FOUNDATIONS",
@@ -36,7 +35,7 @@ export function CommitmentsInfographicSection() {
     },
     {
       num: "2",
-      color: "#0d9488", // Emerald Teal matching reference item 2
+      color: "#0d9488", // Emerald Teal matching reference Image 2 Item 2
       lightBg: "rgba(13, 148, 136, 0.08)",
       icon: FlaskConical,
       title: "BEYOND CLASSROOM",
@@ -46,7 +45,7 @@ export function CommitmentsInfographicSection() {
     },
     {
       num: "3",
-      color: "#d97706", // ACE Gold matching reference item 3 & ACE brand
+      color: "#d97706", // ACE Gold matching reference Image 2 Item 3
       lightBg: "rgba(217, 119, 6, 0.08)",
       icon: MessageSquare,
       title: "ESSENTIAL SKILLS",
@@ -66,8 +65,8 @@ export function CommitmentsInfographicSection() {
     },
     {
       num: "5",
-      color: "#7c3aed", // Royal Violet Confidence
-      lightBg: "rgba(124, 58, 237, 0.08)",
+      color: "#0284c7", // Electric Sky Blue ACE Brand
+      lightBg: "rgba(2, 132, 199, 0.08)",
       icon: HeartHandshake,
       title: "CONFIDENCE",
       shortDesc: "Timed mock drills & zero exam anxiety.",
@@ -78,10 +77,10 @@ export function CommitmentsInfographicSection() {
 
   return (
     <section className="relative overflow-hidden bg-background py-24 border-y border-border select-none">
-      {/* Background Subtle World Map Watermark matching reference image */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.035] flex items-center justify-center">
+      {/* Background Subtle World Map Watermark matching reference Image 2 */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.04] flex items-center justify-center">
         <svg viewBox="0 0 1000 500" className="w-full h-auto">
-          {/* Stylized world map contour watermark */}
+          {/* Stylized world map contour watermark matching Image 2 */}
           <path
             d="M 150,120 Q 200,80 250,110 T 320,180 T 260,260 T 210,210 Z
                M 450,90 Q 520,60 580,100 T 680,140 T 750,220 T 670,280 T 520,240 Z
@@ -128,26 +127,27 @@ export function CommitmentsInfographicSection() {
           </p>
         </Reveal>
 
-        {/* ════════════ 5-Item Interlocked Number-Circle Infographic Grid ════════════ */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-3 items-start">
-          {commitments.map((item, idx) => {
+        {/* ════════════ 5-Item Number-Circle Infographic Layout (matching Reference Image 2 with ZERO overlap) ════════════ */}
+        {/* Row 1: Top 3 Items (1, 2, 3) with spacious columns exactly matching Image 2 */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start max-w-6xl mx-auto">
+          {commitments.slice(0, 3).map((item, idx) => {
             const Icon = item.icon;
 
             return (
-              <Reveal key={item.num} variant="fade-up" delay={idx * 80}>
+              <Reveal key={item.num} variant="fade-up" delay={idx * 90}>
                 <div className="group relative flex flex-col items-center justify-start p-2 transition-all duration-300 hover:-translate-y-2">
-                  {/* Outer SVG Container (Interlocking Number + Open Circular Ring) */}
-                  <div className="relative w-full max-w-[280px] sm:max-w-[260px] lg:max-w-none aspect-[340/240]">
+                  {/* SVG Container: Giant Number + Connected Open Circular Ring */}
+                  <div className="relative w-full max-w-[320px] aspect-[340/240]">
                     <svg
                       viewBox="0 0 340 240"
                       className="w-full h-full overflow-visible filter drop-shadow-sm transition-transform duration-300 group-hover:scale-[1.02]"
                     >
-                      {/* Soft ambient background disc glow */}
-                      <circle cx="208" cy="120" r="94" fill={item.lightBg} />
+                      {/* Ambient soft background disc glow inside the circle */}
+                      <circle cx="210" cy="120" r="88" fill={item.lightBg} />
 
                       {/* Giant Solid Number on Left */}
                       <text
-                        x="72"
+                        x="70"
                         y="162"
                         textAnchor="middle"
                         fill={item.color}
@@ -159,11 +159,12 @@ export function CommitmentsInfographicSection() {
 
                       {/* 
                         Circular Ring looping seamlessly out from the giant number
-                        Starts at top-left of circle (130, 65) and loops 290° clockwise to (130, 175)
-                        Radius R=96, Center=(208, 120). ZERO overlap with inner text pod!
+                        Radius R=88, Center=(210, 120).
+                        Loop starts at (136, 68) and curves 280° clockwise to (136, 172)
+                        Leaves ample clearance so circle NEVER touches inner text!
                       */}
                       <path
-                        d="M 130 65 A 96 96 0 1 1 130 175"
+                        d="M 136 68 A 88 88 0 1 1 136 172"
                         fill="none"
                         stroke={item.color}
                         strokeWidth="4.5"
@@ -172,9 +173,9 @@ export function CommitmentsInfographicSection() {
                       />
                     </svg>
 
-                    {/* Absolute HTML Content Pod Centered inside the Ring with Strict Margins (Guaranteed 0 Overlap) */}
-                    <div className="absolute left-[61.2%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[42%] max-w-[130px] flex flex-col items-center justify-center text-center px-1 pointer-events-none select-none">
-                      {/* Icon */}
+                    {/* Absolute HTML Content Pod Centered inside the Ring (Guaranteed ZERO overlap with circular stroke) */}
+                    <div className="absolute left-[61.8%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[140px] flex flex-col items-center justify-center text-center p-1 pointer-events-none select-none">
+                      {/* Icon in white badge */}
                       <span
                         className="mb-1.5 grid size-7 place-items-center rounded-full bg-white shadow-2xs"
                         style={{ color: item.color }}
@@ -184,21 +185,21 @@ export function CommitmentsInfographicSection() {
 
                       {/* Title */}
                       <h3
-                        className="font-display font-extrabold text-[11px] leading-tight uppercase tracking-wider"
+                        className="font-display font-extrabold text-xs leading-tight uppercase tracking-wider"
                         style={{ color: item.color }}
                       >
                         {item.title}
                       </h3>
 
-                      {/* Short Description strictly fitted within circle chord */}
-                      <p className="mt-1 text-[9.5px] leading-snug text-muted-foreground font-semibold line-clamp-2">
+                      {/* Tagline */}
+                      <p className="mt-1 text-[10px] leading-snug text-muted-foreground font-semibold line-clamp-2">
                         {item.shortDesc}
                       </p>
                     </div>
                   </div>
 
-                  {/* Comprehensive Full Description below the circle (Clear, readable, spacious) */}
-                  <p className="mt-3 text-xs text-muted-foreground text-center font-medium leading-relaxed px-1">
+                  {/* Comprehensive Full Description below the circle */}
+                  <p className="mt-3 text-xs text-muted-foreground text-center font-medium leading-relaxed px-2 max-w-[280px]">
                     {item.fullDesc}
                   </p>
 
@@ -215,10 +216,93 @@ export function CommitmentsInfographicSection() {
           })}
         </div>
 
-        {/* ── Subtitle Footer Branding (matching reference image) ── */}
+        {/* Row 2: Bottom 2 Items (4, 5) centered with identical generous proportions */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-start max-w-3xl mx-auto">
+          {commitments.slice(3, 5).map((item, idx) => {
+            const Icon = item.icon;
+
+            return (
+              <Reveal key={item.num} variant="fade-up" delay={(idx + 3) * 90}>
+                <div className="group relative flex flex-col items-center justify-start p-2 transition-all duration-300 hover:-translate-y-2">
+                  {/* SVG Container: Giant Number + Connected Open Circular Ring */}
+                  <div className="relative w-full max-w-[320px] aspect-[340/240]">
+                    <svg
+                      viewBox="0 0 340 240"
+                      className="w-full h-full overflow-visible filter drop-shadow-sm transition-transform duration-300 group-hover:scale-[1.02]"
+                    >
+                      {/* Ambient soft background disc glow inside the circle */}
+                      <circle cx="210" cy="120" r="88" fill={item.lightBg} />
+
+                      {/* Giant Solid Number on Left */}
+                      <text
+                        x="70"
+                        y="162"
+                        textAnchor="middle"
+                        fill={item.color}
+                        className="font-display font-black text-[130px] select-none tracking-tighter"
+                        style={{ fontFamily: "var(--font-display, inherit)" }}
+                      >
+                        {item.num}
+                      </text>
+
+                      {/* Circular Ring */}
+                      <path
+                        d="M 136 68 A 88 88 0 1 1 136 172"
+                        fill="none"
+                        stroke={item.color}
+                        strokeWidth="4.5"
+                        strokeLinecap="round"
+                        className="transition-all duration-300 group-hover:stroke-width-[5.5]"
+                      />
+                    </svg>
+
+                    {/* Absolute HTML Content Pod Centered inside the Ring */}
+                    <div className="absolute left-[61.8%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[140px] flex flex-col items-center justify-center text-center p-1 pointer-events-none select-none">
+                      {/* Icon */}
+                      <span
+                        className="mb-1.5 grid size-7 place-items-center rounded-full bg-white shadow-2xs"
+                        style={{ color: item.color }}
+                      >
+                        <Icon className="size-4" />
+                      </span>
+
+                      {/* Title */}
+                      <h3
+                        className="font-display font-extrabold text-xs leading-tight uppercase tracking-wider"
+                        style={{ color: item.color }}
+                      >
+                        {item.title}
+                      </h3>
+
+                      {/* Tagline */}
+                      <p className="mt-1 text-[10px] leading-snug text-muted-foreground font-semibold line-clamp-2">
+                        {item.shortDesc}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Comprehensive Full Description below the circle */}
+                  <p className="mt-3 text-xs text-muted-foreground text-center font-medium leading-relaxed px-2 max-w-[280px]">
+                    {item.fullDesc}
+                  </p>
+
+                  {/* Tag Pill below card */}
+                  <span
+                    className="mt-3 inline-block rounded-full px-3 py-1 text-[10.5px] font-bold uppercase tracking-wider transition-colors duration-200"
+                    style={{ backgroundColor: item.lightBg, color: item.color }}
+                  >
+                    {item.tag}
+                  </span>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        {/* ── Subtitle Footer Branding (matching Reference Image 2) ── */}
         <div className="mt-16 pt-8 border-t border-border/80 text-center">
           <p className="font-display font-bold text-xs uppercase tracking-[0.25em] text-muted-foreground">
-            INFOGRAPHICS ELEMENTS · EDUCATIONAL COMMITMENT ECOSYSTEM
+            INFOGRAPHICS ELEMENTS · BUSINESS &amp; EDUCATIONAL PRESENTATION DESIGN
           </p>
           <p className="mt-2 text-sm font-semibold text-primary">
             From Concepts to Confidence · Guiding over 500+ students towards academic brilliance.
@@ -236,4 +320,3 @@ export function CommitmentsInfographicSection() {
     </section>
   );
 }
-

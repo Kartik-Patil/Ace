@@ -18,8 +18,13 @@ export function SiteFooter() {
         <div>
           <h2 className="text-sm font-bold uppercase tracking-widest text-gold">Explore</h2>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/admissions" className="hover:text-gold">Admissions & Achievers</Link></li>
-            <li><Link to="/courses" className="hover:text-gold">Programs</Link></li>
+            <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
+            <li><Link to="/courses" className="hover:text-gold">Courses</Link></li>
+            <li><Link to="/admissions" className="hover:text-gold">Admissions</Link></li>
+            <li><Link to="/events" className="hover:text-gold">Events</Link></li>
+            <li><Link to="/results" className="hover:text-gold">Results</Link></li>
+            <li><Link to="/career" className="hover:text-gold">Careers</Link></li>
+            <li><Link to="/partner" className="hover:text-gold">Partner with Us</Link></li>
           </ul>
         </div>
         <div>

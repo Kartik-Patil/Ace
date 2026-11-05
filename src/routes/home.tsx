@@ -15,6 +15,7 @@ import { ContactSection } from "@/components/ace/ContactSection";
 import { Reveal } from "@/components/ace/Reveal";
 import { RollingNumber } from "@/components/ace/RollingNumber";
 import { ExamReadySection } from "@/components/ace/ExamReadySection";
+import { ProgramFeaturesSection } from "@/components/ace/ProgramFeaturesSection";
 import { AceWord } from "@/components/ace/AceWord";
 import { contact } from "@/data/ace";
 import study from "@/assets/study-illustration.jpg";
@@ -153,64 +154,101 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ── About Us Section ── */}
-      <section id="about" className="container-ace scroll-mt-24 py-20">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
-          <Reveal variant="slide-left">
-            <SectionHeading
-              eyebrow={<>About Us – <AceWord /> Education, Hubballi</>}
-              title={<>Academic Excellence &amp; <span className="italic text-primary">Beyond Classroom Learning</span></>}
-            />
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+      {/* ── About Us Section (Clean editorial paragraphs, minimal negative space, no cards) ── */}
+      <section id="about" className="container-ace scroll-mt-24 py-12 sm:py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Header & Badges */}
+          <div className="border-b-2 border-border/80 pb-6">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-primary flex flex-wrap items-center gap-3">
+              <span className="h-1 w-8 bg-gold inline-block rounded-full" />
+              About Us – <AceWord /> Education, Hubballi
+            </h2>
+            <h3 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary">
+              From Concepts <span className="italic text-gold">to Confidence</span>
+            </h3>
+            <p className="mt-3 text-base sm:text-lg font-bold text-muted-foreground flex flex-wrap items-center gap-x-3.5 gap-y-1.5">
+              <span className="text-primary font-bold">Established in 2022</span>
+              <span className="text-gold font-black text-lg">|</span>
+              <span className="text-primary font-bold">500+ Students</span>
+              <span className="text-gold font-black text-lg">|</span>
+              <span className="text-primary font-bold">Academic Excellence &amp; Beyond Classroom Learning</span>
+            </p>
+          </div>
+
+          {/* Flowing Narrative Paragraphs */}
+          <div className="mt-6 space-y-3.5 text-sm sm:text-base leading-relaxed text-foreground/90 font-medium">
+            <p className="text-base sm:text-lg font-semibold text-primary leading-snug border-l-3 border-gold pl-3.5 py-0.5">
+              At <AceWord /> Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
+            </p>
+            <p>
               Established in 2022, <AceWord /> has grown into a dedicated learning centre, having guided and supported 500+ students on their academic journey. We are committed to nurturing young minds through quality education, personalised mentoring and a strong foundation in essential academic concepts.
             </p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              We specialise in Foundation Programmes and Board Examination Support for Classes 8, 9 and 10, with a focus on building conceptual clarity, strengthening analytical abilities and developing problem-solving skills.
+            <p>
+              We specialise in <strong className="text-primary font-bold">Foundation Programmes and Board Examination Support</strong> for Classes 8, 9 and 10, with a focus on building conceptual clarity, strengthening analytical abilities and developing problem-solving skills.
             </p>
-          </Reveal>
+            <p>
+              At <AceWord />, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
+            </p>
+            <p>
+              Our approach focuses not just on helping students score better marks but also on developing confidence, discipline, critical thinking and independent learning abilities that prepare them for future academic challenges.
+            </p>
+          </div>
 
-          <Reveal variant="slide-right">
-            <div className="space-y-6">
-              <div className="group rounded-2xl border-2 border-sky-border/40 bg-card p-7 transition duration-300 hover:-translate-y-1 hover:border-sky-border hover:shadow-card">
-                <div className="flex items-center justify-between">
-                  <span className="grid size-11 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-                    <Sparkles className="size-5 text-gold" aria-hidden />
-                  </span>
-                  <span className="rounded-full bg-sky px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary border border-sky-border/30">
-                    Interactive Learning
-                  </span>
-                </div>
-                <h3 className="mt-4 font-display text-xl font-bold text-primary">
-                  Beyond Textbooks &amp; Classroom Teaching
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  At <AceWord />, education goes beyond textbooks and classroom teaching. We integrate interactive teaching methodologies, experiment-based learning, practical activities and skill development to make learning meaningful, engaging and effective.
-                </p>
-              </div>
-
-              <div className="group rounded-2xl border-2 border-sky-border/40 bg-sky/70 p-7 transition duration-300 hover:-translate-y-1 hover:border-sky-border hover:shadow-card">
-                <div className="flex items-center justify-between">
-                  <span className="grid size-11 place-items-center rounded-xl bg-gold text-gold-foreground shadow-sm">
-                    <Trophy className="size-5" aria-hidden />
-                  </span>
-                  <span className="rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-gold-foreground">
-                    Future Readiness
-                  </span>
-                </div>
-                <h3 className="mt-4 font-display text-xl font-bold text-primary">
-                  Preparing for Future Academic Challenges
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Our approach focuses not just on helping students score better marks but also on developing confidence, discipline, critical thinking and independent learning abilities that prepare them for future academic challenges.
-                </p>
-              </div>
+          {/* ── WHY ACE? Strive List (Noticeable Large Headings, clean bulleted format, no cards) ── */}
+          <div className="mt-10 border-t-2 border-border/80 pt-8">
+            <div>
+              <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary flex items-center gap-3">
+                <span className="h-1 w-8 bg-gold inline-block rounded-full" />
+                WHY <span className="text-gold"><AceWord />?</span>
+              </h3>
+              <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90">
+                At <AceWord />, we strive to:
+              </p>
             </div>
-          </Reveal>
+
+            <ul className="mt-5 space-y-3 text-sm sm:text-base leading-relaxed text-foreground/90 font-medium">
+              <li className="flex items-start gap-3">
+                <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
+                <span>
+                  <strong className="text-primary font-bold text-base sm:text-lg">Build Strong Foundations:</strong>{" "}
+                  Develop conceptual understanding in Physics, Chemistry, Mathematics and Biology.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
+                <span>
+                  <strong className="text-primary font-bold text-base sm:text-lg">Promote Beyond Classroom Learning:</strong>{" "}
+                  Encourage experiential, activity-based and application-oriented learning.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
+                <span>
+                  <strong className="text-primary font-bold text-base sm:text-lg">Develop Essential Skills:</strong>{" "}
+                  Strengthen communication, analytical thinking, creativity and problem-solving abilities.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
+                <span>
+                  <strong className="text-primary font-bold text-base sm:text-lg">Ensure Academic Excellence:</strong>{" "}
+                  Provide structured Board Support and Foundation training to improve academic performance.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
+                <span>
+                  <strong className="text-primary font-bold text-base sm:text-lg">Build Confidence:</strong>{" "}
+                  Help students overcome examination fear through regular assessments, mentoring and personalised guidance.
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* ── Everything you need for your Exam at one place (Bento Grid) ── */}
-      <ExamReadySection />
+      {/* ── Everything you need for your Exam at one place (Bento Grid) - Commented Out ── */}
+      {/* <ExamReadySection /> */}
 
       {/* ── Vision & Mission ── */}
       <section className="container-ace py-20">
@@ -248,6 +286,9 @@ function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* ── Features of the Program: Education Beyond the Classroom ── */}
+      <ProgramFeaturesSection />
 
       {/* ── CTA band ── */}
       <section className="bg-navy-pattern py-16 text-navy-foreground">

@@ -128,20 +128,20 @@ export function EducationalPhilosophyWaveSection() {
       </div>
 
       <div className="container-ace relative z-10">
-        {/* ── Section Header (Minimalist & Modern, matching reference) ── */}
+        {/* ── Section Header (Minimalist & Modern, matching Reference Image 1) ── */}
         <Reveal variant="fade-up" className="text-center max-w-3xl mx-auto">
           <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-sky-border mb-3">
-            <span className="w-6 h-0.5 bg-sky-border inline-block" />
-            Our Educational Philosophy
-            <span className="w-6 h-0.5 bg-sky-border inline-block" />
+            <span>—</span>
+            <span>ACE EDUCATION · HUBBALLI</span>
+            <span>—</span>
           </p>
 
-          <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-primary">
-            Learning Begins with Curiosity.
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary">
+            Our Educational Philosophy.
           </h2>
 
           <p className="mt-3 font-display text-2xl sm:text-3xl font-bold tracking-tight text-gold">
-            Excellence Follows with Confidence.
+            Learning Begins with Curiosity. Excellence Follows with Confidence.
           </p>
 
           <p className="mt-4 text-sm sm:text-base text-muted-foreground font-medium max-w-2xl mx-auto">
@@ -306,18 +306,19 @@ export function EducationalPhilosophyWaveSection() {
           </div>
         </div>
 
-        {/* ── Bottom Reference Footer Bar (matching reference layout) ── */}
+        {/* ── Bottom Reference Footer Bar (matching Reference Image 1) ── */}
         <div className="mt-16 pt-6 border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-muted-foreground">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-primary">ACE EDUCATION HUBBALLI</span>
+            <span className="font-bold text-primary font-display text-sm">2022 ace education.</span>
             <span>·</span>
             <span>From Concepts to Confidence</span>
           </div>
           <a
             href="#enquire"
-            className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-gold transition"
+            className="inline-flex items-center gap-1.5 font-bold text-primary hover:text-gold transition group"
           >
-            Enquire Now →
+            <span>↗</span>
+            <span className="group-hover:underline">Enquire Now · hubballi@ace.in</span>
           </a>
         </div>
       </div>
