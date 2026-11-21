@@ -12,14 +12,18 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AdmissionsRouteImport } from './routes/admissions'
+import { Route as AsetTestRouteImport } from './routes/aset-test'
+import { Route as BoardPrepRouteImport } from './routes/board-prep'
 import { Route as CareerRouteImport } from './routes/career'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as HomeRouteImport } from './routes/home'
+import { Route as LanguageAssistanceRouteImport } from './routes/language-assistance'
 import { Route as PartnerRouteImport } from './routes/partner'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as ResultsRouteImport } from './routes/results'
+import { Route as StemFoundationRouteImport } from './routes/stem-foundation'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,6 +38,16 @@ const AboutRoute = AboutRouteImport.update({
 const AdmissionsRoute = AdmissionsRouteImport.update({
   id: '/admissions',
   path: '/admissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AsetTestRoute = AsetTestRouteImport.update({
+  id: '/aset-test',
+  path: '/aset-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoardPrepRoute = BoardPrepRouteImport.update({
+  id: '/board-prep',
+  path: '/board-prep',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CareerRoute = CareerRouteImport.update({
@@ -61,6 +75,11 @@ const HomeRoute = HomeRouteImport.update({
   path: '/home',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LanguageAssistanceRoute = LanguageAssistanceRouteImport.update({
+  id: '/language-assistance',
+  path: '/language-assistance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PartnerRoute = PartnerRouteImport.update({
   id: '/partner',
   path: '/partner',
@@ -76,46 +95,63 @@ const ResultsRoute = ResultsRouteImport.update({
   path: '/results',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StemFoundationRoute = StemFoundationRouteImport.update({
+  id: '/stem-foundation',
+  path: '/stem-foundation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/aset-test': typeof AsetTestRoute
+  '/board-prep': typeof BoardPrepRoute
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/language-assistance': typeof LanguageAssistanceRoute
   '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
+  '/stem-foundation': typeof StemFoundationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/aset-test': typeof AsetTestRoute
+  '/board-prep': typeof BoardPrepRoute
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/language-assistance': typeof LanguageAssistanceRoute
   '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
+  '/stem-foundation': typeof StemFoundationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/admissions': typeof AdmissionsRoute
+  '/aset-test': typeof AsetTestRoute
+  '/board-prep': typeof BoardPrepRoute
   '/career': typeof CareerRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/home': typeof HomeRoute
+  '/language-assistance': typeof LanguageAssistanceRoute
   '/partner': typeof PartnerRoute
   '/programs': typeof ProgramsRoute
   '/results': typeof ResultsRoute
+  '/stem-foundation': typeof StemFoundationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -123,54 +159,70 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/admissions'
+    | '/aset-test'
+    | '/board-prep'
     | '/career'
     | '/contact'
     | '/courses'
     | '/events'
     | '/home'
+    | '/language-assistance'
     | '/partner'
     | '/programs'
     | '/results'
+    | '/stem-foundation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/admissions'
+    | '/aset-test'
+    | '/board-prep'
     | '/career'
     | '/contact'
     | '/courses'
     | '/events'
     | '/home'
+    | '/language-assistance'
     | '/partner'
     | '/programs'
     | '/results'
+    | '/stem-foundation'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/admissions'
+    | '/aset-test'
+    | '/board-prep'
     | '/career'
     | '/contact'
     | '/courses'
     | '/events'
     | '/home'
+    | '/language-assistance'
     | '/partner'
     | '/programs'
     | '/results'
+    | '/stem-foundation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AdmissionsRoute: typeof AdmissionsRoute
+  AsetTestRoute: typeof AsetTestRoute
+  BoardPrepRoute: typeof BoardPrepRoute
   CareerRoute: typeof CareerRoute
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   EventsRoute: typeof EventsRoute
   HomeRoute: typeof HomeRoute
+  LanguageAssistanceRoute: typeof LanguageAssistanceRoute
   PartnerRoute: typeof PartnerRoute
   ProgramsRoute: typeof ProgramsRoute
   ResultsRoute: typeof ResultsRoute
+  StemFoundationRoute: typeof StemFoundationRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -194,6 +246,20 @@ declare module '@tanstack/react-router' {
       path: '/admissions'
       fullPath: '/admissions'
       preLoaderRoute: typeof AdmissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aset-test': {
+      id: '/aset-test'
+      path: '/aset-test'
+      fullPath: '/aset-test'
+      preLoaderRoute: typeof AsetTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/board-prep': {
+      id: '/board-prep'
+      path: '/board-prep'
+      fullPath: '/board-prep'
+      preLoaderRoute: typeof BoardPrepRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/career': {
@@ -231,6 +297,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/language-assistance': {
+      id: '/language-assistance'
+      path: '/language-assistance'
+      fullPath: '/language-assistance'
+      preLoaderRoute: typeof LanguageAssistanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/partner': {
       id: '/partner'
       path: '/partner'
@@ -252,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResultsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stem-foundation': {
+      id: '/stem-foundation'
+      path: '/stem-foundation'
+      fullPath: '/stem-foundation'
+      preLoaderRoute: typeof StemFoundationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -259,14 +339,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AdmissionsRoute: AdmissionsRoute,
+  AsetTestRoute: AsetTestRoute,
+  BoardPrepRoute: BoardPrepRoute,
   CareerRoute: CareerRoute,
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   EventsRoute: EventsRoute,
   HomeRoute: HomeRoute,
+  LanguageAssistanceRoute: LanguageAssistanceRoute,
   PartnerRoute: PartnerRoute,
   ProgramsRoute: ProgramsRoute,
   ResultsRoute: ResultsRoute,
+  StemFoundationRoute: StemFoundationRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

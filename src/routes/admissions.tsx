@@ -35,9 +35,12 @@ export const Route = createFileRoute("/admissions")({
 });
 
 export function AdmissionsPage() {
+  // ── Entire Admissions page commented out as requested ──
+  return null;
+
+  /*
   return (
     <>
-      {/* ── Hero: Why Parents Choose ACE ── */}
       <section className="relative overflow-hidden bg-navy-pattern text-navy-foreground">
         <div className="container-ace grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.1fr_1fr]">
           <div className="fade-up">
@@ -64,11 +67,10 @@ export function AdmissionsPage() {
                 </svg>
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed opacity-90 font-medium">
+            <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed opacity-90 font-medium text-justify">
               At <AceWord dark /> Education, Hubballi, we believe every child possesses the potential to achieve extraordinary things when guided with purposeful mentorship, conceptual clarity and an inspiring learning environment.
             </p>
 
-            {/* Quick Proof Pills */}
             <div className="mt-6 flex flex-wrap gap-2.5 text-xs font-bold text-gold">
               <span className="rounded-full bg-white/10 px-3 py-1.5 border border-white/15">
                 ★ 500+ Students Guided
@@ -102,7 +104,6 @@ export function AdmissionsPage() {
             </div>
           </div>
 
-          {/* Right Hero Image Card */}
           <div className="relative fade-up [animation-delay:150ms]">
             <div className="relative overflow-hidden rounded-3xl border-4 border-gold/70 shadow-lift">
               <img
@@ -121,7 +122,6 @@ export function AdmissionsPage() {
               </div>
             </div>
 
-            {/* Floating Trust Badge */}
             <div className="absolute -bottom-5 -left-4 sm:left-4 rounded-2xl bg-card p-4 text-card-foreground shadow-lift border border-border">
               <div className="flex items-center gap-3">
                 <div className="grid size-11 place-items-center rounded-xl bg-gold text-gold-foreground font-black text-xl">
@@ -137,7 +137,6 @@ export function AdmissionsPage() {
         </div>
       </section>
 
-      {/* ── Quick Program & Board Strip ── */}
       <Reveal variant="fade-in">
         <section className="border-b bg-card py-5">
           <div className="container-ace flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm font-semibold text-primary">
@@ -159,19 +158,14 @@ export function AdmissionsPage() {
         </section>
       </Reveal>
 
-      {/* ── Section 1: What Makes ACE Different? (Radial Fan Infographic Design) ── */}
       <WhyParentsTrustRadialSection />
 
-      {/* ── Section 2: Educational Philosophy (Continuous Sine-Wave Process Journey) ── */}
       <EducationalPhilosophyWaveSection />
 
-      {/* ── Section 3: Our 5 Unwavering Commitments (Interlocked Number-Circle Infographic) ── */}
       <CommitmentsInfographicSection />
 
-      {/* ── Section 4: 3-Step Admission Pathway (Interlocking Jigsaw Puzzle Infographic) ── */}
       <AdmissionPathwayPuzzleSection />
 
-      {/* ── Section 5: Parent FAQs ── */}
       <section className="container-ace grid gap-10 py-20 lg:grid-cols-[1fr_1.5fr]">
         <Reveal variant="slide-left">
           <SectionHeading
@@ -197,8 +191,8 @@ export function AdmissionsPage() {
         </Reveal>
       </section>
 
-      {/* ── Enquiry Contact Form ── */}
       <ContactSection title={`Enquire for Admission (${contact.admissionYear})`} />
     </>
   );
+  */
 }

@@ -389,7 +389,7 @@ export function ProgrammesSplashSection() {
           })}
         </div>
 
-        {/* ── Combined Learning Roadmap Bar ── */}
+        {/* ── Combined Learning Roadmap Bar (Commented out) ──
         <Reveal variant="fade-up" delay={500} className="mt-16">
           <div className="rounded-3xl border-2 border-gold/40 bg-navy-pattern p-6 sm:p-8 text-navy-foreground shadow-lift">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -415,6 +415,7 @@ export function ProgrammesSplashSection() {
             </div>
           </div>
         </Reveal>
+        */}
       </div>
     </section>
   );

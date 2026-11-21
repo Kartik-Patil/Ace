@@ -21,14 +21,15 @@ describe("enquiry form rules", () => {
 });
 
 describe("flyer content", () => {
-  it("lists 11 achievers grouped as on the flyer", () => {
-    expect(achieverGroups.map((g) => g.students.length)).toEqual([4, 4, 2, 1]);
+  it("lists 12 achievers grouped as on the flyer", () => {
+    expect(achieverGroups.map((g) => g.students.length)).toEqual([4, 4, 3, 1]);
   });
   it("keeps scores exactly as printed", () => {
     const all = achieverGroups.flatMap((g) => g.students);
     expect(all.find((s) => s.name === "Tejas Onimani")?.score).toBe("97%");
     expect(all.find((s) => s.name === "Mohammad Ayaan")?.score).toBe("98.03");
     expect(all.find((s) => s.name === "Niranjan K")?.institution).toBe("IIT Mumbai");
+    expect(all.find((s) => s.name === "Anup Naik")?.score).toBe("83%");
   });
   it("uses the flyer phone number", () => {
     expect(contact.phoneHref).toBe("tel:+919148486661");

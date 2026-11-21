@@ -14,6 +14,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/ace/SiteHeader";
 import { SiteFooter } from "@/components/ace/SiteFooter";
+import { FloatingActions } from "@/components/ace/FloatingActions";
+import { EnquiryModalProvider } from "@/context/EnquiryModalContext";
+import { EnquiryModal } from "@/components/ace/EnquiryModal";
 
 function NotFoundComponent() {
   return (
@@ -121,12 +124,16 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteHeader />
-      <main>
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-      </main>
-      <SiteFooter />
+      <EnquiryModalProvider>
+        <SiteHeader />
+        <main>
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <SiteFooter />
+        <FloatingActions />
+        <EnquiryModal />
+      </EnquiryModalProvider>
     </QueryClientProvider>
   );
 }

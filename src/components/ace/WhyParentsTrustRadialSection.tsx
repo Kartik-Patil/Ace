@@ -469,7 +469,7 @@ export function WhyParentsTrustRadialSection() {
                     <h4 className="mt-1 font-display text-xl sm:text-2xl font-bold text-primary">
                       {currentActiveReason.title}
                     </h4>
-                    <p className="mt-1 text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl">
+                    <p className="mt-1 text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl text-justify">
                       {currentActiveReason.description}
                     </p>
                   </div>
@@ -528,7 +528,7 @@ export function WhyParentsTrustRadialSection() {
                     </span>
                   </div>
 
-                  <p className="mt-2.5 text-xs text-white/90 leading-relaxed font-medium">
+                  <p className="mt-2.5 text-xs text-white/90 leading-relaxed font-medium text-justify">
                     {item.description}
                   </p>
 

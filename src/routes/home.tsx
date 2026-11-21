@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import {
   ArrowRight,
   Phone,
@@ -17,10 +17,14 @@ import { RollingNumber } from "@/components/ace/RollingNumber";
 import { ExamReadySection } from "@/components/ace/ExamReadySection";
 import { ProgramFeaturesSection } from "@/components/ace/ProgramFeaturesSection";
 import { AceWord } from "@/components/ace/AceWord";
+import { VisionMissionValuesSection } from "@/components/ace/VisionMissionValuesSection";
 import { contact } from "@/data/ace";
-import study from "@/assets/study-illustration.jpg";
+import aboutBanner from "@/assets/about-banner.jpg";
 
 export const Route = createFileRoute("/home")({
+  beforeLoad: () => {
+    throw redirect({ to: "/about" });
+  },
   head: () => ({
     meta: [
       { title: "ACE Experience | ACE – Education Redefined, Hubballi" },
@@ -102,7 +106,7 @@ function HomePage() {
             <h1 className="mt-6 text-5xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
               From Concepts <span className="italic text-gold">to Confidence.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90 text-justify">
               At <AceWord dark /> Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -124,11 +128,11 @@ function HomePage() {
           </div>
           <div className="relative fade-up [animation-delay:150ms]">
             <img
-              src={study}
-              alt="Students studying science and maths together"
-              width={1280}
-              height={960}
-              className="rounded-3xl border-4 border-gold/70 object-cover shadow-lift"
+              src={aboutBanner}
+              alt="Academic Centre for Eduxcellence – Foundation for Class 7, 8, 9 & 10"
+              width={1024}
+              height={344}
+              className="rounded-3xl border-4 border-gold/70 object-cover shadow-lift w-full h-auto"
             />
             <div className="absolute -bottom-6 left-6 rounded-2xl bg-card p-4 text-card-foreground shadow-lift">
               <p className="font-display text-3xl font-bold text-primary">
@@ -156,7 +160,7 @@ function HomePage() {
 
       {/* ── About Us Section (Clean editorial paragraphs, minimal negative space, no cards) ── */}
       <section id="about" className="container-ace scroll-mt-24 py-12 sm:py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full">
           {/* Header & Badges */}
           <div className="border-b-2 border-border/80 pb-6">
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-primary flex flex-wrap items-center gap-3">
@@ -176,8 +180,8 @@ function HomePage() {
           </div>
 
           {/* Flowing Narrative Paragraphs */}
-          <div className="mt-6 space-y-3.5 text-sm sm:text-base leading-relaxed text-foreground/90 font-medium">
-            <p className="text-base sm:text-lg font-semibold text-primary leading-snug border-l-3 border-gold pl-3.5 py-0.5">
+          <div className="mt-6 space-y-3.5 text-sm sm:text-base leading-relaxed text-foreground/90 font-medium text-justify">
+            <p className="text-base sm:text-lg font-semibold text-primary leading-snug border-l-3 border-gold pl-3.5 py-0.5 text-justify">
               At <AceWord /> Education, Hubballi, we believe that every student has the potential to excel when guided with the right knowledge, mentorship and learning environment.
             </p>
             <p>
@@ -199,7 +203,7 @@ function HomePage() {
             <div>
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary flex items-center gap-3">
                 <span className="h-1 w-8 bg-gold inline-block rounded-full" />
-                WHY <span className="text-gold"><AceWord />?</span>
+                WHY <AceWord />
               </h3>
               <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90">
                 At <AceWord />, we strive to:
@@ -209,35 +213,35 @@ function HomePage() {
             <ul className="mt-5 space-y-3 text-sm sm:text-base leading-relaxed text-foreground/90 font-medium">
               <li className="flex items-start gap-3">
                 <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
-                <span>
+                <span className="text-justify w-full">
                   <strong className="text-primary font-bold text-base sm:text-lg">Build Strong Foundations:</strong>{" "}
                   Develop conceptual understanding in Physics, Chemistry, Mathematics and Biology.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
-                <span>
+                <span className="text-justify w-full">
                   <strong className="text-primary font-bold text-base sm:text-lg">Promote Beyond Classroom Learning:</strong>{" "}
                   Encourage experiential, activity-based and application-oriented learning.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
-                <span>
+                <span className="text-justify w-full">
                   <strong className="text-primary font-bold text-base sm:text-lg">Develop Essential Skills:</strong>{" "}
                   Strengthen communication, analytical thinking, creativity and problem-solving abilities.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
-                <span>
+                <span className="text-justify w-full">
                   <strong className="text-primary font-bold text-base sm:text-lg">Ensure Academic Excellence:</strong>{" "}
                   Provide structured Board Support and Foundation training to improve academic performance.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="size-2 rounded-full bg-gold shrink-0 mt-2.5" />
-                <span>
+                <span className="text-justify w-full">
                   <strong className="text-primary font-bold text-base sm:text-lg">Build Confidence:</strong>{" "}
                   Help students overcome examination fear through regular assessments, mentoring and personalised guidance.
                 </span>
@@ -250,42 +254,8 @@ function HomePage() {
       {/* ── Everything you need for your Exam at one place (Bento Grid) - Commented Out ── */}
       {/* <ExamReadySection /> */}
 
-      {/* ── Vision & Mission ── */}
-      <section className="container-ace py-20">
-        <Reveal variant="fade-up">
-          <SectionHeading
-            eyebrow="Guiding Principles"
-            title="Our Vision &amp; Mission"
-          />
-        </Reveal>
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {/* Vision */}
-          <Reveal variant="slide-left">
-            <div className="h-full rounded-3xl bg-navy-pattern p-8 text-navy-foreground border-2 border-gold/40 shadow-lift flex flex-col justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Our Vision</p>
-                <h3 className="mt-3 text-2xl font-bold">Nurturing Confident Learners</h3>
-                <p className="mt-4 text-base leading-relaxed opacity-90">
-                  To nurture confident, knowledgeable and independent learners by creating an enriching academic environment that inspires curiosity, builds competence and prepares students for a successful future.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Mission */}
-          <Reveal variant="slide-right">
-            <div className="h-full rounded-3xl border-2 border-sky-border bg-sky p-8 shadow-lift flex flex-col justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-border">Our Mission</p>
-                <h3 className="mt-3 text-2xl font-bold text-primary">Empowering Academic Excellence</h3>
-                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  To deliver quality education through innovative teaching, strong conceptual foundations, individual attention and holistic skill development, empowering every student to achieve their academic goals and excel beyond the classroom.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {/* ── Vision, Mission & Values (Curved Infographic Design) ── */}
+      <VisionMissionValuesSection />
 
       {/* ── Features of the Program: Education Beyond the Classroom ── */}
       <ProgramFeaturesSection />
@@ -298,21 +268,15 @@ function HomePage() {
             Your Ambition, <span className="italic text-gold">Our Foundation.</span>
           </h2>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-gold-foreground bg-gold px-6 py-2 rounded-full mt-1">
-            Learn. Lead. Excel.
+            Explore. Experience. Excel.
           </p>
           <p className="max-w-xl opacity-85 mt-2">
             Discover the right programme for your child and take the first step towards stronger concepts, sharper thinking and greater confidence.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-4">
-            <Link
-              to="/courses"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5"
-            >
-              Explore programmes <ArrowRight className="size-4" aria-hidden />
-            </Link>
             <a
               href="#enquire"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold transition hover:border-gold hover:text-gold"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-card"
             >
               Enquire Now
             </a>

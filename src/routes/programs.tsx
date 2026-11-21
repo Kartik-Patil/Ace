@@ -35,7 +35,7 @@ function ProgramsPage() {
           <div className="fade-up">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Programs for Class VIII, IX & X</p>
             <h1 className="mt-4 text-5xl font-semibold leading-[1.05] md:text-6xl">Learning that grows <span className="italic text-gold">with every class.</span></h1>
-            <p className="mt-6 max-w-xl text-lg opacity-85">From closing gaps to building competitive strength, ACE's programs take students from concepts to confidence — for ICSE, CBSE and State Board.</p>
+            <p className="mt-6 max-w-xl text-lg opacity-85 text-justify">From closing gaps to building competitive strength, ACE's programs take students from concepts to confidence — for ICSE, CBSE and State Board.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#programs" className="rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5">Explore programs</a>
               <a href="#enquire" className="inline-flex items-center gap-2 rounded-full border-2 border-navy-foreground/40 px-7 py-3.5 font-bold hover:border-gold hover:text-gold">Enquire Now <ArrowRight className="size-4" aria-hidden /></a>
@@ -79,7 +79,7 @@ function ProgramsPage() {
                   <li key={x} className="flex gap-3"><CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden />{x}</li>
                 ))}
               </ul>
-              <Link to="/admissions" hash="achievers" className="mt-5 inline-flex items-center gap-1 font-bold text-sky-border">Meet the achievers <ArrowRight className="size-4" aria-hidden /></Link>
+              <Link to="/results" hash="achievers" className="mt-5 inline-flex items-center gap-1 font-bold text-sky-border">Meet the achievers <ArrowRight className="size-4" aria-hidden /></Link>
             </div>
           </div>
         </div>

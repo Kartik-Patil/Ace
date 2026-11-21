@@ -33,7 +33,7 @@ interface SubmissionDetails {
 }
 
 const fieldClass =
-  "mt-1.5 w-full rounded-xl border border-input bg-card px-4 py-3 text-sm outline-none transition focus:border-sky-border focus:ring-2 focus:ring-ring/30 aria-[invalid=true]:border-destructive disabled:opacity-60 disabled:cursor-not-allowed";
+  "mt-1 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2 sm:py-2.5 text-xs sm:text-sm outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20 aria-[invalid=true]:border-destructive disabled:opacity-60 disabled:cursor-not-allowed";
 
 export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }) {
   // Email & OTP States
@@ -118,7 +118,10 @@ export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!isVerified) {
-      setEmailError("Please verify your email with OTP before submitting.");
+      if (!otpSent) {
+        handleSendOtp();
+      }
+      setEmailError("Please verify your email with the 6-digit OTP code to submit.");
       return;
     }
 
@@ -275,289 +278,217 @@ export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }
   });
 
   return (
-    <div className="rounded-3xl border-2 border-sky-border/40 bg-card p-6 shadow-card md:p-8">
+    <div className="rounded-3xl border-2 border-amber-300/80 bg-white p-5 sm:p-6 shadow-sm">
       {/* ── Form Header ── */}
-      <div className="border-b pb-5">
-        <div className="flex items-center justify-between">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-sky px-3 py-1 text-xs font-bold text-primary">
-            <ShieldCheck className="size-4 text-sky-border" /> Official Enquiry Form
-          </span>
-          <span className="text-xs font-semibold text-muted-foreground">Academic Year {contact.admissionYear}</span>
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-amber-100 pb-3">
+        <div className="flex items-center gap-2">
+
+
         </div>
-        <h3 className="mt-2 text-xl font-bold text-primary">Begin Your Admission Process</h3>
-        <p className="text-xs text-muted-foreground">
-          Step 1: Verify your email with a 6-digit OTP to unlock the admission enquiry details.
-        </p>
+        {isVerified && (
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-bold text-emerald-800">
+            <CheckCircle2 className="size-3" /> Email Verified
+          </span>
+        )}
       </div>
 
-      {/* ── STEP 1: Email & OTP Verification ── */}
-      <div className="mt-6 rounded-2xl border-2 border-dashed border-sky-border/50 bg-sky/40 p-5">
-        <div className="flex items-center justify-between">
-          <label className="text-sm font-bold text-primary flex items-center gap-2">
-            <Mail className="size-4 text-sky-border" />
-            <span>Parent / Student Email Address</span>
-            <span className="text-destructive">*</span>
+      <form onSubmit={onSubmit} noValidate className="mt-4 space-y-3.5">
+        {/* Row 1: Student Name & Parent Name */}
+        <div className="grid gap-3 sm:grid-cols-2">
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Student Full Name <span className="text-destructive">*</span>
+            <input
+              name="studentName"
+              autoComplete="off"
+              placeholder="e.g. Rahul Patil"
+              className={fieldClass}
+              {...aria("studentName")}
+            />
+            {err("studentName")}
           </label>
-          {isVerified && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-800">
-              <CheckCircle2 className="size-3.5" /> Verified
-            </span>
-          )}
+
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Parent / Guardian Name <span className="text-destructive">*</span>
+            <input
+              name="parentName"
+              autoComplete="name"
+              placeholder="e.g. Suresh Patil"
+              className={fieldClass}
+              {...aria("parentName")}
+            />
+            {err("parentName")}
+          </label>
         </div>
 
-        {!isVerified ? (
-          <div className="mt-3 space-y-4">
-            <div className="flex flex-col gap-2 sm:flex-row">
+        {/* Row 2: Mobile Number & Email Address */}
+        <div className="grid gap-3 sm:grid-cols-2">
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Mobile Number (WhatsApp) <span className="text-destructive">*</span>
+            <div className="relative mt-1">
+              <span className="absolute left-3.5 top-2 sm:top-2.5 text-xs sm:text-sm font-bold text-muted-foreground">
+                +91
+              </span>
               <input
-                type="email"
-                disabled={otpSent}
-                value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
-                placeholder="Enter your email address (e.g. name@example.com)"
-                className={fieldClass}
+                name="phone"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="98765 43210"
+                className={`${fieldClass} pl-12 mt-0`}
+                {...aria("phone")}
               />
-              {!otpSent ? (
+            </div>
+            {err("phone")}
+          </label>
+
+          <div>
+            <div className="flex items-center justify-between text-xs sm:text-sm font-semibold text-primary">
+              <label htmlFor="email-input">
+                Email Address <span className="text-destructive">*</span>
+              </label>
+              {isVerified ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsVerified(false);
+                    setOtpSent(false);
+                    setEnteredOtp("");
+                  }}
+                  className="text-xs text-muted-foreground hover:text-primary underline font-normal"
+                >
+                  Change
+                </button>
+              ) : null}
+            </div>
+            <div className="relative mt-1 flex gap-2">
+              <input
+                id="email-input"
+                type="email"
+                disabled={isVerified}
+                value={emailInput}
+                onChange={(e) => {
+                  setEmailInput(e.target.value);
+                  setEmail(e.target.value);
+                }}
+                placeholder="name@example.com"
+                className={`${fieldClass} mt-0 flex-1`}
+              />
+              {!isVerified && (
                 <button
                   type="button"
                   onClick={handleSendOtp}
                   disabled={isSending}
-                  className="mt-1.5 whitespace-nowrap rounded-xl bg-primary px-6 py-3 text-sm font-bold text-primary-foreground transition hover:opacity-90 disabled:opacity-50"
+                  className="whitespace-nowrap rounded-xl bg-navy px-3.5 py-2 text-xs font-bold text-white transition hover:bg-primary disabled:opacity-50 shrink-0"
                 >
-                  {isSending ? "Sending OTP..." : "Send OTP"}
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setOtpSent(false);
-                    setEnteredOtp("");
-                    setOtpError(null);
-                  }}
-                  className="mt-1.5 whitespace-nowrap rounded-xl border border-input bg-card px-4 py-3 text-xs font-semibold text-muted-foreground hover:bg-secondary"
-                >
-                  Change Email
+                  {isSending ? "Sending..." : otpSent ? "Resend" : "Send OTP"}
                 </button>
               )}
             </div>
-            {emailError && <p className="text-xs font-medium text-destructive">{emailError}</p>}
-
-            {/* OTP Entry Box */}
-            {otpSent && (
-              <div className="rounded-xl border border-sky-border/50 bg-card p-4 transition-all">
-                {/* Dispatch Status Banner */}
-                <div className="flex items-start gap-3 rounded-lg bg-emerald-50 p-3.5 text-xs text-emerald-900 border border-emerald-200">
-                  <Send className="size-4 shrink-0 mt-0.5 text-emerald-600" />
-                  <div>
-                    <p className="font-bold">Verification code dispatched to your email!</p>
-                    <p className="mt-0.5 leading-relaxed">
-                      We have sent a 6-digit verification code to <strong>{email}</strong>. Please check your inbox (including Promotions or Spam) and enter the code below to proceed.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
-                  <div>
-                    <label className="text-xs font-semibold text-muted-foreground block mb-1.5">
-                      Enter 6-Digit Verification Code
-                    </label>
-                    <InputOTP maxLength={6} value={enteredOtp} onChange={setEnteredOtp}>
-                      <InputOTPGroup>
-                        <InputOTPSlot index={0} />
-                        <InputOTPSlot index={1} />
-                        <InputOTPSlot index={2} />
-                        <InputOTPSlot index={3} />
-                        <InputOTPSlot index={4} />
-                        <InputOTPSlot index={5} />
-                      </InputOTPGroup>
-                    </InputOTP>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={handleVerifyOtp}
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-gold px-5 py-2.5 text-sm font-bold text-gold-foreground transition hover:-translate-y-0.5 shadow-sm"
-                    >
-                      <CheckCircle2 className="size-4" /> Verify Code
-                    </button>
-                    {resendTimer > 0 ? (
-                      <span className="text-xs font-medium text-muted-foreground">
-                        Resend in {resendTimer}s
-                      </span>
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={handleSendOtp}
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-primary underline"
-                      >
-                        <RefreshCw className="size-3" /> Resend Code
-                      </button>
-                    )}
-                  </div>
-                </div>
-
-                {otpError && (
-                  <p className="mt-2 text-xs font-medium text-destructive flex items-center gap-1">
-                    <AlertCircle className="size-3.5" /> {otpError}
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
-        ) : (
-          <div className="mt-2 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3 border border-emerald-200 text-sm">
-            <span className="font-semibold text-emerald-900">
-              Verified: <span className="font-mono">{email}</span>
-            </span>
-            <button
-              type="button"
-              onClick={() => {
-                setIsVerified(false);
-                setOtpSent(false);
-                setEnteredOtp("");
-              }}
-              className="text-xs font-bold text-emerald-800 underline hover:text-emerald-900"
-            >
-              Change
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* ── STEP 2: Main Form Details (Locked until OTP Verified) ── */}
-      <form onSubmit={onSubmit} noValidate className="mt-6">
-        <div className="relative">
-          {/* Overlay lock when email is not verified */}
-          {!isVerified && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl bg-card/85 backdrop-blur-[2px] p-6 text-center border-2 border-dashed border-muted">
-              <div className="grid size-12 place-items-center rounded-2xl bg-secondary text-primary">
-                <Lock className="size-6 text-sky-border" />
-              </div>
-              <h4 className="mt-3 font-display text-base font-bold text-primary">
-                Verify Email to Unlock Admission Form
-              </h4>
-              <p className="mt-1 max-w-sm text-xs text-muted-foreground">
-                Please enter your email address above and verify the 6-digit OTP code. All subsequent admission details will unlock immediately.
-              </p>
-            </div>
-          )}
-
-          <div className={`grid gap-4 sm:grid-cols-2 ${!isVerified ? "pointer-events-none opacity-40" : ""}`}>
-            <label className="text-sm font-semibold text-primary">
-              Student Full Name <span className="text-destructive">*</span>
-              <input
-                name="studentName"
-                autoComplete="off"
-                placeholder="e.g. Rahul Patil"
-                className={fieldClass}
-                {...aria("studentName")}
-              />
-              {err("studentName")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary">
-              Parent / Guardian Name <span className="text-destructive">*</span>
-              <input
-                name="parentName"
-                autoComplete="name"
-                placeholder="e.g. Suresh Patil"
-                className={fieldClass}
-                {...aria("parentName")}
-              />
-              {err("parentName")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary sm:col-span-2">
-              Primary Mobile Number (WhatsApp enabled) <span className="text-destructive">*</span>
-              <div className="relative mt-1.5">
-                <span className="absolute left-4 top-3.5 text-sm font-bold text-muted-foreground">
-                  +91
-                </span>
-                <input
-                  name="phone"
-                  type="tel"
-                  inputMode="tel"
-                  autoComplete="tel"
-                  placeholder="98765 43210"
-                  className={`${fieldClass} pl-14 mt-0`}
-                  {...aria("phone")}
-                />
-              </div>
-              {err("phone")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary">
-              Current / Target Class <span className="text-destructive">*</span>
-              <select name="studentClass" defaultValue="" className={fieldClass} {...aria("studentClass")}>
-                <option value="" disabled>
-                  Select class
-                </option>
-                <option value="Class VII">Class VII (7th)</option>
-                <option value="Class VIII">Class VIII (8th)</option>
-                <option value="Class IX">Class IX (9th)</option>
-                <option value="Class X">Class X (10th)</option>
-              </select>
-              {err("studentClass")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary">
-              School Board <span className="text-destructive">*</span>
-              <select name="board" defaultValue="" className={fieldClass} {...aria("board")}>
-                <option value="" disabled>
-                  Select board
-                </option>
-                {boards.map((b) => (
-                  <option key={b}>{b}</option>
-                ))}
-              </select>
-              {err("board")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary sm:col-span-2">
-              Program of Interest <span className="text-destructive">*</span>
-              <select
-                name="program"
-                defaultValue={defaultProgram}
-                className={fieldClass}
-                {...aria("program")}
-              >
-                <option value="" disabled>
-                  Select program
-                </option>
-                {programs.map((p) => (
-                  <option key={p.id} value={p.name}>
-                    {p.name} {p.highlight ? `(${p.highlight})` : ""}
-                  </option>
-                ))}
-              </select>
-              {err("program")}
-            </label>
-
-            <label className="text-sm font-semibold text-primary sm:col-span-2">
-              Specific Query or Notes (Optional)
-              <textarea
-                name="notes"
-                rows={2}
-                placeholder="Mention any specific learning requirements or morning batch preference..."
-                className={fieldClass}
-              />
-            </label>
+            {emailError && <p className="mt-1 text-xs font-medium text-destructive">{emailError}</p>}
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-4 border-t pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <FileCheck2 className="size-4 text-emerald-600 shrink-0" />
-            <span>Enquiry is directly submitted to <AceWord /> admissions desk.</span>
+        {/* Inline OTP Verification Strip if OTP Sent */}
+        {otpSent && !isVerified && (
+          <div className="rounded-xl border border-amber-300 bg-amber-50/90 p-3 text-xs animate-in fade-in slide-in-from-top-1">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div className="flex items-center gap-1.5 text-amber-950 font-medium">
+                <Send className="size-3.5 text-amber-700 shrink-0" />
+                <span>
+                  Code sent to <strong>{email}</strong>. Enter 6-digit OTP:
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <InputOTP maxLength={6} value={enteredOtp} onChange={setEnteredOtp}>
+                  <InputOTPGroup>
+                    <InputOTPSlot index={0} className="size-7 text-xs bg-white font-mono" />
+                    <InputOTPSlot index={1} className="size-7 text-xs bg-white font-mono" />
+                    <InputOTPSlot index={2} className="size-7 text-xs bg-white font-mono" />
+                    <InputOTPSlot index={3} className="size-7 text-xs bg-white font-mono" />
+                    <InputOTPSlot index={4} className="size-7 text-xs bg-white font-mono" />
+                    <InputOTPSlot index={5} className="size-7 text-xs bg-white font-mono" />
+                  </InputOTPGroup>
+                </InputOTP>
+                <button
+                  type="button"
+                  onClick={handleVerifyOtp}
+                  className="rounded-lg bg-gold px-3 py-1.5 text-xs font-bold text-gold-foreground transition hover:opacity-90 shadow-2xs"
+                >
+                  Verify
+                </button>
+              </div>
+            </div>
+            {otpError && (
+              <p className="mt-1 text-xs font-medium text-destructive flex items-center gap-1">
+                <AlertCircle className="size-3" /> {otpError}
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Row 3: Class, Board, Program */}
+        <div className="grid gap-3 sm:grid-cols-3">
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Class <span className="text-destructive">*</span>
+            <select name="studentClass" defaultValue="" className={fieldClass} {...aria("studentClass")}>
+              <option value="" disabled>Select class</option>
+              <option value="Class VII">Class VII (7th)</option>
+              <option value="Class VIII">Class VIII (8th)</option>
+              <option value="Class IX">Class IX (9th)</option>
+              <option value="Class X">Class X (10th)</option>
+            </select>
+            {err("studentClass")}
+          </label>
+
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Board <span className="text-destructive">*</span>
+            <select name="board" defaultValue="" className={fieldClass} {...aria("board")}>
+              <option value="" disabled>Select board</option>
+              {boards.map((b) => (
+                <option key={b}>{b}</option>
+              ))}
+            </select>
+            {err("board")}
+          </label>
+
+          <label className="text-xs sm:text-sm font-semibold text-primary">
+            Program <span className="text-destructive">*</span>
+            <select name="program" defaultValue={defaultProgram} className={fieldClass} {...aria("program")}>
+              <option value="" disabled>Select program</option>
+              {programs.map((p) => (
+                <option key={p.id} value={p.name}>
+                  {p.name}
+                </option>
+              ))}
+            </select>
+            {err("program")}
+          </label>
+        </div>
+
+        {/* Row 4: Optional Notes */}
+        <label className="text-xs sm:text-sm font-semibold text-primary block">
+          Specific Query / Notes <span className="text-muted-foreground font-normal">(Optional)</span>
+          <input
+            name="notes"
+            placeholder="Any specific learning needs or questions..."
+            className={fieldClass}
+          />
+        </label>
+
+        {/* Submit Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 pt-3">
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+
+
           </div>
 
           <button
             type="submit"
-            disabled={!isVerified || isSubmitting}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-card disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isSubmitting}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-2.5 text-xs sm:text-sm font-bold text-gold-foreground transition hover:-translate-y-0.5 hover:shadow-md disabled:opacity-50"
           >
             {isSubmitting ? (
-              "Submitting Enquiry..."
+              "Submitting..."
             ) : (
               <>
                 Submit Official Enquiry <ArrowRight className="size-4" />

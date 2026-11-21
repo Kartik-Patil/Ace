@@ -70,7 +70,7 @@ function EventsPage() {
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
               Where Learning Meets <span className="italic text-gold">Action &amp; Discovery</span>
             </h1>
-            <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium">
+            <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium text-justify">
               From scholarship diagnostic drives to hands-on science exhibitions and parent mentoring sessions, explore what is happening at ACE Education.
             </p>
           </div>
@@ -115,7 +115,7 @@ function EventsPage() {
                     <span className="truncate">{ev.venue}</span>
                   </div>
 
-                  <p className="mt-4 text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+                  <p className="mt-4 text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-justify">
                     {ev.desc}
                   </p>
 
@@ -161,7 +161,7 @@ function EventsPage() {
             <h3 className="font-display text-2xl font-bold text-primary">
               Want ACE to host a STEM or Exam Strategy Workshop at your school?
             </h3>
-            <p className="mt-2 text-sm text-muted-foreground max-w-xl">
+            <p className="mt-2 text-sm text-muted-foreground max-w-xl text-justify">
               We conduct custom academic workshops for school students from Classes 7th to 10th on conceptual clarity and exam confidence.
             </p>
           </div>

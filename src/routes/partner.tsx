@@ -74,7 +74,7 @@ function PartnerPage() {
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
               Partner with <span className="italic text-gold">ACE Education</span>
             </h1>
-            <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium">
+            <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium text-justify">
               We collaborate with forward-thinking schools, educators, and academic institutions across North Karnataka to build deep conceptual learning ecosystems.
             </p>
           </div>
@@ -107,7 +107,7 @@ function PartnerPage() {
                       {tr.title}
                     </h3>
 
-                    <p className="mt-3 text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+                    <p className="mt-3 text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-justify">
                       {tr.desc}
                     </p>
 
@@ -152,7 +152,7 @@ function PartnerPage() {
               <h2 className="mt-3 font-display text-2xl sm:text-3xl font-bold text-primary">
                 Initiate a Partnership Conversation
               </h2>
-              <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
+              <p className="mt-2 text-xs sm:text-sm text-muted-foreground text-justify">
                 Our academic leadership will schedule an in-person or virtual consultation with your school principal or trustee board.
               </p>
             </div>

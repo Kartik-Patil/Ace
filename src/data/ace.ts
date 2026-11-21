@@ -1,7 +1,7 @@
 // All content below is transcribed from the client's flyer. Do not embellish.
 export const contact = {
   brand: "ACE – Education Redefined",
-  tagline: "From Concepts to Confidence",
+  tagline: "From Concepts To Confidence",
   phoneDisplay: "+91 91484 86661",
   phoneHref: "tel:+919148486661",
   whatsappHref: "https://wa.me/919148486661",
@@ -59,6 +59,7 @@ export const achieverGroups: AchieverGroup[] = [
     title: "Class IX",
     students: [
       { name: "Sharan Tugalad", score: "96%", tag: "CBSE", photo: "/images/achievers/sharan-tugalad.webp" },
+      { name: "Anup Naik", score: "83%", tag: "CBSE", photo: "/images/achievers/anup-naik.webp" },
       { name: "Shalini Shettar", score: "82%", tag: "CBSE", photo: "/images/achievers/shalini-shettar.webp" },
     ],
   },

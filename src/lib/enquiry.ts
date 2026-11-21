@@ -1,8 +1,8 @@
 import { z } from "zod";
 
 export const enquirySchema = z.object({
-  studentName: z.string().trim().min(2, "Please enter the student's name").max(80, "Name is too long"),
-  parentName: z.string().trim().min(2, "Please enter the parent's name").max(80, "Name is too long"),
+  studentName: z.string().trim().min(2, "Please enter your name").max(80, "Name is too long"),
+  parentName: z.string().trim().max(80, "Name is too long").optional().default(""),
   email: z.string().trim().email("Please enter a valid email address").optional(),
   phone: z
     .string()
@@ -26,8 +26,12 @@ export const enquirySchema = z.object({
     ],
     { errorMap: () => ({ message: "Choose a class" }) }
   ),
-  board: z.enum(["ICSE", "CBSE", "State Board"], { errorMap: () => ({ message: "Choose a board" }) }),
-  program: z.string().min(1, "Choose a program"),
+  board: z.enum(
+    ["ICSE", "CBSE", "State Board", "Integrated (CBSE + Foundation)"],
+    { errorMap: () => ({ message: "Choose a stream" }) }
+  ),
+  program: z.string().optional().default("ACE Foundation & Board Prep"),
+  currentSchool: z.string().optional(),
   notes: z.string().optional(),
 });
 

@@ -29,7 +29,7 @@ function ResultsPage() {
             <h1 className="mt-6 text-5xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
               Our <span className="italic text-gold">Achievers</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg opacity-85">
+            <p className="mx-auto mt-6 max-w-xl text-lg opacity-85 text-justify">
               These results speak for themselves. Congratulations to every student who worked hard and made <AceWord dark /> proud.
             </p>
           </div>

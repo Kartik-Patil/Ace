@@ -26,7 +26,7 @@ export function SectionTabs() {
             <div className="rounded-2xl border bg-card p-8 shadow-card">
               <h3 className="text-2xl font-semibold text-primary">{total} achievers in {contact.achieversYear}</h3>
               <p className="mt-2 text-muted-foreground">Across NEET / IIT JEE, Class X, Class IX and Class VIII.</p>
-              <Link to="/admissions" hash="achievers" className="mt-4 inline-block font-bold text-sky-border underline">See all achievers →</Link>
+              <Link to="/results" hash="achievers" className="mt-4 inline-block font-bold text-sky-border underline">See all achievers →</Link>
             </div>
           </TabsContent>
           <TabsContent value="gallery"><Placeholder title="Gallery">Photos of classrooms and events will appear here once ACE shares them.</Placeholder></TabsContent>
