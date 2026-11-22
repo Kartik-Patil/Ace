@@ -19,6 +19,7 @@ import {
 import { Reveal } from "@/components/ace/Reveal";
 import { AceWord } from "@/components/ace/AceWord";
 import { ContactSection } from "@/components/ace/ContactSection";
+import languageAssistanceBanner from "@/assets/LanguageAssistance-Banner.png";
 
 export const Route = createFileRoute("/language-assistance")({
   head: () => ({
@@ -136,8 +137,24 @@ function LanguageAssistancePage() {
         </div>
       </div>
 
+      {/* ── Hero Banner Section ── */}
+      <section className="container-ace pt-6 sm:pt-8 pb-8 sm:pb-10">
+        <Reveal variant="zoom-in">
+          <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gold/50 shadow-lift bg-navy-pattern">
+            <img
+              src={languageAssistanceBanner}
+              alt="Language Assistance – Kannada & Hindi"
+              className="w-full h-auto block"
+              width={2048}
+              height={768}
+              loading="eager"
+            />
+          </div>
+        </Reveal>
+      </section>
+
       {/* ── Hero Overview Section ── */}
-      <section className="container-ace pt-10 sm:pt-16 pb-12">
+      <section className="container-ace pt-6 sm:pt-8 pb-12">
         <Reveal variant="fade-up">
           <div className="w-full space-y-6">
             <div className="space-y-3">

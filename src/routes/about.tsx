@@ -8,7 +8,7 @@ import { ExamReadySection } from "@/components/ace/ExamReadySection";
 import { ProgramFeaturesSection } from "@/components/ace/ProgramFeaturesSection";
 import { AceWord } from "@/components/ace/AceWord";
 import { VisionMissionValuesSection } from "@/components/ace/VisionMissionValuesSection";
-import aboutBanner from "@/assets/about-banner.jpg";
+import aboutBanner from "@/assets/Aboutus-banner.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -69,9 +69,9 @@ function AboutPage() {
       <section className="w-full bg-navy-pattern overflow-hidden">
         <img
           src={aboutBanner}
-          alt="Academic Centre for Eduxcellence – Foundation for Class 7, 8, 9 & 10"
-          width={1024}
-          height={344}
+          alt="About Us – Academic Centre for Eduxcellence"
+          width={1518}
+          height={508}
           className="w-full h-auto block"
           loading="eager"
         />

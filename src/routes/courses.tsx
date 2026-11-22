@@ -8,7 +8,11 @@ import { AceWord } from "@/components/ace/AceWord";
 import { AcesetSection } from "@/components/ace/AcesetSection";
 import { ProgrammesSplashSection } from "@/components/ace/ProgrammesSplashSection";
 import { boards, contact } from "@/data/ace";
-import programs_img from "@/assets/programs-illustration.jpg";
+import foundationBanner from "@/assets/foundationpage-banner.png";
+import stemCardImg from "@/assets/STEMfoundationCARD-image.png";
+import boardPrepCardImg from "@/assets/boardprepcard-image.png";
+import langCardImg from "@/assets/languageassistance-card-image.png";
+import mathCardImg from "@/assets/mathmastery-card-image.png";
 
 export const Route = createFileRoute("/courses")({
   head: () => ({
@@ -20,31 +24,66 @@ export const Route = createFileRoute("/courses")({
   component: CoursesPage,
 });
 
+const foundationCards = [
+  {
+    title: "STEM Foundation",
+    classes: "Class 8, 9 & 10",
+    description:
+      "Strengthening fundamental concepts, scientific aptitude, and problem-solving abilities for future success.",
+    image: stemCardImg,
+    hours: "250+ hours",
+    tests: "25+ Tests",
+    href: "/stem-foundation",
+    isInternal: true,
+  },
+  {
+    title: "BOARD Prep",
+    classes: "Class 7, 8, 9 & 10",
+    description:
+      "Systematic syllabus coverage, concept reinforcement, and targeted assessments to excel in school boards.",
+    image: boardPrepCardImg,
+    hours: "400+ hours",
+    tests: "30+ Tests",
+    href: "/board-prep",
+    isInternal: true,
+  },
+  {
+    title: "Language Assistance",
+    classes: "Class 8, 9 & 10 · Kannada & Hindi",
+    description:
+      "Dedicated Hindi and Kannada language mentoring to improve comprehension, reading, and writing skills.",
+    image: langCardImg,
+    hours: "60+ Hours",
+    tests: "10+ Tests",
+    href: "/language-assistance",
+    isInternal: true,
+  },
+  {
+    title: "Maths Mastery",
+    classes: "Class 9 & 10",
+    description:
+      "Building strong conceptual foundations, mathematical reasoning, analytical thinking, and exam confidence.",
+    image: mathCardImg,
+    hours: "250+ hours",
+    tests: "15+ tests",
+    href: "#enquire",
+    isInternal: false,
+  },
+];
+
 function CoursesPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-navy-pattern text-navy-foreground">
-        <div className="container-ace grid items-center gap-10 py-16 md:py-24 lg:grid-cols-2">
-          <div className="fade-up">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Programmes for Classes 8, 9 &amp; 10</p>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.05] md:text-6xl">
-              Building Strong Foundations.{" "}
-              <span className="italic text-gold">Preparing for Future Success.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg opacity-85">
-              From closing gaps to building competitive strength, <AceWord dark />&apos;s programmes take students from concepts to confidence —
-              for ICSE, CBSE and State Board.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#programmes" className="rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5">View programmes</a>
-              <a href="#enquire" className="rounded-full bg-gold px-7 py-3.5 font-bold text-gold-foreground transition hover:-translate-y-0.5">
-                Enquire Now <ArrowRight className="size-4" aria-hidden />
-              </a>
-            </div>
-          </div>
-          <img src={programs_img} alt="Teacher guiding students through geometry at a whiteboard" width={1280} height={960} className="fade-up rounded-3xl border-4 border-gold/70 shadow-lift [animation-delay:150ms]" />
-        </div>
+      {/* ── Hero Banner (Full width edge-to-edge, zero negative space) ── */}
+      <section className="w-full bg-navy-pattern overflow-hidden">
+        <img
+          src={foundationBanner}
+          alt="ACE Foundation Programmes – Building Strong Foundations"
+          width={1518}
+          height={508}
+          className="w-full h-auto block"
+          loading="eager"
+        />
       </section>
 
       {/* ── Flagship programmes ── */}
@@ -76,122 +115,81 @@ function CoursesPage() {
         </Reveal>
         {/* ── 4 Course Cards (STEM, Board, Language, Maths Mastery) ── */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <Reveal variant="fade-up" delay={50}>
-            <Link
-              to="/stem-foundation"
-              className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-gold/50 bg-navy-pattern p-6 xl:p-8 text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift"
-            >
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gold text-gold-foreground transition-transform duration-300 group-hover:scale-110">
-                    <Rocket className="size-6" aria-hidden />
-                  </span>
+          {foundationCards.map((card, idx) => {
+            const cardInner = (
+              <>
+                <div className="flex flex-col">
+                  {/* Top Illustration Banner */}
+                  <div className="w-full bg-white border-b-2 border-gold/40 overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      width={750}
+                      height={446}
+                      className="w-full h-auto block object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
 
+                  {/* Card Content Body */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-display text-xl sm:text-2xl font-extrabold text-gold tracking-tight transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm sm:text-base font-bold text-white">
+                      {card.classes}
+                    </p>
+                    <p className="mt-3 text-sm leading-relaxed text-white/90 font-medium text-justify">
+                      {card.description}
+                    </p>
+
+                    {/* Mode Badges */}
+                    <div className="mt-5 flex flex-col items-start gap-2">
+                      <span className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-xs font-semibold text-white">
+                        Classroom
+                      </span>
+                      <span className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-xs font-semibold text-white">
+                        Offline
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-white transition-colors group-hover:text-gold">
-                  STEM Foundation
-                </h3>
-                <p className="mt-2 text-base font-semibold text-gold">
-                  (7, 8, 9 and 10)
-                </p>
-                <p className="mt-4 text-sm text-white/80 leading-relaxed text-justify">
-                  Strengthening fundamental concepts, scientific aptitude, and problem-solving abilities for future success.
-                </p>
-              </div>
 
-              <div className="mt-8 flex items-center gap-2 border-t border-white/10 pt-5 text-sm font-bold text-gold transition-all duration-300 group-hover:text-white">
-                <span>Explore Course</span>
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
-              </div>
-            </Link>
-          </Reveal>
-
-          <Reveal variant="fade-up" delay={150}>
-            <Link
-              to="/board-prep"
-              className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-gold/50 bg-navy-pattern p-6 xl:p-8 text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift"
-            >
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gold text-gold-foreground transition-transform duration-300 group-hover:scale-110">
-                    <BookOpenCheck className="size-6" aria-hidden />
-                  </span>
-
+                {/* Card Bottom / Footer */}
+                <div className="px-6 pb-6 pt-0">
+                  <hr className="mb-4 border-t border-white/15" />
+                  <div className="flex items-center gap-4 text-sm sm:text-base font-bold text-white">
+                    <span>{card.hours}</span>
+                    <span>{card.tests}</span>
+                  </div>
+                  <div className="mt-4 flex items-center gap-1.5 text-sm sm:text-base font-bold text-gold transition-all duration-300 group-hover:text-white">
+                    <span>View programme</span>
+                    <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
+                  </div>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-white transition-colors group-hover:text-gold">
-                  BOARD Prep
-                </h3>
-                <p className="mt-2 text-base font-semibold text-gold">
-                  (ICSE, CBSE/State Boards)
-                </p>
-                <p className="mt-4 text-sm text-white/80 leading-relaxed text-justify">
-                  Systematic syllabus coverage, concept reinforcement, and targeted assessments to excel in school boards.
-                </p>
-              </div>
+              </>
+            );
 
-              <div className="mt-8 flex items-center gap-2 border-t border-white/10 pt-5 text-sm font-bold text-gold transition-all duration-300 group-hover:text-white">
-                <span>Explore Course</span>
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
-              </div>
-            </Link>
-          </Reveal>
-
-          <Reveal variant="fade-up" delay={250}>
-            <Link
-              to="/language-assistance"
-              className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-gold/50 bg-navy-pattern p-6 xl:p-8 text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift"
-            >
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gold text-gold-foreground transition-transform duration-300 group-hover:scale-110">
-                    <Languages className="size-6" aria-hidden />
-                  </span>
-
-                </div>
-                <h3 className="mt-6 text-2xl font-bold text-white transition-colors group-hover:text-gold">
-                  Language Assistance
-                </h3>
-                <p className="mt-2 text-base font-semibold text-gold">
-                  (Hindi &amp; Kannada Support)
-                </p>
-                <p className="mt-4 text-sm text-white/80 leading-relaxed text-justify">
-                  Dedicated Hindi and Kannada language mentoring to improve comprehension, reading, and writing skills.
-                </p>
-              </div>
-
-              <div className="mt-8 flex items-center gap-2 border-t border-white/10 pt-5 text-sm font-bold text-gold transition-all duration-300 group-hover:text-white">
-                <span>Explore Course</span>
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
-              </div>
-            </Link>
-          </Reveal>
-
-          <Reveal variant="fade-up" delay={350}>
-            <div className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-gold/50 bg-navy-pattern p-6 xl:p-8 text-navy-foreground shadow-card transition-all duration-300 hover:border-gold/80 select-none cursor-default">
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gold text-gold-foreground transition-transform duration-300 group-hover:scale-105">
-                    <Calculator className="size-6" aria-hidden />
-                  </span>
-
-                </div>
-                <h3 className="mt-6 text-2xl font-bold text-white transition-colors group-hover:text-gold">
-                  Maths Mastery
-                </h3>
-                <p className="mt-2 text-base font-semibold text-gold">
-                  (Classes 7, 8, 9 &amp; 10)
-                </p>
-                <p className="mt-4 text-sm text-white/80 leading-relaxed text-justify">
-                  Building strong conceptual foundations, mathematical reasoning, analytical thinking, and exam confidence.
-                </p>
-              </div>
-
-              <div className="mt-8 flex items-center gap-2 border-t border-white/10 pt-5 text-sm font-bold text-gold">
-                <span>Explore Course</span>
-                <ArrowRight className="size-4" aria-hidden />
-              </div>
-            </div>
-          </Reveal>
+            return (
+              <Reveal key={card.title} variant="fade-up" delay={idx * 100}>
+                {card.isInternal ? (
+                  <Link
+                    to={card.href}
+                    className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-gold/50 bg-navy-pattern text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift text-left"
+                  >
+                    {cardInner}
+                  </Link>
+                ) : (
+                  <a
+                    href={card.href}
+                    className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-gold/50 bg-navy-pattern text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift text-left"
+                  >
+                    {cardInner}
+                  </a>
+                )}
+              </Reveal>
+            );
+          })}
         </div>
 
         {/* ── Commented 2 Previous Cards as requested ──

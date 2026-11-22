@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Reveal } from "@/components/ace/Reveal";
 import { AceWord } from "@/components/ace/AceWord";
-import asetBannerWide from "@/assets/Aset-banner-wide.jpeg";
+import asetBanner from "@/assets/ASETpage-banner.png";
 
 export const Route = createFileRoute("/aset-test")({
   head: () => ({
@@ -132,13 +132,13 @@ function AsetTestPage() {
         </div>
       </div>
 
-      {/* ── Hero Poster Banner (Fits edge-to-edge matching exact reference proportions: 3.26:1 ratio, 314px height on 1024px screen) ── */}
+      {/* ── Hero Poster Banner ── */}
       <section className="w-full bg-[#edf5fa] overflow-hidden border-b border-slate-200/60">
         <img
-          src={asetBannerWide}
+          src={asetBanner}
           alt="ASET 2027 – ACE Scholarship & Entrance Test"
-          width={2445}
-          height={750}
+          width={1518}
+          height={508}
           className="w-full h-auto block"
           loading="eager"
         />
@@ -217,7 +217,7 @@ function AsetTestPage() {
                 id="why-take-aset-heading"
                 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight"
               >
-                Why Take ASET 2027?
+                Why ASET ?
               </h2>
               <p className="mt-2.5 text-base sm:text-lg font-bold text-[#fdb435]">
                 Your Potential Deserves an Opportunity to Excel!

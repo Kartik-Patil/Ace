@@ -10,12 +10,12 @@ import {
   FlaskConical,
   Brain,
   CheckCircle2,
-  Sparkles,
   Compass,
 } from "lucide-react";
 import { Reveal } from "@/components/ace/Reveal";
 import { AceWord } from "@/components/ace/AceWord";
 import { ContactSection } from "@/components/ace/ContactSection";
+import stemFoundationBanner from "@/assets/STEMFoundation-Banner.png";
 
 export const Route = createFileRoute("/stem-foundation")({
   head: () => ({
@@ -106,32 +106,23 @@ function StemFoundationPage() {
             <ArrowLeft className="size-4" /> Back to Courses
           </Link>
           <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            ACE STEM Foundation · Classes 7, 8, 9 &amp; 10th
+            ACE STEM Foundation · Class 7, 8, 9 &amp; 10th
           </span>
         </div>
       </div>
 
       {/* ── Hero Banner Section ── */}
-      <section className="container-ace pt-6 sm:pt-8 pb-10">
+      <section className="container-ace pt-6 sm:pt-8 pb-8 sm:pb-10">
         <Reveal variant="zoom-in">
-          <div className="relative overflow-hidden rounded-3xl border-2 border-gold/50 shadow-lift bg-navy-pattern">
+          <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gold/50 shadow-lift bg-navy-pattern">
             <img
-              src="/images/stem-foundation-banner.jpg"
-              alt="ACE STEM Foundation – Classes 7, 8, 9 & 10th"
-              className="w-full h-auto object-cover max-h-[460px]"
-              width={1024}
-              height={384}
+              src={stemFoundationBanner}
+              alt="ACE STEM Foundation"
+              className="w-full h-auto block"
+              width={2048}
+              height={768}
+              loading="eager"
             />
-
-            {/* Overlaid Banner Badge mentioning Classes 7, 8, 9, 10th */}
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex flex-wrap items-center gap-2 sm:gap-3">
-              <span className="rounded-full bg-gold px-4 py-2 text-xs sm:text-sm font-black uppercase tracking-wider text-gold-foreground shadow-lg backdrop-blur-xs flex items-center gap-2">
-                <Sparkles className="size-4" /> Classes 7, 8, 9 &amp; 10th
-              </span>
-              <span className="hidden sm:inline-flex rounded-full bg-navy/90 border border-gold/50 px-4 py-2 text-xs sm:text-sm font-bold text-white shadow-lg backdrop-blur-xs">
-                Academic Centre for Eduxcellence
-              </span>
-            </div>
           </div>
         </Reveal>
       </section>
@@ -223,7 +214,7 @@ function StemFoundationPage() {
 
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary font-display">
-                What makes ACE STEM Foundation different?
+                Why ACE STEM Foundation ?
               </h2>
               <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium text-justify">
 

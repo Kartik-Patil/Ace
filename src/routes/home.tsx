@@ -19,7 +19,7 @@ import { ProgramFeaturesSection } from "@/components/ace/ProgramFeaturesSection"
 import { AceWord } from "@/components/ace/AceWord";
 import { VisionMissionValuesSection } from "@/components/ace/VisionMissionValuesSection";
 import { contact } from "@/data/ace";
-import aboutBanner from "@/assets/about-banner.jpg";
+import aboutBanner from "@/assets/Aboutus-banner.png";
 
 export const Route = createFileRoute("/home")({
   beforeLoad: () => {
