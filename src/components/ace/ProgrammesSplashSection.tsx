@@ -204,7 +204,7 @@ export function ProgrammesSplashSection() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-border mb-3">
             Academic Notice Board · What we offer
           </p>
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             Six programmes,{" "}
             <span className="relative inline-block">
               <span className="italic text-gold">one goal</span>
@@ -244,8 +244,8 @@ export function ProgrammesSplashSection() {
                 */}
                 <div
                   className={`group relative h-[450px] sm:h-[470px] cursor-pointer [perspective:1200px] transition-transform duration-300 ${
-                    isFlipped ? "rotate-0 scale-[1.02]" : p.tiltClass
-                  } hover:rotate-0 hover:scale-[1.02]`}
+                    isFlipped ? "rotate-0 scale-[1.03]" : p.tiltClass
+                  } hover:rotate-0 hover:scale-[1.03]`}
                   onClick={() => toggleFlip(p.id)}
                   onMouseEnter={() => setHoveredCard(p.id)}
                   onMouseLeave={() => setHoveredCard(null)}
@@ -271,24 +271,23 @@ export function ProgrammesSplashSection() {
                     }`}
                   >
                     {/* ════════ FRONT FACE: Clean Rectangle with Course Name & Creative Study Snapshot ════════ */}
-                    <div className="absolute inset-0 size-full [backface-visibility:hidden] rounded-2xl border-2 border-gold/40 bg-card p-6 sm:p-7 shadow-lift flex flex-col justify-between items-center text-center select-none">
+                    <div className="absolute inset-0 size-full [backface-visibility:hidden] rounded-2xl border-2 border-slate-200/80 group-hover:border-[#fdb435] bg-white p-6 sm:p-7 shadow-lift flex flex-col justify-between items-center text-center select-none">
                       {/* Subtle Paper Pin Hole Accent at Top */}
                       <div className="size-2 rounded-full bg-slate-900/40 shadow-inner mt-0.5" />
 
                       {/* Course Header */}
-                      <div className="space-y-1 mt-1">
-                        <div className="inline-flex items-center gap-1.5 rounded-full bg-sky px-2.5 py-0.5 text-[10px] font-bold text-sky-border uppercase tracking-wider">
-                          <Icon className="size-3 text-gold" />
-                          Programme {p.num}
-                        </div>
-                        <h3 className="font-display text-xl sm:text-2xl font-extrabold tracking-tight text-primary leading-tight">
-                          {p.id === "foundation" ? (
-                            <>
-                              <AceWord /> {p.name}
-                            </>
-                          ) : (
-                            p.name
-                          )}
+                      <div className="space-y-1.5 mt-1 w-full">
+                        <h3 className="flex items-center justify-center gap-2 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-extrabold tracking-tight text-[#fdb435] leading-tight shadow-xs">
+                          <Icon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
+                          <span>
+                            {p.id === "foundation" ? (
+                              <>
+                                <AceWord dark /> {p.name}
+                              </>
+                            ) : (
+                              p.name
+                            )}
+                          </span>
                         </h3>
                         <p className="text-[11px] font-semibold text-muted-foreground">
                           {p.tagline}
@@ -325,13 +324,13 @@ export function ProgrammesSplashSection() {
                     </div>
 
                     {/* ════════ BACK FACE: Full Curriculum Table ════════ */}
-                    <div className="absolute inset-0 size-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl border-2 border-gold bg-card p-6 sm:p-7 shadow-lift flex flex-col justify-between overflow-y-auto">
+                    <div className="absolute inset-0 size-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl border-2 border-[#fdb435] bg-white p-6 sm:p-7 shadow-lift flex flex-col justify-between overflow-y-auto">
                       {/* Table Header */}
                       <div>
                         <div className="flex items-center justify-between pb-3 border-b border-border text-xs font-bold">
                           <div className="flex items-center gap-2">
                             <span className="size-2 rounded-full bg-gold" />
-                            <h4 className="font-display font-bold text-primary text-sm sm:text-base">
+                            <h4 className="rounded-lg bg-[#2a2273] px-3 py-1 font-display font-bold text-[#fdb435] text-sm sm:text-base">
                               {p.id === "foundation" ? (
                                 <>
                                   <AceWord /> {p.name}

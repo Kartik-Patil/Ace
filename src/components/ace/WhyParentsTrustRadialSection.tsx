@@ -179,7 +179,7 @@ export function WhyParentsTrustRadialSection() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-border mb-3">
             What Makes ACE Different?
           </p>
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             6 Reasons Parents Trust{" "}
             <span className="relative inline-block">
               <span className="italic text-gold">
@@ -445,18 +445,13 @@ export function WhyParentsTrustRadialSection() {
 
           {/* ── Active Pillar Detail Spotlight Bar ── */}
           <Reveal variant="fade-up" delay={150} className="mt-8">
-            <div className="mx-auto max-w-4xl rounded-3xl border-2 border-gold/40 bg-card p-7 shadow-lift transition-all duration-300">
+            <div className="mx-auto max-w-4xl rounded-3xl border-2 border-slate-200/80 bg-white p-7 shadow-lift transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435]">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <div className="flex items-start gap-4">
-                  <span
-                    className={`grid size-14 shrink-0 place-items-center rounded-2xl border-2 shadow-sm ${
-                      currentActiveReason.colorType === "gold"
-                        ? "bg-gold text-gold-foreground border-gold/60"
-                        : "bg-primary text-gold border-gold/40"
-                    }`}
-                  >
-                    <ActiveIcon className="size-7" />
+                <div>
+                  <span className="text-xs font-bold text-sky-border uppercase tracking-wider">
+                    {currentActiveReason.tag}
                   </span>
+<<<<<<< HEAD
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="rounded-full bg-gold/15 px-2.5 py-0.5 text-xs font-bold text-gold-foreground">
@@ -473,6 +468,15 @@ export function WhyParentsTrustRadialSection() {
                       {currentActiveReason.description}
                     </p>
                   </div>
+=======
+                  <h4 className="mt-2 inline-flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold text-[#fdb435] shadow-xs">
+                    <ActiveIcon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
+                    <span>{currentActiveReason.title}</span>
+                  </h4>
+                  <p className="mt-2.5 text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl text-justify">
+                    {currentActiveReason.description}
+                  </p>
+>>>>>>> c8fd4d4 (day 7 commit)
                 </div>
 
                 <div className="shrink-0 rounded-2xl border border-sky-border/40 bg-sky/50 p-4 max-w-xs">
@@ -492,14 +496,14 @@ export function WhyParentsTrustRadialSection() {
         {/* ════════════ MOBILE & COMPACT: Responsive Curved Arc Stack ════════════ */}
         <div className="mt-12 space-y-5 lg:hidden">
           {/* Mobile Central Hub Card */}
-          <div className="rounded-3xl border-2 border-gold/40 bg-card p-6 text-center shadow-lift">
+          <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-6 text-center shadow-lift transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435]">
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-sky-border">
               Why Parents Trust ACE
             </p>
-            <h3 className="mt-1 font-display text-2xl font-extrabold text-primary">
+            <h3 className="mt-2 inline-block rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-2xl font-extrabold text-[#fdb435]">
               6 Pillars of Academic Trust
             </h3>
-            <p className="mt-2 text-xs text-muted-foreground font-medium">
+            <p className="mt-2 text-xs text-slate-700 font-medium">
               Education beyond the classroom — built on conceptual clarity, individual care, and proven board success.
             </p>
           </div>
@@ -507,33 +511,30 @@ export function WhyParentsTrustRadialSection() {
           {/* 6 Reasons Alternating Fan Cards */}
           {reasons.map((item, idx) => {
             const Icon = item.icon;
-            const isGold = item.colorType === "gold";
 
             return (
               <Reveal key={item.id} variant="fade-up" delay={idx * 60}>
-                <div
-                  className={`rounded-2xl border-4 border-white p-5 text-white shadow-lift transition-transform active:scale-[0.98] ${
-                    isGold
-                      ? "bg-gradient-to-r from-amber-500 to-amber-600"
-                      : "bg-gradient-to-r from-navy to-[#152a48]"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-2 font-display text-lg font-extrabold tracking-wide">
+                <div className="rounded-2xl border-2 border-slate-200/80 bg-white p-5 text-slate-700 shadow-lift transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] active:scale-[0.98]">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-[#2a2273] px-3.5 py-1.5 font-display text-lg font-extrabold tracking-wide text-[#fdb435]">
                       <Icon className="size-5 shrink-0" />
-                      0{idx + 1}. {item.title}
+                      {item.title}
                     </span>
-                    <span className="rounded-full bg-white/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                    <span className="rounded-full bg-[#2a2273]/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">
                       {item.tag}
                     </span>
                   </div>
 
+<<<<<<< HEAD
                   <p className="mt-2.5 text-xs text-white/90 leading-relaxed font-medium text-justify">
+=======
+                  <p className="mt-3 text-xs text-slate-700 leading-relaxed font-medium text-justify">
+>>>>>>> c8fd4d4 (day 7 commit)
                     {item.description}
                   </p>
 
-                  <div className="mt-3.5 rounded-xl bg-black/20 p-2.5 text-[11px] text-white/95 border border-white/10">
-                    <strong className="text-amber-200">Parent Benefit:</strong> {item.parentBenefit}
+                  <div className="mt-3.5 rounded-xl bg-amber-50/70 p-2.5 text-[11px] text-slate-700 border border-[#fdb435]/40">
+                    <strong className="text-primary">Parent Benefit:</strong> {item.parentBenefit}
                   </div>
                 </div>
               </Reveal>

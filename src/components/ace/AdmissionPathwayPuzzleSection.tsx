@@ -28,7 +28,7 @@ export function AdmissionPathwayPuzzleSection() {
             <span className="w-6 h-0.5 bg-sky-border inline-block" />
           </p>
 
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             Simple 3-Step Pathway to Join{" "}
             <span className="relative inline-block">
               <span className="italic text-gold">
@@ -389,20 +389,19 @@ export function AdmissionPathwayPuzzleSection() {
 
         {/* ════════════ MOBILE & COMPACT: Responsive Puzzle Stack ════════════ */}
         <div className="mt-12 space-y-6 lg:hidden">
-          {/* Step 1 Mobile Card (Deep Navy) */}
+          {/* Step 1 Mobile Card */}
           <Reveal variant="fade-up" delay={0}>
-            <div className="rounded-3xl border-2 border-primary/30 bg-card p-6 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
+            <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-bold uppercase tracking-wider">
                   Step 01 · Counselling
                 </span>
                 <span className="size-3 rounded-full bg-primary" />
               </div>
-              <h3 className="mt-3 font-display text-lg font-bold text-primary">
+              <h3 className="mt-3 inline-block rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-lg font-bold text-[#fdb435] shadow-xs">
                 Free Academic Counselling
               </h3>
-              <p className="mt-2 text-xs text-muted-foreground font-medium leading-relaxed">
+              <p className="mt-2.5 text-xs text-slate-700 font-medium leading-relaxed">
                 Meet our academic mentors along with your child. We assess their learning style, current strengths, and set clear milestones.
               </p>
               <div className="mt-3 rounded-xl bg-primary/5 p-2.5 text-[11px] font-bold text-primary border border-primary/10">
@@ -411,20 +410,19 @@ export function AdmissionPathwayPuzzleSection() {
             </div>
           </Reveal>
 
-          {/* Step 2 Mobile Card (ACE Gold) */}
+          {/* Step 2 Mobile Card */}
           <Reveal variant="fade-up" delay={100}>
-            <div className="rounded-3xl border-2 border-gold/40 bg-card p-6 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-gold" />
+            <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-gold/15 text-gold-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
                   Step 02 · Scholarship Test
                 </span>
                 <span className="size-3 rounded-full bg-gold" />
               </div>
-              <h3 className="mt-3 font-display text-lg font-bold text-primary">
-                Appear for <AceWord />SET
+              <h3 className="mt-3 inline-block rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-lg font-bold text-[#fdb435] shadow-xs">
+                Appear for <AceWord dark />SET
               </h3>
-              <p className="mt-2 text-xs text-muted-foreground font-medium leading-relaxed">
+              <p className="mt-2.5 text-xs text-slate-700 font-medium leading-relaxed">
                 Participate in the ACE Scholarship Entrance Test to evaluate subject readiness and earn merit scholarships up to 100%*.
               </p>
               <div className="mt-3 rounded-xl bg-gold/10 p-2.5 text-[11px] font-bold text-gold-foreground border border-gold/20">
@@ -433,20 +431,19 @@ export function AdmissionPathwayPuzzleSection() {
             </div>
           </Reveal>
 
-          {/* Step 3 Mobile Card (Sky Blue) */}
+          {/* Step 3 Mobile Card */}
           <Reveal variant="fade-up" delay={200}>
-            <div className="rounded-3xl border-2 border-sky-border/40 bg-card p-6 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-sky-border" />
+            <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-sky text-sky-border px-3 py-1 text-xs font-bold uppercase tracking-wider">
                   Step 03 · Enrolment
                 </span>
                 <span className="size-3 rounded-full bg-sky-border" />
               </div>
-              <h3 className="mt-3 font-display text-lg font-bold text-primary">
+              <h3 className="mt-3 inline-block rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-lg font-bold text-[#fdb435] shadow-xs">
                 Personalized Pathway Enrolment
               </h3>
-              <p className="mt-2 text-xs text-muted-foreground font-medium leading-relaxed">
+              <p className="mt-2.5 text-xs text-slate-700 font-medium leading-relaxed">
                 Choose the tailored programme (Foundation, Board Support, Math Mastery, Test Series or Language Support) with no school-timing clashes.
               </p>
               <div className="mt-3 rounded-xl bg-sky/40 p-2.5 text-[11px] font-bold text-primary border border-sky-border/30">

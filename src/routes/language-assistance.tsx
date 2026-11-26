@@ -3,7 +3,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
+<<<<<<< HEAD
   ArrowDown,
+=======
+>>>>>>> c8fd4d4 (day 7 commit)
   Languages,
   BookOpenCheck,
   Volume2,
@@ -18,7 +21,11 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/ace/Reveal";
 import { AceWord } from "@/components/ace/AceWord";
+<<<<<<< HEAD
 import { ContactSection } from "@/components/ace/ContactSection";
+=======
+import { useEnquiryModal } from "@/context/EnquiryModalContext";
+>>>>>>> c8fd4d4 (day 7 commit)
 import languageAssistanceBanner from "@/assets/LanguageAssistance-Banner.png";
 
 export const Route = createFileRoute("/language-assistance")({
@@ -122,6 +129,10 @@ const hindiCurriculum = [
 ];
 
 function LanguageAssistancePage() {
+<<<<<<< HEAD
+=======
+  const { openModal } = useEnquiryModal();
+>>>>>>> c8fd4d4 (day 7 commit)
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* ── Top Navigation Bar ── */}
@@ -137,6 +148,7 @@ function LanguageAssistancePage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* ── Hero Banner Section ── */}
       <section className="container-ace pt-6 sm:pt-8 pb-8 sm:pb-10">
         <Reveal variant="zoom-in">
@@ -151,17 +163,35 @@ function LanguageAssistancePage() {
             />
           </div>
         </Reveal>
+=======
+      {/* ── Hero Banner Section (Full width edge-to-edge, zero negative space) ── */}
+      <section className="w-full bg-navy-pattern overflow-hidden">
+        <img
+          src={languageAssistanceBanner}
+          alt="Language Assistance – Kannada & Hindi"
+          className="w-full h-auto block"
+          width={2048}
+          height={768}
+          loading="eager"
+        />
+>>>>>>> c8fd4d4 (day 7 commit)
       </section>
 
       {/* ── Hero Overview Section ── */}
       <section className="container-ace pt-6 sm:pt-8 pb-12">
         <Reveal variant="fade-up">
           <div className="w-full space-y-6">
+<<<<<<< HEAD
             <div className="space-y-3">
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary font-display">
                 Language Assistance – Kannada &amp; Hindi
               </h1>
+=======
+            <div className="space-y-3 text-center">
+
+
+>>>>>>> c8fd4d4 (day 7 commit)
               <p className="text-lg sm:text-xl font-bold text-gold">
 
               </p>
@@ -171,6 +201,7 @@ function LanguageAssistancePage() {
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-700 font-medium text-justify">
               At <AceWord />, we provide dedicated language assistance in Kannada and Hindi to help students strengthen their holistic academic performance. Through structured lessons, grammar practice, reading, writing and comprehension activities, students develop better language proficiency, communication skills and confidence. Our focused guidance helps students prepare effectively for school examinations while building a strong foundation in both languages.
             </p>
+<<<<<<< HEAD
 
             {/* Course Detail Button */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -189,6 +220,8 @@ function LanguageAssistancePage() {
                 <ArrowRight className="size-4" />
               </a>
             </div>
+=======
+>>>>>>> c8fd4d4 (day 7 commit)
           </div>
         </Reveal>
       </section>
@@ -197,6 +230,7 @@ function LanguageAssistancePage() {
       <section id="course-details" className="scroll-mt-16 container-ace py-14 sm:py-20 border-t border-slate-100 bg-slate-50/50">
         <Reveal variant="fade-up">
           <div className="w-full space-y-6">
+<<<<<<< HEAD
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary font-display">
@@ -205,6 +239,15 @@ function LanguageAssistancePage() {
 
               <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium leading-relaxed text-justify">
                 At <AceWord />, we provide dedicated Kannada and Hindi language support to help students improve their language proficiency, strengthen grammar and excel in school examinations. Our structured approach focuses on developing reading, writing, comprehension and communication skills through guided practice and individual attention.
+=======
+            <div className="w-full mb-12 sm:mb-16">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
+                Course Details
+              </h2>
+
+              <p className="mt-4 w-full text-base sm:text-lg text-slate-600 font-medium leading-relaxed text-justify">
+                At <AceWord />, we provide dedicated language support to help students improve their language proficiency, strengthen grammar and excel in school examinations. Our structured approach focuses on developing reading, writing, comprehension and communication skills through guided practice and individual attention.
+>>>>>>> c8fd4d4 (day 7 commit)
               </p>
             </div>
 
@@ -213,7 +256,11 @@ function LanguageAssistancePage() {
               {/* ── Kannada Support Track ── */}
               <div className="space-y-6">
                 {/* Track Header Card */}
+<<<<<<< HEAD
                 <div className="flex items-center justify-between rounded-2xl border-2 border-gold/40 bg-navy p-6 text-white shadow-md">
+=======
+                <div className="flex items-center justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 text-primary shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
+>>>>>>> c8fd4d4 (day 7 commit)
                   <div className="flex items-center gap-4">
                     <span className="grid size-14 place-items-center rounded-2xl bg-gold font-display text-2xl font-black text-navy shadow-sm">
                       ಕ
@@ -222,12 +269,20 @@ function LanguageAssistancePage() {
                       <span className="text-xs font-bold uppercase tracking-wider text-gold">
 
                       </span>
+<<<<<<< HEAD
                       <h3 className="text-2xl font-extrabold text-white">
+=======
+                      <h3 className="rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-2xl font-extrabold text-[#fdb435] shadow-xs">
+>>>>>>> c8fd4d4 (day 7 commit)
                         Kannada
                       </h3>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <span className="hidden sm:inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+=======
+                  <span className="hidden sm:inline-flex rounded-full bg-[#2a2273]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+>>>>>>> c8fd4d4 (day 7 commit)
                     ಕನ್ನಡ ಭಾಷೆ
                   </span>
                 </div>
@@ -238,6 +293,7 @@ function LanguageAssistancePage() {
                     const Icon = item.icon;
                     return (
                       <Reveal key={item.step} variant="fade-up" delay={idx * 60}>
+<<<<<<< HEAD
                         <div className="group relative flex flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-md">
                           <div className="flex items-start gap-4">
                             <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-navy text-gold shadow-sm transition-transform duration-300 group-hover:scale-105">
@@ -257,6 +313,21 @@ function LanguageAssistancePage() {
                               </p>
                             </div>
                           </div>
+=======
+                        <div className="group relative flex flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift">
+                          <div className="flex items-center justify-between gap-2">
+                            <h4 className="flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-3.5 py-2 font-display font-bold text-[#fdb435] text-base sm:text-lg shadow-xs">
+                              <Icon className="size-4 shrink-0 text-[#fdb435]" aria-hidden />
+                              <span>{item.title}</span>
+                            </h4>
+                            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-bold text-slate-600 shrink-0">
+                              {item.badge}
+                            </span>
+                          </div>
+                          <p className="mt-3 text-sm leading-relaxed text-slate-700 font-medium text-justify">
+                            {item.description}
+                          </p>
+>>>>>>> c8fd4d4 (day 7 commit)
                         </div>
                       </Reveal>
                     );
@@ -267,21 +338,35 @@ function LanguageAssistancePage() {
               {/* ── Hindi Support Track ── */}
               <div className="space-y-6">
                 {/* Track Header Card */}
+<<<<<<< HEAD
                 <div className="flex items-center justify-between rounded-2xl border-2 border-sky-border/40 bg-navy p-6 text-white shadow-md">
                   <div className="flex items-center gap-4">
                     <span className="grid size-14 place-items-center rounded-2xl bg-sky-400 font-display text-2xl font-black text-navy shadow-sm">
+=======
+                <div className="flex items-center justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 text-primary shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
+                  <div className="flex items-center gap-4">
+                    <span className="grid size-14 place-items-center rounded-2xl bg-gold font-display text-2xl font-black text-navy shadow-sm">
+>>>>>>> c8fd4d4 (day 7 commit)
                       अ
                     </span>
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-sky-border">
 
                       </span>
+<<<<<<< HEAD
                       <h3 className="text-2xl font-extrabold text-white">
+=======
+                      <h3 className="rounded-xl bg-[#2a2273] px-4 py-1.5 font-display text-2xl font-extrabold text-[#fdb435] shadow-xs">
+>>>>>>> c8fd4d4 (day 7 commit)
                         Hindi
                       </h3>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <span className="hidden sm:inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+=======
+                  <span className="hidden sm:inline-flex rounded-full bg-[#2a2273]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+>>>>>>> c8fd4d4 (day 7 commit)
                     हिंदी भाषा
                   </span>
                 </div>
@@ -292,6 +377,7 @@ function LanguageAssistancePage() {
                     const Icon = item.icon;
                     return (
                       <Reveal key={item.step} variant="fade-up" delay={idx * 60}>
+<<<<<<< HEAD
                         <div className="group relative flex flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-md">
                           <div className="flex items-start gap-4">
                             <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-navy text-gold shadow-sm transition-transform duration-300 group-hover:scale-105">
@@ -311,6 +397,21 @@ function LanguageAssistancePage() {
                               </p>
                             </div>
                           </div>
+=======
+                        <div className="group relative flex flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift">
+                          <div className="flex items-center justify-between gap-2">
+                            <h4 className="flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-3.5 py-2 font-display font-bold text-[#fdb435] text-base sm:text-lg shadow-xs">
+                              <Icon className="size-4 shrink-0 text-[#fdb435]" aria-hidden />
+                              <span>{item.title}</span>
+                            </h4>
+                            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-bold text-slate-600 shrink-0">
+                              {item.badge}
+                            </span>
+                          </div>
+                          <p className="mt-3 text-sm leading-relaxed text-slate-700 font-medium text-justify">
+                            {item.description}
+                          </p>
+>>>>>>> c8fd4d4 (day 7 commit)
                         </div>
                       </Reveal>
                     );
@@ -334,13 +435,18 @@ function LanguageAssistancePage() {
                 <Compass className="size-4" /> Our Core Focus
               </span>
 
+<<<<<<< HEAD
               <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display max-w-3xl mx-auto leading-tight">
+=======
+              <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white text-center max-w-3xl mx-auto leading-tight">
+>>>>>>> c8fd4d4 (day 7 commit)
                 “Building language confidence, improving written expression and helping every student perform better in Kannada and Hindi examinations.”
               </h3>
 
 
 
               <div className="pt-4 flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
                 <a
                   href="#enquire"
                   className="rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition-transform hover:-translate-y-0.5 hover:shadow-lg inline-flex items-center gap-2"
@@ -352,17 +458,32 @@ function LanguageAssistancePage() {
                   className="rounded-full border-2 border-white/40 px-8 py-3.5 font-bold text-white hover:border-gold hover:text-gold transition-colors"
                 >
                   Explore All Courses
+=======
+                <button
+                  type="button"
+                  onClick={() => openModal("Language Support")}
+                  className="rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition-transform hover:-translate-y-0.5 hover:shadow-lg inline-flex items-center gap-2 cursor-pointer"
+                >
+                  Enquire Now <ArrowRight className="size-4" />
+                </button>
+                <Link
+                >
+
+>>>>>>> c8fd4d4 (day 7 commit)
                 </Link>
               </div>
             </div>
           </div>
         </Reveal>
       </section>
+<<<<<<< HEAD
 
       {/* ── Contact Section ── */}
       <div id="enquire">
         <ContactSection title="Enquire for Language Assistance (Kannada & Hindi)" />
       </div>
+=======
+>>>>>>> c8fd4d4 (day 7 commit)
     </div>
   );
 }

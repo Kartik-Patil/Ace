@@ -8,7 +8,7 @@ export function ExamReadySection() {
       <div className="container-ace">
         {/* ── Section Header with Brush Underline matching reference ── */}
         <Reveal variant="fade-up" className="text-center max-w-3xl mx-auto">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             <span className="relative inline-block">
               Everything you need for your Exam
               {/* Hand-drawn gold accent brush underline */}
@@ -38,30 +38,26 @@ export function ExamReadySection() {
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* ════════ Left Column (col-span-7) ════════ */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            {/* 1. Build Strong Foundations (Horizontal Card, Deep Navy Brand Theme) */}
+            {/* 1. Build Strong Foundations */}
             <Reveal variant="fade-up" delay={0}>
-              <div className="group relative overflow-hidden rounded-3xl bg-navy-pattern p-7 sm:p-8 text-navy-foreground border-2 border-gold/40 shadow-lift transition duration-300">
-                {/* Subtle background glow */}
-                <div className="pointer-events-none absolute -top-16 -right-16 size-56 rounded-full bg-gold/15 blur-3xl" />
-                <div className="pointer-events-none absolute -bottom-16 -left-16 size-48 rounded-full bg-sky-border/20 blur-2xl" />
-
+              <div className="group relative overflow-hidden rounded-3xl bg-white p-7 sm:p-8 text-slate-700 border-2 border-slate-200/80 shadow-card transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
                   {/* Left Text */}
                   <div className="md:col-span-6">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-gold-foreground shadow-sm">
                       <Sparkles className="size-3" /> PCMB Conceptual Mastery
                     </span>
-                    <h3 className="mt-3 font-display text-2xl sm:text-3xl font-bold leading-tight">
-                      Build <span className="italic text-gold">Strong Foundations</span>
+                    <h3 className="mt-3 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-2xl sm:text-3xl font-bold leading-tight text-[#fdb435] shadow-xs">
+                      Build Strong Foundations
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed opacity-90">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-700">
                       Develop conceptual understanding in Physics, Chemistry, Mathematics and Biology to move from rote learning to analytical excellence.
                     </p>
                   </div>
 
-                  {/* Right Humanized UI Mockup (Blended Seamlessly - No Boxy Patch!) */}
+                  {/* Right Humanized UI Mockup */}
                   <div className="md:col-span-6 flex justify-center">
-                    <div className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-4 shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
+                    <div className="w-full max-w-sm rounded-2xl bg-[#2a2273] border border-[#fdb435]/40 p-4 shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
                       {/* Mini Window Header */}
                       <div className="flex items-center justify-between pb-3 border-b border-white/15 text-xs font-medium text-white/80">
                         <div className="flex items-center gap-1.5">
@@ -114,15 +110,15 @@ export function ExamReadySection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-1">
               {/* 2. Promote Beyond Classroom Learning (Vertical Clean White Card) */}
               <Reveal variant="fade-up" delay={80} className="h-full">
-                <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-sky-border/40 bg-card p-6 sm:p-7 shadow-card hover:shadow-lift transition duration-300 hover:border-sky-border">
+                <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-slate-200/80 bg-white p-6 sm:p-7 shadow-card hover:scale-[1.03] hover:shadow-lift transition-all duration-300 hover:border-[#fdb435]">
                   <div>
                     <span className="inline-block rounded-full bg-sky px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary border border-sky-border/30">
                       Experiential &amp; Hands-on
                     </span>
-                    <h3 className="mt-4 font-display text-xl sm:text-2xl font-bold text-primary">
+                    <h3 className="mt-4 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold text-[#fdb435] shadow-xs">
                       Beyond Classroom Learning
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-2.5 text-sm leading-relaxed text-slate-700">
                       Encourage experiential, activity-based and application-oriented learning through real experiments.
                     </p>
                   </div>
@@ -162,17 +158,17 @@ export function ExamReadySection() {
                 </div>
               </Reveal>
 
-              {/* 3. Develop Essential Skills (Flashcards visual like in EduRev reference) */}
+              {/* 3. Develop Essential Skills */}
               <Reveal variant="fade-up" delay={160} className="h-full">
-                <div className="group h-full flex flex-col justify-between rounded-3xl bg-primary text-primary-foreground border-2 border-gold/40 p-6 sm:p-7 shadow-card hover:shadow-lift transition duration-300">
+                <div className="group h-full flex flex-col justify-between rounded-3xl bg-white text-slate-700 border-2 border-slate-200/80 p-6 sm:p-7 shadow-card hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift transition-all duration-300">
                   <div>
-                    <span className="inline-block rounded-full bg-gold/20 text-gold border border-gold/40 px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                    <span className="inline-block rounded-full bg-gold/20 text-gold-foreground border border-gold/40 px-3 py-1 text-xs font-bold uppercase tracking-wider">
                       Logic &amp; Critical Thinking
                     </span>
-                    <h3 className="mt-4 font-display text-xl sm:text-2xl font-bold leading-tight">
-                      Develop <span className="italic text-gold">Essential Skills</span>
+                    <h3 className="mt-4 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold leading-tight text-[#fdb435] shadow-xs">
+                      Develop Essential Skills
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed opacity-90">
+                    <p className="mt-2.5 text-sm leading-relaxed text-slate-700">
                       Flip. Recall. Repeat. Strengthen communication, analytical thinking, and problem-solving abilities.
                     </p>
                   </div>
@@ -180,8 +176,8 @@ export function ExamReadySection() {
                   {/* Playful Tilted Flashcards Mockup matching reference (Blended Seamlessly!) */}
                   <div className="mt-6 relative h-48 flex items-center justify-center">
                     {/* Background peeking card */}
-                    <div className="absolute w-[86%] rounded-2xl bg-white/15 border border-white/20 p-3.5 rotate-6 shadow-md transition-transform duration-300 group-hover:rotate-8">
-                      <div className="flex items-center justify-between text-[11px] text-white/80">
+                    <div className="absolute w-[86%] rounded-2xl bg-[#2a2273] border border-[#fdb435]/40 p-3.5 rotate-6 shadow-md transition-transform duration-300 group-hover:rotate-8">
+                      <div className="flex items-center justify-between text-[11px] text-white/90">
                         <span>Card #41 · Speed Math</span>
                         <span className="font-mono">2 + 2 = ?</span>
                       </div>
@@ -220,7 +216,7 @@ export function ExamReadySection() {
           <div className="lg:col-span-5 flex flex-col gap-6">
             {/* 4. Ensure Academic Excellence (Tall White Card, Laptop/Video visual like reference) */}
             <Reveal variant="fade-up" delay={120} className="flex-1">
-              <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-sky-border/40 bg-card p-6 sm:p-7 shadow-card hover:shadow-lift transition duration-300 hover:border-sky-border">
+              <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-slate-200/80 bg-white p-6 sm:p-7 shadow-card hover:scale-[1.03] hover:shadow-lift transition-all duration-300 hover:border-[#fdb435]">
                 {/* Modern Laptop / Digital Lecture Visual (Blended Seamlessly!) */}
                 <div className="relative rounded-2xl bg-gradient-to-b from-sky/40 via-sky/20 to-transparent p-4 pb-6">
                   {/* Floating play badge tag */}
@@ -273,29 +269,29 @@ export function ExamReadySection() {
                   <span className="inline-block rounded-full bg-primary/10 text-primary border border-primary/20 px-3 py-1 text-xs font-bold uppercase tracking-wider">
                     Curriculum &amp; Board Mastery
                   </span>
-                  <h3 className="mt-3 font-display text-2xl font-bold text-primary">
+                  <h3 className="mt-3 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-2xl font-bold text-[#fdb435] shadow-xs">
                     Academic Excellence
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2.5 text-sm leading-relaxed text-slate-700">
                     Provide structured Board Support and Foundation training for Classes 8, 9 &amp; 10 to systematically elevate academic performance in school examinations.
                   </p>
                 </div>
               </div>
             </Reveal>
 
-            {/* 5. Build Confidence (Test Insights & A+ Score sheet matching reference) */}
+            {/* 5. Build Confidence (White Card + Gold Border + Navy Title) */}
             <Reveal variant="fade-up" delay={200}>
-              <div className="group rounded-3xl border-2 border-sky-border/50 bg-sky/70 p-6 sm:p-7 shadow-card hover:shadow-lift transition duration-300 hover:border-sky-border">
+              <div className="group rounded-3xl border-2 border-slate-200/80 bg-white p-6 sm:p-7 shadow-card hover:scale-[1.03] hover:shadow-lift transition-all duration-300 hover:border-[#fdb435]">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
                   {/* Left Text */}
                   <div className="sm:col-span-6">
                     <span className="inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-gold-foreground">
                       Fear-Free Assessments
                     </span>
-                    <h3 className="mt-3 font-display text-xl sm:text-2xl font-bold text-primary">
+                    <h3 className="mt-3 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold text-[#fdb435] shadow-xs">
                       Build Confidence
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-2.5 text-sm leading-relaxed text-slate-700">
                       Help students overcome examination fear through regular assessments, mentoring and personalised guidance.
                     </p>
                   </div>

@@ -278,7 +278,11 @@ export function EnquiryForm({ defaultProgram = "" }: { defaultProgram?: string }
   });
 
   return (
+<<<<<<< HEAD
     <div className="rounded-3xl border-2 border-amber-300/80 bg-white p-5 sm:p-6 shadow-sm">
+=======
+    <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-5 sm:p-6 shadow-sm transition-all duration-300 hover:border-[#fdb435]">
+>>>>>>> c8fd4d4 (day 7 commit)
       {/* ── Form Header ── */}
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-amber-100 pb-3">
         <div className="flex items-center gap-2">

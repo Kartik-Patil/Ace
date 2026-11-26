@@ -110,12 +110,20 @@ function AboutPage() {
 
           {/* ── WHY ACE? Strive List (Noticeable Large Headings, clean bulleted format, no cards) ── */}
           <div className="mt-10 border-t-2 border-border/80 pt-8">
+<<<<<<< HEAD
             <div>
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary flex items-center gap-3">
                 <span className="h-1 w-8 bg-gold inline-block rounded-full" />
                 WHY <AceWord />
               </h3>
               <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90">
+=======
+            <div className="text-center">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary text-center">
+                WHY <AceWord />
+              </h2>
+              <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90 text-center">
+>>>>>>> c8fd4d4 (day 7 commit)
                 At <AceWord />, we strive to:
               </p>
             </div>
@@ -202,7 +210,7 @@ function AboutPage() {
       {/* <section className="bg-navy-pattern py-16 text-navy-foreground">
         <Reveal variant="zoom-in" className="container-ace flex flex-col items-center gap-4 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold"><AceWord dark /> Education</p>
-          <h2 className="text-3xl font-semibold md:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
             Your Ambition, <span className="italic text-gold">Our Foundation.</span>
           </h2>
           <p className="text-base font-bold uppercase tracking-[0.2em] text-gold-foreground bg-gold px-6 py-2 rounded-full mt-2">

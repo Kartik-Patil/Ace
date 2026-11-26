@@ -67,7 +67,7 @@ function EventsPage() {
             <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-4 py-1.5 text-xs font-bold text-gold-foreground uppercase tracking-widest shadow-sm">
               <Sparkles className="size-3.5" /> Academic Events &amp; Workshops
             </span>
-            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            <h1 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-center">
               Where Learning Meets <span className="italic text-gold">Action &amp; Discovery</span>
             </h1>
             <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium text-justify">
@@ -90,7 +90,7 @@ function EventsPage() {
         <div className="mt-12 grid gap-8 md:grid-cols-3 items-stretch">
           {upcomingEvents.map((ev, i) => (
             <Reveal key={ev.id} variant="fade-up" delay={i * 90}>
-              <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-border bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift hover:border-gold/60">
+              <div className="group h-full flex flex-col justify-between rounded-3xl border-2 border-slate-200/80 bg-white p-6 shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1.5 hover:shadow-lift hover:border-[#fdb435]">
                 <div>
                   <div className="flex items-center justify-between gap-2">
                     <span className={`inline-block rounded-full border px-3 py-1 text-xs font-bold ${ev.badgeColor}`}>
@@ -101,7 +101,7 @@ function EventsPage() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-display text-xl font-bold text-primary group-hover:text-gold transition-colors">
+                  <h3 className="mt-4 rounded-xl bg-[#2a2273] px-4 py-2.5 font-display text-xl font-bold text-[#fdb435] shadow-xs">
                     {ev.title}
                   </h3>
 
@@ -153,15 +153,19 @@ function EventsPage() {
 
       {/* ── Partner / School Event Banner ── */}
       <section className="bg-secondary/60 py-16 border-y border-border">
-        <div className="container-ace flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-border mb-2">
+        <div className="container-ace flex flex-col items-center gap-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-border mb-2">
               <Users className="size-4" /> Institutional Seminars
             </div>
-            <h3 className="font-display text-2xl font-bold text-primary">
+            <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
               Want ACE to host a STEM or Exam Strategy Workshop at your school?
             </h3>
+<<<<<<< HEAD
             <p className="mt-2 text-sm text-muted-foreground max-w-xl text-justify">
+=======
+            <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto text-center">
+>>>>>>> c8fd4d4 (day 7 commit)
               We conduct custom academic workshops for school students from Classes 7th to 10th on conceptual clarity and exam confidence.
             </p>
           </div>

@@ -47,7 +47,7 @@ export function AdmissionsPage() {
             <p className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-1.5 text-xs sm:text-sm font-bold text-gold-foreground shadow-sm">
               <Sparkles className="size-4" aria-hidden /> Admissions Open · Academic Year {contact.admissionYear}
             </p>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight">
+            <h1 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.08] tracking-tight text-center">
               Where Curiosity Becomes Clarity.{" "}
               <span className="relative inline-block">
                 <span className="italic text-gold">Confidence Follows.</span>

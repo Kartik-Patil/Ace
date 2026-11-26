@@ -103,7 +103,7 @@ function HomePage() {
             <p className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-1.5 text-xs font-bold text-gold-foreground uppercase tracking-widest">
               <Sparkles className="size-3.5" aria-hidden /> Admissions Open · {contact.admissionYear}
             </p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.08] text-center">
               From Concepts <span className="italic text-gold">to Confidence.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed opacity-90 text-justify">
@@ -134,7 +134,7 @@ function HomePage() {
               height={344}
               className="rounded-3xl border-4 border-gold/70 object-cover shadow-lift w-full h-auto"
             />
-            <div className="absolute -bottom-6 left-6 rounded-2xl bg-card p-4 text-card-foreground shadow-lift">
+            <div className="absolute -bottom-6 left-6 rounded-2xl border-2 border-slate-200/80 bg-white p-4 text-card-foreground shadow-lift transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435]">
               <p className="font-display text-3xl font-bold text-primary">
                 <RollingNumber value="500+" />
               </p>
@@ -162,15 +162,14 @@ function HomePage() {
       <section id="about" className="container-ace scroll-mt-24 py-12 sm:py-16">
         <div className="w-full">
           {/* Header & Badges */}
-          <div className="border-b-2 border-border/80 pb-6">
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-primary flex flex-wrap items-center gap-3">
-              <span className="h-1 w-8 bg-gold inline-block rounded-full" />
+          <div className="border-b-2 border-border/80 pb-6 text-center">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
               About Us – <AceWord /> Education, Hubballi
             </h2>
-            <h3 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary">
+            <h3 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
               From Concepts <span className="italic text-gold">to Confidence</span>
             </h3>
-            <p className="mt-3 text-base sm:text-lg font-bold text-muted-foreground flex flex-wrap items-center gap-x-3.5 gap-y-1.5">
+            <p className="mt-3 text-base sm:text-lg font-bold text-muted-foreground flex flex-wrap items-center justify-center gap-x-3.5 gap-y-1.5">
               <span className="text-primary font-bold">Established in 2022</span>
               <span className="text-gold font-black text-lg">|</span>
               <span className="text-primary font-bold">500+ Students</span>
@@ -200,12 +199,17 @@ function HomePage() {
 
           {/* ── WHY ACE? Strive List (Noticeable Large Headings, clean bulleted format, no cards) ── */}
           <div className="mt-10 border-t-2 border-border/80 pt-8">
+<<<<<<< HEAD
             <div>
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary flex items-center gap-3">
                 <span className="h-1 w-8 bg-gold inline-block rounded-full" />
+=======
+            <div className="text-center">
+              <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary text-center">
+>>>>>>> c8fd4d4 (day 7 commit)
                 WHY <AceWord />
               </h3>
-              <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90">
+              <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90 text-center">
                 At <AceWord />, we strive to:
               </p>
             </div>
@@ -264,7 +268,7 @@ function HomePage() {
       <section className="bg-navy-pattern py-16 text-navy-foreground">
         <Reveal variant="zoom-in" className="container-ace flex flex-col items-center gap-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold"><AceWord dark /> Education</p>
-          <h2 className="text-3xl font-semibold md:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center">
             Your Ambition, <span className="italic text-gold">Our Foundation.</span>
           </h2>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-gold-foreground bg-gold px-6 py-2 rounded-full mt-1">

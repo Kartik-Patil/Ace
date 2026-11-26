@@ -136,7 +136,7 @@ export function EducationalPhilosophyWaveSection() {
             <span>—</span>
           </p>
 
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             Our Educational Philosophy.
           </h2>
 
@@ -275,24 +275,15 @@ export function EducationalPhilosophyWaveSection() {
 
               return (
                 <Reveal key={stg.num} variant="fade-up" delay={i * 80}>
-                  <div className="relative group rounded-2xl border-2 border-border bg-card p-5 shadow-sm transition hover:border-gold hover:shadow-lift">
-                    {/* Glowing Hexagonal Node Pin on Timeline */}
-                    <div className="absolute -left-[54px] top-5 size-11 grid place-items-center rounded-xl bg-white border-2 border-sky-500 shadow-md">
-                      <Icon className={`size-5 ${isGold ? "text-gold" : "text-sky-600"}`} />
-                    </div>
-
-                    {/* Giant Watermark Step Number */}
-                    <span className="pointer-events-none absolute top-3 right-4 font-display font-black text-5xl text-slate-200/70 select-none">
-                      {stg.numberInt}
-                    </span>
-
-                    <div className="relative z-10 pr-8">
+                  <div className="relative group rounded-2xl border-2 border-slate-200/80 bg-white p-5 shadow-sm transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
+                    <div className="relative z-10">
                       <span className="inline-block rounded bg-gold/15 px-2 py-0.5 text-[10px] font-bold text-gold-foreground uppercase tracking-wide">
                         {stg.subTitle}
                       </span>
 
-                      <h3 className="mt-2 font-display text-lg font-bold text-primary">
-                        {stg.title}
+                      <h3 className="mt-2 flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-3.5 py-2 font-display text-lg font-bold text-[#fdb435] shadow-xs">
+                        <Icon className="size-4 shrink-0 text-[#fdb435]" aria-hidden />
+                        <span>{stg.title}</span>
                       </h3>
 
                       <p className="mt-1 text-xs text-muted-foreground font-medium leading-relaxed">

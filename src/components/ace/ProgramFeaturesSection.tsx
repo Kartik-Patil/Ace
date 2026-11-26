@@ -58,7 +58,11 @@ export function ProgramFeaturesSection() {
     <section className="relative overflow-hidden bg-secondary/30 py-20 border-t border-border">
       <div className="container-ace">
         <Reveal variant="fade-up" className="text-center max-w-3xl mx-auto">
+<<<<<<< HEAD
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+=======
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
+>>>>>>> c8fd4d4 (day 7 commit)
             Learning Beyond Books
           </h2>
 
@@ -79,6 +83,7 @@ export function ProgramFeaturesSection() {
                 : idx === 4
                   ? "lg:col-span-2 sm:col-span-2 sm:max-w-md sm:mx-auto lg:max-w-none lg:mx-0 w-full"
                   : "lg:col-span-2 sm:col-span-1";
+<<<<<<< HEAD
 
             return (
               <Reveal key={item.number} variant="fade-up" delay={idx * 60} className={colSpanClass}>
@@ -102,12 +107,32 @@ export function ProgramFeaturesSection() {
 
                     {/* Description in White */}
                     <p className="mt-2.5 text-sm leading-relaxed text-white/95 font-medium text-justify">
+=======
+
+            return (
+              <Reveal key={item.number} variant="fade-up" delay={idx * 60} className={colSpanClass}>
+                {/* Card with white background, hover-only golden border, hover zoom, and inline icon + dark blue title box */}
+                <div className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 sm:p-7 shadow-md transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift text-slate-700">
+                  <div>
+                    {/* Icon & Title on the same line in Dark Blue Box with Golden Words */}
+                    <h3 className="flex items-center gap-3 rounded-xl bg-[#2a2273] px-4 py-2.5 font-display text-lg sm:text-xl font-bold leading-snug text-[#fdb435] tracking-tight shadow-xs">
+                      <Icon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
+                      <span>{item.title}</span>
+                    </h3>
+
+                    {/* Description in Dark Slate on White */}
+                    <p className="mt-4 text-sm leading-relaxed text-slate-700 font-medium text-justify">
+>>>>>>> c8fd4d4 (day 7 commit)
                       {item.description}
                     </p>
                   </div>
 
                   {/* Bottom accent indicator */}
+<<<<<<< HEAD
                   <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-[#fdb435]/50 group-hover:text-[#fdb435] transition-colors" />
+=======
+                  <div className="mt-5 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-bold text-[#2a2273]/50 group-hover:text-[#fdb435] transition-colors" />
+>>>>>>> c8fd4d4 (day 7 commit)
                 </div>
               </Reveal>
             );

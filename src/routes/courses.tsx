@@ -51,7 +51,11 @@ const foundationCards = [
     title: "Language Assistance",
     classes: "Class 8, 9 & 10 · Kannada & Hindi",
     description:
+<<<<<<< HEAD
       "Dedicated Hindi and Kannada language mentoring to improve comprehension, reading, and writing skills.",
+=======
+      "Dedicated language mentoring to improve comprehension, reading, and writing skills.",
+>>>>>>> c8fd4d4 (day 7 commit)
     image: langCardImg,
     hours: "60+ Hours",
     tests: "10+ Tests",
@@ -90,7 +94,11 @@ function CoursesPage() {
       <section id="programmes" className="container-ace scroll-mt-24 py-16 sm:py-20">
         <Reveal variant="fade-up">
           <div className="w-full">
+<<<<<<< HEAD
             <h2 className="text-3xl font-semibold text-primary md:text-4xl lg:text-5xl">
+=======
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
+>>>>>>> c8fd4d4 (day 7 commit)
               Foundation
             </h2>
 
@@ -120,7 +128,11 @@ function CoursesPage() {
               <>
                 <div className="flex flex-col">
                   {/* Top Illustration Banner */}
+<<<<<<< HEAD
                   <div className="w-full bg-white border-b-2 border-gold/40 overflow-hidden">
+=======
+                  <div className="w-full bg-white border-b border-slate-200/80 overflow-hidden">
+>>>>>>> c8fd4d4 (day 7 commit)
                     <img
                       src={card.image}
                       alt={card.title}
@@ -133,6 +145,7 @@ function CoursesPage() {
 
                   {/* Card Content Body */}
                   <div className="p-6 flex flex-col flex-1">
+<<<<<<< HEAD
                     <h3 className="font-display text-xl sm:text-2xl font-extrabold text-gold tracking-tight transition-colors">
                       {card.title}
                     </h3>
@@ -140,15 +153,31 @@ function CoursesPage() {
                       {card.classes}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-white/90 font-medium text-justify">
+=======
+                    <h3 className="rounded-xl bg-[#2a2273] px-4 py-2.5 font-display text-xl sm:text-2xl font-extrabold text-[#fdb435] tracking-tight text-center shadow-xs transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm sm:text-base font-bold text-primary">
+                      {card.classes}
+                    </p>
+                    <p className="mt-2.5 text-sm leading-relaxed text-slate-700 font-medium text-justify">
+>>>>>>> c8fd4d4 (day 7 commit)
                       {card.description}
                     </p>
 
                     {/* Mode Badges */}
                     <div className="mt-5 flex flex-col items-start gap-2">
+<<<<<<< HEAD
                       <span className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-xs font-semibold text-white">
                         Classroom
                       </span>
                       <span className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-3.5 py-1 text-xs font-semibold text-white">
+=======
+                      <span className="inline-flex items-center rounded-full bg-[#2a2273]/5 border border-[#2a2273]/20 px-3.5 py-1 text-xs font-semibold text-primary">
+                        Classroom Learning
+                      </span>
+                      <span className="inline-flex items-center rounded-full bg-[#2a2273]/5 border border-[#2a2273]/20 px-3.5 py-1 text-xs font-semibold text-primary">
+>>>>>>> c8fd4d4 (day 7 commit)
                         Offline
                       </span>
                     </div>
@@ -157,12 +186,21 @@ function CoursesPage() {
 
                 {/* Card Bottom / Footer */}
                 <div className="px-6 pb-6 pt-0">
+<<<<<<< HEAD
                   <hr className="mb-4 border-t border-white/15" />
                   <div className="flex items-center gap-4 text-sm sm:text-base font-bold text-white">
                     <span>{card.hours}</span>
                     <span>{card.tests}</span>
                   </div>
                   <div className="mt-4 flex items-center gap-1.5 text-sm sm:text-base font-bold text-gold transition-all duration-300 group-hover:text-white">
+=======
+                  <hr className="mb-4 border-t border-slate-200/80" />
+                  <div className="flex items-center gap-4 text-sm sm:text-base font-bold text-primary">
+                    <span>{card.hours}</span>
+                    <span>{card.tests}</span>
+                  </div>
+                  <div className="mt-4 flex items-center gap-1.5 text-sm sm:text-base font-bold text-[#2a2273] transition-all duration-300 group-hover:text-[#d97706]">
+>>>>>>> c8fd4d4 (day 7 commit)
                     <span>View programme</span>
                     <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden />
                   </div>
@@ -175,14 +213,22 @@ function CoursesPage() {
                 {card.isInternal ? (
                   <Link
                     to={card.href}
+<<<<<<< HEAD
                     className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-gold/50 bg-navy-pattern text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift text-left"
+=======
+                    className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-slate-200/80 bg-white text-slate-700 shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1.5 hover:border-[#fdb435] hover:shadow-lift text-left"
+>>>>>>> c8fd4d4 (day 7 commit)
                   >
                     {cardInner}
                   </Link>
                 ) : (
                   <a
                     href={card.href}
+<<<<<<< HEAD
                     className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-gold/50 bg-navy-pattern text-navy-foreground shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-lift text-left"
+=======
+                    className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl border-2 border-slate-200/80 bg-white text-slate-700 shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1.5 hover:border-[#fdb435] hover:shadow-lift text-left"
+>>>>>>> c8fd4d4 (day 7 commit)
                   >
                     {cardInner}
                   </a>

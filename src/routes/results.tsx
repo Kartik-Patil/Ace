@@ -26,7 +26,7 @@ function ResultsPage() {
             <p className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-1.5 text-sm font-bold text-gold-foreground">
               <Sparkles className="size-4" aria-hidden /> Academic Year {contact.achieversYear}
             </p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-center">
               Our <span className="italic text-gold">Achievers</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg opacity-85 text-justify">

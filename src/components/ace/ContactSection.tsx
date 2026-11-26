@@ -33,7 +33,11 @@ export function ContactSection({
       <div className="container-ace max-w-4xl mx-auto text-center">
         <div>
           <Eyebrow>Admission enquiry · {contact.admissionYear}</Eyebrow>
+<<<<<<< HEAD
           <h2 className="mt-2 text-3xl font-extrabold text-primary md:text-5xl font-display">{displayTitle}</h2>
+=======
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">{displayTitle}</h2>
+>>>>>>> c8fd4d4 (day 7 commit)
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             Have questions about syllabus, batches or our classroom programs? Reach out to our admissions desk or submit an enquiry.
           </p>
@@ -56,10 +60,17 @@ export function ContactSection({
             target="_blank"
             rel="noreferrer"
             className={cn(
+<<<<<<< HEAD
               "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:shadow-md hover:border-emerald-500 hover:-translate-y-0.5",
               isWhite
                 ? "bg-white border border-slate-200"
                 : "bg-white/95 border border-amber-200/70"
+=======
+              "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:scale-[1.03] hover:shadow-lift hover:border-[#fdb435] hover:-translate-y-0.5",
+              isWhite
+                ? "bg-white border-2 border-slate-200/80"
+                : "bg-white border-2 border-slate-200/80"
+>>>>>>> c8fd4d4 (day 7 commit)
             )}
           >
             <span className="grid size-11 place-items-center rounded-xl bg-emerald-600 text-white shrink-0 shadow-sm">
@@ -74,10 +85,17 @@ export function ContactSection({
           <a
             href={contact.phoneHref}
             className={cn(
+<<<<<<< HEAD
               "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:shadow-md hover:border-gold hover:-translate-y-0.5",
               isWhite
                 ? "bg-white border border-slate-200"
                 : "bg-white/95 border border-amber-200/70"
+=======
+              "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:scale-[1.03] hover:shadow-lift hover:border-[#fdb435] hover:-translate-y-0.5",
+              isWhite
+                ? "bg-white border-2 border-slate-200/80"
+                : "bg-white border-2 border-slate-200/80"
+>>>>>>> c8fd4d4 (day 7 commit)
             )}
           >
             <span className="grid size-11 place-items-center rounded-xl bg-gold text-gold-foreground shrink-0 shadow-sm">
@@ -94,10 +112,17 @@ export function ContactSection({
             target="_blank"
             rel="noreferrer"
             className={cn(
+<<<<<<< HEAD
               "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:shadow-md hover:border-primary hover:-translate-y-0.5",
               isWhite
                 ? "bg-white border border-slate-200"
                 : "bg-white/95 border border-amber-200/70"
+=======
+              "flex items-center gap-3.5 rounded-2xl p-4 shadow-2xs transition-all duration-300 hover:scale-[1.03] hover:shadow-lift hover:border-[#fdb435] hover:-translate-y-0.5",
+              isWhite
+                ? "bg-white border-2 border-slate-200/80"
+                : "bg-white border-2 border-slate-200/80"
+>>>>>>> c8fd4d4 (day 7 commit)
             )}
           >
             <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">

@@ -54,23 +54,23 @@ function ProgramsPage() {
           <div>
             <SectionHeading eyebrow="Our approach" title="How students move forward" />
             <ol className="mt-8 space-y-5">
-              {steps.map((s, i) => (
-                <li key={s.t} className="flex gap-4 rounded-2xl bg-card p-5 shadow-card">
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-primary font-display font-bold text-primary-foreground">{i + 1}</span>
-                  <div><p className="font-bold text-primary">{s.t}</p><p className="text-sm text-muted-foreground">{s.d}</p></div>
+              {steps.map((s) => (
+                <li key={s.t} className="rounded-2xl border-2 border-slate-200/80 bg-white p-5 shadow-card transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift">
+                  <p className="inline-block rounded-lg bg-[#2a2273] px-3.5 py-1.5 font-display font-bold text-[#fdb435]">{s.t}</p>
+                  <p className="mt-2 text-sm text-slate-700">{s.d}</p>
                 </li>
               ))}
             </ol>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="rounded-2xl bg-navy-pattern p-8 text-navy-foreground">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Boards supported</p>
+            <div className="rounded-2xl border-2 border-slate-200/80 bg-white p-8 text-primary shadow-card transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
+              <p className="inline-block rounded-lg bg-[#2a2273] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#fdb435]">Boards supported</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                {boards.map((b) => <span key={b} className="rounded-xl border-2 border-gold px-5 py-3 font-display text-2xl font-semibold">{b}</span>)}
+                {boards.map((b) => <span key={b} className="rounded-xl border-2 border-gold px-5 py-3 font-display text-2xl font-semibold text-primary">{b}</span>)}
               </div>
             </div>
-            <div className="rounded-2xl border-2 border-sky-border/40 bg-card p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-border">Why ACE</p>
+            <div className="rounded-2xl border-2 border-slate-200/80 bg-white p-8 shadow-card transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
+              <p className="inline-block rounded-lg bg-[#2a2273] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#fdb435]">Why ACE</p>
               <ul className="mt-4 space-y-3 text-sm">
                 {["Programs for Classes VIII, IX & X under one roof", "Foundation covering Physics, Chemistry, Maths, Biology & Reasoning", "Morning Math Mastery classes", "Kannada & Hindi language support", "Proven results — see our 2025–26 achievers"].map((x) => (
                   <li key={x} className="flex gap-3"><CheckCircle2 className="size-5 shrink-0 text-success" aria-hidden />{x}</li>

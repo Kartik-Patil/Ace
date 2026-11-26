@@ -100,7 +100,7 @@ export function CommitmentsInfographicSection() {
             <span className="w-6 h-0.5 bg-sky-border inline-block" />
           </p>
 
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
             Our 5 Unwavering Commitments{" "}
             <span className="relative inline-block">
               <span className="italic text-gold">to Your Child</span>

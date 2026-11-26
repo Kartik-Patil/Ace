@@ -13,9 +13,9 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 
 export function SectionHeading({ eyebrow, title, intro }: { eyebrow: ReactNode; title: ReactNode; intro?: ReactNode }) {
   return (
-    <div className="max-w-2xl">
-      <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-3 text-3xl font-semibold text-primary md:text-4xl">{title}</h2>
+    <div className="mx-auto max-w-3xl text-center">
+      {eyebrow && <div className="mb-3"><Eyebrow>{eyebrow}</Eyebrow></div>}
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">{title}</h2>
       {intro && <p className="mt-3 text-muted-foreground">{intro}</p>}
     </div>
   );
@@ -25,18 +25,15 @@ const icons: Record<string, LucideIcon> = {
   bridge: Layers, foundation: Rocket, board: BookOpenCheck, tests: ClipboardCheck, math: Calculator, language: Languages,
 };
 
-export function ProgramCard({ program, index }: { program: Program; index: number }) {
+export function ProgramCard({ program }: { program: Program; index?: number }) {
   const Icon = icons[program.id] ?? Layers;
   return (
-    <article className="group relative flex h-full flex-col rounded-2xl border-2 border-sky-border/40 bg-sky p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-border hover:shadow-lift">
-      <div className="flex items-start justify-between">
-        <span className="grid size-12 place-items-center rounded-xl bg-primary text-primary-foreground transition group-hover:bg-gold group-hover:text-gold-foreground">
-          <Icon className="size-6" aria-hidden />
-        </span>
-        <span className="font-display text-3xl text-sky-border/30">{String(index + 1).padStart(2, "0")}</span>
-      </div>
-      <h3 className="mt-5 text-xl font-semibold text-primary">{program.name}</h3>
-      <p className="mt-2 flex-1 text-sm text-muted-foreground">{program.summary}</p>
+    <article className="group relative flex h-full flex-col rounded-2xl border-2 border-slate-200/80 bg-white p-6 shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift">
+      <h3 className="flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-4 py-2.5 font-display text-xl font-bold text-[#fdb435] shadow-xs">
+        <Icon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
+        <span>{program.name}</span>
+      </h3>
+      <p className="mt-3 flex-1 text-sm text-slate-700">{program.summary}</p>
       {program.highlight && (
         <p className="mt-4 inline-flex w-fit rounded-full bg-gold px-3 py-1 text-xs font-bold text-gold-foreground">{program.highlight}</p>
       )}
@@ -46,7 +43,7 @@ export function ProgramCard({ program, index }: { program: Program; index: numbe
 
 export function AchieverCard({ a }: { a: Achiever }) {
   return (
-    <figure className="group overflow-hidden rounded-2xl border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+    <figure className="group overflow-hidden rounded-2xl border-2 border-slate-200/80 bg-white shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift">
       <div className="relative aspect-[4/5] overflow-hidden bg-sky">
         <SafeImage
           src={a.photo}
@@ -67,8 +64,8 @@ export function AchieverCard({ a }: { a: Achiever }) {
         </div>
       </div>
       <figcaption className="p-4">
-        <p className="font-bold text-primary">{a.name}</p>
-        <p className="text-sm text-muted-foreground">{a.institution ?? a.tag}</p>
+        <p className="rounded-xl bg-[#2a2273] px-3 py-1.5 font-display font-bold text-[#fdb435] text-center shadow-xs">{a.name}</p>
+        <p className="mt-2 text-sm text-slate-600 text-center font-medium">{a.institution ?? a.tag}</p>
       </figcaption>
     </figure>
   );
@@ -89,10 +86,10 @@ export function Faq() {
 
 export function Placeholder({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="rounded-2xl border-2 border-dashed border-sky-border/40 bg-sky p-8 text-center">
+    <div className="rounded-2xl border-2 border-slate-200/80 bg-white p-8 text-center shadow-card transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
       <p className="text-xs font-bold uppercase tracking-widest text-sky-border">Content coming soon</p>
-      <h3 className="mt-2 text-2xl font-semibold text-primary">{title}</h3>
-      <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">{children}</p>
+      <h3 className="mt-3 inline-block rounded-xl bg-[#2a2273] px-5 py-2 font-display text-2xl font-bold text-[#fdb435]">{title}</h3>
+      <p className="mx-auto mt-3 max-w-lg text-sm text-slate-700">{children}</p>
     </div>
   );
 }

@@ -68,10 +68,8 @@ function PartnerPage() {
       <section className="bg-navy-pattern text-navy-foreground py-16 md:py-24">
         <div className="container-ace text-center max-w-3xl mx-auto">
           <div className="fade-up">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-4 py-1.5 text-xs font-bold text-gold-foreground uppercase tracking-widest shadow-sm">
-              <Handshake className="size-3.5" /> Institutional Alliances
-            </span>
-            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+
+            <h1 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-center">
               Partner with <span className="italic text-gold">ACE Education</span>
             </h1>
             <p className="mt-6 text-base sm:text-lg opacity-90 leading-relaxed font-medium text-justify">
@@ -97,14 +95,11 @@ function PartnerPage() {
 
             return (
               <Reveal key={tr.title} variant="fade-up" delay={i * 90}>
-                <div className="h-full rounded-3xl border-2 border-border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift flex flex-col justify-between">
+                <div className="h-full rounded-3xl border-2 border-slate-200/80 bg-white p-7 shadow-card transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1.5 hover:border-[#fdb435] hover:shadow-lift flex flex-col justify-between">
                   <div>
-                    <div className="grid size-12 place-items-center rounded-2xl bg-gold/15 text-gold-foreground">
-                      <Icon className="size-6 text-gold" />
-                    </div>
-
-                    <h3 className="mt-5 font-display text-xl font-bold text-primary">
-                      {tr.title}
+                    <h3 className="flex items-center gap-3 rounded-xl bg-[#2a2273] px-4 py-2.5 font-display text-xl font-bold text-[#fdb435] shadow-xs">
+                      <Icon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
+                      <span>{tr.title}</span>
                     </h3>
 
                     <p className="mt-3 text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-justify">
@@ -113,7 +108,7 @@ function PartnerPage() {
 
                     <div className="mt-6 border-t border-border pt-4">
                       <p className="text-xs font-bold uppercase tracking-wider text-primary mb-3">
-                        Key Deliverables:
+
                       </p>
                       <ul className="space-y-2 text-xs text-muted-foreground font-semibold">
                         {tr.benefits.map((b, idx) => (
@@ -144,12 +139,12 @@ function PartnerPage() {
       {/* ── Institutional Inquiry Form ── */}
       <section id="partner-form" className="bg-secondary/40 py-20 border-t border-border">
         <div className="container-ace max-w-2xl mx-auto">
-          <div className="rounded-3xl border-2 border-border bg-card p-8 sm:p-10 shadow-lift">
+          <div className="rounded-3xl border-2 border-slate-200/80 bg-white p-8 sm:p-10 shadow-lift transition-all duration-300 hover:border-[#fdb435]">
             <div className="text-center">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary uppercase tracking-wider">
                 <ShieldCheck className="size-3.5" /> Official Institutional Desk
               </span>
-              <h2 className="mt-3 font-display text-2xl sm:text-3xl font-bold text-primary">
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
                 Initiate a Partnership Conversation
               </h2>
               <p className="mt-2 text-xs sm:text-sm text-muted-foreground text-justify">
