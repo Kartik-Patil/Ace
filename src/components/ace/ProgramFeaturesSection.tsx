@@ -58,11 +58,7 @@ export function ProgramFeaturesSection() {
     <section className="relative overflow-hidden bg-secondary/30 py-20 border-t border-border">
       <div className="container-ace">
         <Reveal variant="fade-up" className="text-center max-w-3xl mx-auto">
-<<<<<<< HEAD
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl lg:text-5xl">
-=======
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
->>>>>>> c8fd4d4 (day 7 commit)
             Learning Beyond Books
           </h2>
 
@@ -83,32 +79,6 @@ export function ProgramFeaturesSection() {
                 : idx === 4
                   ? "lg:col-span-2 sm:col-span-2 sm:max-w-md sm:mx-auto lg:max-w-none lg:mx-0 w-full"
                   : "lg:col-span-2 sm:col-span-1";
-<<<<<<< HEAD
-
-            return (
-              <Reveal key={item.number} variant="fade-up" delay={idx * 60} className={colSpanClass}>
-                {/* Card with exact logo blue background #2a2273 */}
-                <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#3d3594]/80 bg-[#2a2273] p-6 sm:p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#fdb435]/60 hover:shadow-2xl text-white">
-                  <div>
-                    {/* Top Row: Icon Badge & Number */}
-                    <div className="flex items-center justify-between">
-                      <span className="grid size-12 place-items-center rounded-xl bg-white/10 border border-white/15 text-[#fdb435] shadow-xs transition-colors duration-300 group-hover:bg-[#fdb435] group-hover:text-[#2a2273]">
-                        <Icon className="size-6" />
-                      </span>
-                      <span className="font-display text-2xl font-black text-[#fdb435]/70 select-none">
-                        {item.number}
-                      </span>
-                    </div>
-
-                    {/* Title in Golden (shade from the logo #fdb435) */}
-                    <h3 className="mt-5 font-display text-xl font-bold leading-snug text-[#fdb435] tracking-tight">
-                      {item.title}
-                    </h3>
-
-                    {/* Description in White */}
-                    <p className="mt-2.5 text-sm leading-relaxed text-white/95 font-medium text-justify">
-=======
-
             return (
               <Reveal key={item.number} variant="fade-up" delay={idx * 60} className={colSpanClass}>
                 {/* Card with white background, hover-only golden border, hover zoom, and inline icon + dark blue title box */}
@@ -122,17 +92,12 @@ export function ProgramFeaturesSection() {
 
                     {/* Description in Dark Slate on White */}
                     <p className="mt-4 text-sm leading-relaxed text-slate-700 font-medium text-justify">
->>>>>>> c8fd4d4 (day 7 commit)
                       {item.description}
                     </p>
                   </div>
 
                   {/* Bottom accent indicator */}
-<<<<<<< HEAD
-                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-[#fdb435]/50 group-hover:text-[#fdb435] transition-colors" />
-=======
                   <div className="mt-5 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-bold text-[#2a2273]/50 group-hover:text-[#fdb435] transition-colors" />
->>>>>>> c8fd4d4 (day 7 commit)
                 </div>
               </Reveal>
             );

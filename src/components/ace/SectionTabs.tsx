@@ -23,15 +23,9 @@ export function SectionTabs() {
             </div>
           </TabsContent>
           <TabsContent value="results">
-<<<<<<< HEAD
-            <div className="rounded-2xl border bg-card p-8 shadow-card">
-              <h3 className="text-2xl font-semibold text-primary">{total} achievers in {contact.achieversYear}</h3>
-              <p className="mt-2 text-muted-foreground">Across NEET / IIT JEE, Class X, Class IX and Class VIII.</p>
-=======
             <div className="rounded-2xl border-2 border-slate-200/80 bg-white p-8 shadow-card transition-all duration-300 hover:scale-[1.02] hover:border-[#fdb435] hover:shadow-lift">
               <h3 className="inline-block rounded-xl bg-[#2a2273] px-4 py-2 font-display text-2xl font-bold text-[#fdb435]">{total} achievers in {contact.achieversYear}</h3>
               <p className="mt-3 text-slate-700">Across NEET / IIT JEE, Class X, Class IX and Class VIII.</p>
->>>>>>> c8fd4d4 (day 7 commit)
               <Link to="/results" hash="achievers" className="mt-4 inline-block font-bold text-sky-border underline">See all achievers →</Link>
             </div>
           </TabsContent>

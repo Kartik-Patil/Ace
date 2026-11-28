@@ -65,11 +65,7 @@ export function VisionMissionValuesSection() {
               delay={item.delay}
               duration={700}
             >
-<<<<<<< HEAD
-              <div className="rounded-2xl sm:rounded-3xl bg-card border-2 border-border/80 shadow-card hover:shadow-lift transition-all duration-300 overflow-hidden">
-=======
               <div className="rounded-2xl sm:rounded-3xl bg-white border-2 border-slate-200/80 shadow-card hover:border-[#fdb435] hover:scale-[1.02] hover:shadow-lift transition-all duration-300 overflow-hidden">
->>>>>>> c8fd4d4 (day 7 commit)
                 {/* ── Desktop & Tablet View (>= sm) ── */}
                 <div className="hidden sm:flex min-h-[160px] items-stretch">
                   {/* Left Navy Panel with Scalloped Curve (exact logo blue #2a2273) */}
@@ -106,19 +102,11 @@ export function VisionMissionValuesSection() {
                   </div>
 
                   {/* Right Content: Title & Description */}
-<<<<<<< HEAD
-                  <div className="flex-1 bg-card pl-11 sm:pl-14 md:pl-16 pr-6 sm:pr-8 md:pr-10 py-6 sm:py-7 flex flex-col justify-center">
-                    <h3 className="text-xl sm:text-2xl font-bold text-primary tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm sm:text-base leading-relaxed text-muted-foreground font-medium text-justify">
-=======
                   <div className="flex-1 bg-white pl-11 sm:pl-14 md:pl-16 pr-6 sm:pr-8 md:pr-10 py-6 sm:py-7 flex flex-col justify-center">
                     <h3 className="inline-block w-fit rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold text-[#fdb435] tracking-tight shadow-xs">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700 font-medium text-justify">
->>>>>>> c8fd4d4 (day 7 commit)
                       {item.description}
                     </p>
                   </div>
@@ -137,19 +125,11 @@ export function VisionMissionValuesSection() {
                   </div>
 
                   {/* Content: Clean Title & Description */}
-<<<<<<< HEAD
-                  <div className="p-5 bg-card">
-                    <h3 className="text-lg font-bold text-primary">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground font-medium text-justify">
-=======
                   <div className="p-5 bg-white">
                     <h3 className="inline-block w-fit rounded-xl bg-[#2a2273] px-3.5 py-1.5 font-display text-lg font-bold text-[#fdb435] shadow-xs">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-slate-700 font-medium text-justify">
->>>>>>> c8fd4d4 (day 7 commit)
                       {item.description}
                     </p>
                   </div>

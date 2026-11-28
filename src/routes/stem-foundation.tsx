@@ -14,10 +14,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/ace/Reveal";
 import { AceWord } from "@/components/ace/AceWord";
-<<<<<<< HEAD
 import { ContactSection } from "@/components/ace/ContactSection";
-=======
->>>>>>> c8fd4d4 (day 7 commit)
 import stemFoundationBanner from "@/assets/STEMFoundation-Banner.png";
 
 export const Route = createFileRoute("/stem-foundation")({
@@ -114,22 +111,6 @@ function StemFoundationPage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* ── Hero Banner Section ── */}
-      <section className="container-ace pt-6 sm:pt-8 pb-8 sm:pb-10">
-        <Reveal variant="zoom-in">
-          <div className="overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-gold/50 shadow-lift bg-navy-pattern">
-            <img
-              src={stemFoundationBanner}
-              alt="ACE STEM Foundation"
-              className="w-full h-auto block"
-              width={2048}
-              height={768}
-              loading="eager"
-            />
-          </div>
-        </Reveal>
-=======
       {/* ── Hero Banner Section (Full width edge-to-edge, zero negative space) ── */}
       <section className="w-full bg-navy-pattern overflow-hidden">
         <img
@@ -140,7 +121,6 @@ function StemFoundationPage() {
           height={768}
           loading="eager"
         />
->>>>>>> c8fd4d4 (day 7 commit)
       </section>
 
       {/* ── About ACE STEM Foundation ── */}
@@ -151,11 +131,7 @@ function StemFoundationPage() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">
 
               </p>
-<<<<<<< HEAD
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary font-display">
-=======
               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
->>>>>>> c8fd4d4 (day 7 commit)
 
               </h1>
             </div>
@@ -181,11 +157,7 @@ function StemFoundationPage() {
 
 
 
-<<<<<<< HEAD
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary font-display">
-=======
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
->>>>>>> c8fd4d4 (day 7 commit)
               Areas of Study
             </h2>
             <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium">
@@ -200,24 +172,6 @@ function StemFoundationPage() {
             const Icon = area.icon;
             return (
               <Reveal key={area.title} variant="fade-up" delay={idx * 80}>
-<<<<<<< HEAD
-                <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#3d3594]/80 bg-[#2a2273] p-6 sm:p-7 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#fdb435]/60 hover:shadow-2xl text-white">
-                  <div>
-                    {/* Top Row: Icon Badge */}
-                    <div className="flex items-center justify-between">
-                      <span className="grid size-12 place-items-center rounded-xl bg-white/10 border border-white/15 text-[#fdb435] shadow-xs transition-colors duration-300 group-hover:bg-[#fdb435] group-hover:text-[#2a2273]">
-                        <Icon className="size-6" />
-                      </span>
-                    </div>
-
-                    {/* Title in Golden */}
-                    <h3 className="mt-5 font-display text-xl sm:text-2xl font-bold leading-snug text-[#fdb435] tracking-tight">
-                      {area.title}
-                    </h3>
-
-                    {/* Description in White */}
-                    <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-white/95 font-medium text-justify">
-=======
                 <div className="group relative flex h-full flex-col justify-between rounded-2xl border-2 border-slate-200/80 bg-white p-6 sm:p-7 shadow-md transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:border-[#fdb435] hover:shadow-lift text-slate-700">
                   <div>
                     {/* Icon & Title on the same line in Dark Blue Box with Golden Words */}
@@ -228,17 +182,12 @@ function StemFoundationPage() {
 
                     {/* Description in Dark Slate on White */}
                     <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700 font-medium text-justify">
->>>>>>> c8fd4d4 (day 7 commit)
                       {area.description}
                     </p>
                   </div>
 
                   {/* Bottom accent indicator */}
-<<<<<<< HEAD
-                  <div className="mt-5 pt-4 border-t border-white/10" />
-=======
                   <div className="mt-5 pt-4 border-t border-slate-200/80" />
->>>>>>> c8fd4d4 (day 7 commit)
                 </div>
               </Reveal>
             );
@@ -254,11 +203,7 @@ function StemFoundationPage() {
 
 
 
-<<<<<<< HEAD
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary font-display">
-=======
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
->>>>>>> c8fd4d4 (day 7 commit)
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
                 Why ACE STEM Foundation ?
               </h2>
               <p className="mt-3 text-base sm:text-lg text-slate-600 font-medium text-justify">
@@ -270,13 +215,8 @@ function StemFoundationPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               {differentiators.map((diff, index) => (
                 <Reveal key={index} variant="fade-up" delay={index * 50}>
-<<<<<<< HEAD
-                  <div className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-xs transition-all duration-300 hover:border-gold hover:shadow-md hover:-translate-y-0.5">
-                    <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-primary text-gold mt-0.5">
-=======
                   <div className="flex items-start gap-4 rounded-2xl border-2 border-slate-200/80 bg-white p-5 shadow-xs transition-all duration-300 hover:scale-[1.03] hover:border-[#fdb435] hover:shadow-lift hover:-translate-y-0.5">
                     <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-[#2a2273] text-[#fdb435] mt-0.5">
->>>>>>> c8fd4d4 (day 7 commit)
                       <CheckCircle2 className="size-5" />
                     </span>
                     <p className="font-bold text-slate-800 text-base sm:text-lg leading-snug text-justify">
@@ -302,49 +242,32 @@ function StemFoundationPage() {
                 <Compass className="size-4" /> Our Vision
               </span>
 
-<<<<<<< HEAD
-              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display max-w-3xl mx-auto leading-tight">
-=======
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white text-center max-w-3xl mx-auto leading-tight">
->>>>>>> c8fd4d4 (day 7 commit)
                 “To nurture curious minds, develop scientific thinkers and inspire the next generation of problem-solvers.”
               </h3>
 
               <div className="pt-4 flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
-                <a
-                  href="#enquire"
-                  className="rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition-transform hover:-translate-y-0.5 hover:shadow-lg inline-flex items-center gap-2"
-                >
-                  Enquire Now <ArrowRight className="size-4" />
-                </a>
-                <Link
-                  to="/courses"
-                  className="rounded-full border-2 border-white/40 px-8 py-3.5 font-bold text-white hover:border-gold hover:text-gold transition-colors"
-                >
-                  Explore All Courses
-=======
                 <Link
                   to="/aset-test"
                   className="rounded-full bg-gold px-8 py-3.5 font-bold text-gold-foreground transition-transform hover:-translate-y-0.5 hover:shadow-lg inline-flex items-center gap-2"
                 >
                   Join Now! <ArrowRight className="size-4" />
->>>>>>> c8fd4d4 (day 7 commit)
+                </Link>
+                <Link
+                  to="/courses"
+                  className="rounded-full border-2 border-white/40 px-8 py-3.5 font-bold text-white hover:border-gold hover:text-gold transition-colors"
+                >
+                  Explore All Courses
                 </Link>
               </div>
             </div>
           </div>
         </Reveal>
       </section>
-<<<<<<< HEAD
-
       {/* ── Contact Section ── */}
       <div id="enquire">
         <ContactSection title="Enquire for ACE STEM Foundation" variant="white" />
       </div>
-    </div >
-=======
     </div>
->>>>>>> c8fd4d4 (day 7 commit)
   );
 }

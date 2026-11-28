@@ -161,11 +161,7 @@ function EventsPage() {
             <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center">
               Want ACE to host a STEM or Exam Strategy Workshop at your school?
             </h3>
-<<<<<<< HEAD
-            <p className="mt-2 text-sm text-muted-foreground max-w-xl text-justify">
-=======
             <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto text-center">
->>>>>>> c8fd4d4 (day 7 commit)
               We conduct custom academic workshops for school students from Classes 7th to 10th on conceptual clarity and exam confidence.
             </p>
           </div>

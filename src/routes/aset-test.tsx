@@ -152,11 +152,7 @@ function AsetTestPage() {
             <div className="text-center mb-6 sm:mb-8">
               <h2
                 id="test-pattern-heading"
-<<<<<<< HEAD
-                className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight"
-=======
                 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center"
->>>>>>> c8fd4d4 (day 7 commit)
               >
                 Test Pattern
               </h2>
@@ -219,11 +215,7 @@ function AsetTestPage() {
             <div className="text-center mb-10 sm:mb-14">
               <h2
                 id="why-take-aset-heading"
-<<<<<<< HEAD
-                className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 font-display tracking-tight"
-=======
                 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary text-center"
->>>>>>> c8fd4d4 (day 7 commit)
               >
                 Why ASET ?
               </h2>

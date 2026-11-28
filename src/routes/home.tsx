@@ -199,14 +199,8 @@ function HomePage() {
 
           {/* ── WHY ACE? Strive List (Noticeable Large Headings, clean bulleted format, no cards) ── */}
           <div className="mt-10 border-t-2 border-border/80 pt-8">
-<<<<<<< HEAD
-            <div>
-              <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary flex items-center gap-3">
-                <span className="h-1 w-8 bg-gold inline-block rounded-full" />
-=======
             <div className="text-center">
               <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-primary text-center">
->>>>>>> c8fd4d4 (day 7 commit)
                 WHY <AceWord />
               </h3>
               <p className="mt-3 text-lg sm:text-xl lg:text-2xl font-bold text-primary/90 text-center">

@@ -451,24 +451,6 @@ export function WhyParentsTrustRadialSection() {
                   <span className="text-xs font-bold text-sky-border uppercase tracking-wider">
                     {currentActiveReason.tag}
                   </span>
-<<<<<<< HEAD
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="rounded-full bg-gold/15 px-2.5 py-0.5 text-xs font-bold text-gold-foreground">
-                        Reason 0{currentActiveReason.id + 1}
-                      </span>
-                      <span className="text-xs font-bold text-sky-border uppercase tracking-wider">
-                        {currentActiveReason.tag}
-                      </span>
-                    </div>
-                    <h4 className="mt-1 font-display text-xl sm:text-2xl font-bold text-primary">
-                      {currentActiveReason.title}
-                    </h4>
-                    <p className="mt-1 text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl text-justify">
-                      {currentActiveReason.description}
-                    </p>
-                  </div>
-=======
                   <h4 className="mt-2 inline-flex items-center gap-2.5 rounded-xl bg-[#2a2273] px-4 py-2 font-display text-xl sm:text-2xl font-bold text-[#fdb435] shadow-xs">
                     <ActiveIcon className="size-5 shrink-0 text-[#fdb435]" aria-hidden />
                     <span>{currentActiveReason.title}</span>
@@ -476,7 +458,6 @@ export function WhyParentsTrustRadialSection() {
                   <p className="mt-2.5 text-sm text-muted-foreground font-medium leading-relaxed max-w-2xl text-justify">
                     {currentActiveReason.description}
                   </p>
->>>>>>> c8fd4d4 (day 7 commit)
                 </div>
 
                 <div className="shrink-0 rounded-2xl border border-sky-border/40 bg-sky/50 p-4 max-w-xs">
@@ -525,11 +506,7 @@ export function WhyParentsTrustRadialSection() {
                     </span>
                   </div>
 
-<<<<<<< HEAD
-                  <p className="mt-2.5 text-xs text-white/90 leading-relaxed font-medium text-justify">
-=======
                   <p className="mt-3 text-xs text-slate-700 leading-relaxed font-medium text-justify">
->>>>>>> c8fd4d4 (day 7 commit)
                     {item.description}
                   </p>
 
